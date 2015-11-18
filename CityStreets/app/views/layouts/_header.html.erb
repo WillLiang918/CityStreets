@@ -1,0 +1,20 @@
+<div class="app-header group">
+  <div class="sign-up-sign-in">
+    <% if signed_in? %>
+      <div>
+        <%= button_to "Sign Out", session_url, method: :delete %>
+      </div>
+      <div>
+        <%= current_user.username %>
+      </div>
+    <% else %>
+      <div>
+        <%= link_to "Register", new_user_url %>
+      </div>
+      <div>
+        <%= link_to "Sign In", new_session_url %>
+      </div>
+    <% end %>
+  </div>
+  <h1 class="app-logo">CityStreets</h1>
+</div>

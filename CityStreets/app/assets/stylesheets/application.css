@@ -1,0 +1,190 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+html, body, div, ul, li {
+  padding: 0;
+  margin: 0;
+  border: 0;
+
+  font: inherit;
+  text-decoration: inherit;
+  text-align: inherit;
+  color: inherit;
+
+  background: transparent;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 980px;
+  margin: auto;
+}
+
+.group:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*header*/
+
+.page-title {
+  text-align: center;
+}
+
+.app-header {
+  border-bottom: 5px solid black;
+  color: #0080c6;
+}
+
+.sign-up-sign-in {
+  border: 1px solid black;
+  float: right;
+}
+
+.sign-up-sign-in div{
+  float: right;
+}
+
+.app-logo {
+  float: left;
+}
+
+/*root page*/
+
+/*result page*/
+.result .Map-component {
+  width: 310px;
+  float: right;
+}
+
+.result .property-list {
+  border: 3px solid red;
+  width: 66.66%;
+  float: left;
+}
+
+.result .property-list-item {
+  border: 3px solid gold;
+  height: 100%;
+}
+
+.result .property-image {
+  border: 3px solid blue;
+  width: 165px;
+  float: left;
+}
+
+.result .detail-component {
+  border: 3px solid pink;
+  padding-left: 14px;
+  width: 440px;
+  float: right;
+}
+/*profile page*/
+
+.property-list {
+  border: 5px solid black;
+}
+
+.photo-container {
+  height: 400px;
+  width: 60%;
+  float: left;
+}
+
+.Photo-component {
+  border: 1px solid black;
+}
+
+.detail-container {
+  width: 40%;
+  float: right;
+}
+
+.profile-page {
+  width: 980px;
+  margin: auto;
+}
+
+.User-info-listing {
+  border: 5px solid gold;
+  width: 50%;
+  float: left;
+  padding: 10px;
+}
+
+.User-info-listing div{
+  margin: 10px 0px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.Property-map-detail {
+  border: 5px solid brown;
+  width: 40%;
+  float: right;
+  padding: 10px
+}
+
+.Property-map-detail div{
+  text-align: center;
+  margin: 10px 0px;
+  border: 1px solid black;
+}
+
+.Header-component {
+  text-align: center;
+  display: block;
+  background: #ccc;
+  height: 100px;
+  margin: 10px 10px;
+}
+
+.UserInformation-component {
+  height: 100px;
+  display: block;
+  background: #ccc;
+
+}
+
+.MyListings-component {
+  display: block;
+  background: #ccc;
+  height: 300px;
+}
+
+.MySavedList-component {
+  display: block;
+  background: #ccc;
+  height: 300px;
+}
+
+.Map-component {
+  display: block;
+  background: #ccc;
+  height: 500px;
+
+}
+
+.Detail-component {
+  display: block;
+  background: #ccc;
+  height: 200px;
+}
