@@ -26,7 +26,9 @@ address1 = Address.create!(
 
 property1 = Property.create!(
   owner_user_id: 1,
-  price: 3000
+  price: 3000,
+  bathrooms: 2,
+  bedrooms: 2
 )
 
 address2 = Address.create!(
@@ -40,7 +42,8 @@ address2 = Address.create!(
 
 property2 = Property.create!(
   owner_user_id: 1,
-  price: 6000
+  price: 6000,
+  bathrooms: 2
 )
 
 address3 = Address.create!(
@@ -68,7 +71,8 @@ address4 = Address.create!(
 
 property4 = Property.create!(
   owner_user_id: 1,
-  price: 5
+  price: 5,
+  square_ft: 2114
 )
 # address3 = Address.create!(
 #   property_id: 3,

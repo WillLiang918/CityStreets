@@ -105,7 +105,10 @@ ul {
 .detail-title {
   color: #0080c6;
 }
-/*profile page*/
+
+.detail-info {
+  padding-right: 3px
+}/*profile page*/
 
 .property-list {
   /*border: 5px solid black;*/

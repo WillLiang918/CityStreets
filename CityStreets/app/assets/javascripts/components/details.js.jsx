@@ -17,10 +17,13 @@
         <div className="detail-component">
           <div className="detail-title">{this.state.property.address}</div>
           <div className="details-info">
-            {['price', 'other'].map ( function (detail) {
-              return <p className={detail} key={detail}>{this.state.property[detail]}</p>;
-            }.bind(this))}
-            </div>
+            <p>
+              {this.state.property.price}
+            </p>
+            <p>
+              {this.state.property.details}
+            </p>
+          </div>
         </div>
       );
     }

@@ -14,4 +14,24 @@ class Property < ActiveRecord::Base
     "$#{self.price}"
   end
 
+  def get_details
+    details = {};
+    details[:bedrooms] = "#{self.bedrooms} beds" unless self.bedrooms.nil?
+    details[:bathrooms] = "#{self.bathrooms} bath" unless self.bathrooms.nil?
+    details[:square_ft] = "#{self.square_ft} ft²" unless self.square_ft.nil?
+    details
+  end
+
+  def get_bedrooms
+    "#{self.bedrooms} beds" unless self.bedrooms.nil?
+  end
+
+  def get_bathrooms
+    "#{self.bathrooms} beds" unless self.bathrooms.nil?
+  end
+
+  def get_square_ft
+    "#{self.square_ft} ft²" unless self.square_ft.nil?
+  end
+
 end
