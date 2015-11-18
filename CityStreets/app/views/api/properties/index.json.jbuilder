@@ -1,6 +1,7 @@
 json.array! @properties do |property|
   json.id property.id
-  json.extract! property, :owner_user_id, :price, :bedrooms, :bathrooms, :square_ft
+  json.extract! property, :owner_user_id, :bedrooms, :bathrooms, :square_ft
+  json.price property.get_price
   json.address property.get_address
 end
 

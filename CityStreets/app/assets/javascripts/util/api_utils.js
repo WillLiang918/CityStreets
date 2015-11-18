@@ -1,5 +1,4 @@
 ApiUtil = {
-
   fetchProperties: function () {
     $.ajax ({
       url: 'api/properties',

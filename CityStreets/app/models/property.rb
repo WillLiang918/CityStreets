@@ -10,4 +10,8 @@ class Property < ActiveRecord::Base
     "#{self.address.street} #{self.address.unit}"
   end
 
+  def get_price
+    "$#{self.price}"
+  end
+
 end

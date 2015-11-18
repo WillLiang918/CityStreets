@@ -43,6 +43,33 @@ property2 = Property.create!(
   price: 6000
 )
 
+address3 = Address.create!(
+  property_id: 3,
+  street: "15 Brpad Street",
+  unit: "1900",
+  city: "New York City",
+  state: "New York",
+  zip: 10005
+)
+
+property3 = Property.create!(
+  owner_user_id: 1,
+  price: 6000
+)
+
+address4 = Address.create!(
+  property_id: 4,
+  street: "5 Beekma Street",
+  unit: "#23C",
+  city: "New York City",
+  state: "New York",
+  zip: 10038
+)
+
+property4 = Property.create!(
+  owner_user_id: 1,
+  price: 5
+)
 # address3 = Address.create!(
 #   property_id: 3,
 #   street: "no streets",

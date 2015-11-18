@@ -27,13 +27,17 @@ html, body, div, ul, li {
   background: transparent;
 }
 
-ul {
-  list-style: none;
+html {
+  font-family: Source Sans Pro,Helvetica,Arial,Geneva,sans-serif;
 }
 
 body {
   width: 980px;
   margin: auto;
+}
+
+ul {
+  list-style: none;
 }
 
 .group:after {
@@ -75,13 +79,13 @@ body {
 }
 
 .result .property-list {
-  border: 3px solid red;
+  /*border: 3px solid red;*/
   width: 66.66%;
   float: left;
 }
 
 .result .property-list-item {
-  border: 3px solid gold;
+  border-top: 1px solid #1a1f2c;
   height: 100%;
 }
 
@@ -92,15 +96,19 @@ body {
 }
 
 .result .detail-component {
-  border: 3px solid pink;
+  /*border: 3px solid pink;*/
   padding-left: 14px;
   width: 440px;
   float: right;
 }
+
+.detail-title {
+  color: #0080c6;
+}
 /*profile page*/
 
 .property-list {
-  border: 5px solid black;
+  /*border: 5px solid black;*/
 }
 
 .photo-container {
@@ -183,8 +191,9 @@ body {
 
 }
 
-.Detail-component {
-  display: block;
+.detail-info p{
+  border-top: 1px solid #e5e5e5;
+  /*display: block;
   background: #ccc;
-  height: 200px;
+  height: 200px;*/
 }

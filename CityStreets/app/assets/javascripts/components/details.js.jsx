@@ -15,9 +15,12 @@
     render: function () {
       return(
         <div className="detail-component">
-          {['address', 'price', 'other'].map ( function (detail) {
-            return <p key={detail}>{this.state.property[detail]}</p>;
-          }.bind(this))}
+          <div className="detail-title">{this.state.property.address}</div>
+          <div className="details-info">
+            {['price', 'other'].map ( function (detail) {
+              return <p className={detail} key={detail}>{this.state.property[detail]}</p>;
+            }.bind(this))}
+            </div>
         </div>
       );
     }
