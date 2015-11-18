@@ -16,7 +16,7 @@
       return(
         <div className="detail-component">
           {['address', 'price', 'other'].map ( function (detail) {
-            return <p key={detail}>{detail}: {this.state.property[detail]}</p>;
+            return <p key={detail}>{this.state.property[detail]}</p>;
           }.bind(this))}
         </div>
       );

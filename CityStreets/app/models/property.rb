@@ -5,4 +5,8 @@ class Property < ActiveRecord::Base
   belongs_to :owners, class_name: "User", foreign_key: :owner_user_id
   has_one :address, class_name: "Address", foreign_key: :property_id
 
+  def get_address
+    "#{self.address.street} #{self.address.unit}"
+  end
+
 end

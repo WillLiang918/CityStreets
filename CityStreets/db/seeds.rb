@@ -17,11 +17,11 @@ user1 = User.create!(
 
 address1 = Address.create!(
   property_id: 1,
-  street: "street numba 1",
-  unit: "unit 00",
-  city: "NEW YORK!",
-  state: "NEW YORK STATE",
-  zip: 11790
+  street: "959 First Avenue",
+  unit: "#17B",
+  city: "New York City",
+  state: "New York",
+  zip: 10022
 )
 
 property1 = Property.create!(
@@ -31,11 +31,11 @@ property1 = Property.create!(
 
 address2 = Address.create!(
   property_id: 2,
-  street: "street numbaas 2",
-  unit: "unit 99",
-  city: "NYC",
-  state: "NEW YORK",
-  zip: 91790
+  street: "5 Roebling Street",
+  unit: "#PHB",
+  city: "New York City",
+  state: "New York",
+  zip: 11211
 )
 
 property2 = Property.create!(
