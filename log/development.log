@@ -200,3 +200,158 @@ Processing by Api::PropertiesController#index as JSON
   [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
   Rendered api/properties/index.json.jbuilder (56.7ms)
 Completed 200 OK in 77ms (Views: 61.2ms | ActiveRecord: 5.0ms)
+
+
+Started GET "/" for ::1 at 2015-11-18 20:31:58 -0500
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (0.1ms)
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "6U9rup6NONqfqJFMhR-OmA"]]
+  Rendered layouts/_header.html.erb (1.8ms)
+  Rendered layouts/_errors.html.erb (0.1ms)
+Completed 200 OK in 198ms (Views: 197.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/development/react.self-93bc62cb6c7b74ee7e5a2fcf623f3abbd365440bf90eba740c625f159078aa82.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/application.self-56987e5c73af9df141b142cb513d3af4246c73f89c0c2ad3b091c0fd478d0e76.css?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/ReactRouter.min.self-0c08710e85e99bdc2b63a49d032bf9a8ac55d74ebb3e4ab8829aa5352e735450.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/details.self-b12a489079b4c445be195e6331b798ddd05d51c3cc79922cf04ee7df0360554d.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/map.self-53d49f7682c8952da1747fe754af02fe9dc70ea9b16063c22fe67ec49b35b007.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/result.self-6c6811e38f1549bf7ca65792156add839c7e2804891757ce62a35110ec71baf2.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/searchForm.self-fe9deb839001f29d9f388116cea7e9f52a1ab8ef1478d1c0c46e4dd094597acf.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/property_list_item.self-59a05e578eebadabeead26c850e410978201cdd5f0ab08dadb87578ff7ff60aa.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/actions/api_actions.self-6e572ed4014f718376b4c0df49c5919f1bccea3b151054651e512f1f7fa7158e.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/city_streets.self-f81f5516651fd5932cd4a2f830161b9096d2b4448619670ad458c1e714792b03.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/constants/property_constants.self-d727bd5df3cecf2e17a9dfcbf3e18c4c4646722c9be86b63595f6abddbf4a145.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/stores/property.self-143e7411e04312c84cac7be661160a83aaed2a289e588d616140e5fa85b99934.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/util/api_utils.self-7e96e8010d05973eb22122cd4c7a552e143ecd9cb465486af3f4565a4eb8c273.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/assets/components/property_list.self-921eaf713b336267a97cef80d1cea81c06f85191e8e9dbcd55a2223f505622ea.js?body=1" for ::1 at 2015-11-18 20:31:59 -0500
+
+
+Started GET "/api/properties" for ::1 at 2015-11-18 20:31:59 -0500
+Processing by Api::PropertiesController#index as JSON
+  [1m[36mProperty Load (0.8ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 3]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  Rendered api/properties/index.json.jbuilder (26.4ms)
+Completed 200 OK in 52ms (Views: 49.5ms | ActiveRecord: 2.3ms)
+  [1m[36mSQL (0.5ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (12.5ms)[0m  DROP TABLE "addresses" CASCADE
+  [1m[36m (6.5ms)[0m  [1mCREATE TABLE "addresses" ("id" serial primary key, "property_id" integer NOT NULL, "street" character varying NOT NULL, "unit" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "zip" character varying NOT NULL, "latitude" float, "longitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.2ms)[0m  DROP TABLE "photos" CASCADE
+  [1m[36m (5.6ms)[0m  [1mCREATE TABLE "photos" ("id" serial primary key, "title" character varying, "property_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) [0m
+  [1m[35m (3.4ms)[0m  DROP TABLE "properties" CASCADE
+  [1m[36m (4.5ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "owner_user_id" integer NOT NULL, "price" integer NOT NULL, "bedrooms" integer, "bathrooms" decimal, "square_ft" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.2ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.6ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mSQL (0.4ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (8.4ms)[0m  DROP TABLE "addresses" CASCADE
+  [1m[36m (8.9ms)[0m  [1mCREATE TABLE "addresses" ("id" serial primary key, "property_id" integer NOT NULL, "street" character varying NOT NULL, "unit" character varying NOT NULL, "city" character varying NOT NULL, "state" character varying NOT NULL, "zip" character varying NOT NULL, "latitude" float, "longitude" float, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.6ms)[0m  DROP TABLE "photos" CASCADE
+  [1m[36m (15.3ms)[0m  [1mCREATE TABLE "photos" ("id" serial primary key, "title" character varying, "property_id" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL, "image_file_name" character varying, "image_content_type" character varying, "image_file_size" integer, "image_updated_at" timestamp) [0m
+  [1m[35m (2.7ms)[0m  DROP TABLE "properties" CASCADE
+  [1m[36m (6.7ms)[0m  [1mCREATE TABLE "properties" ("id" serial primary key, "owner_user_id" integer NOT NULL, "price" integer NOT NULL, "bedrooms" integer, "bathrooms" decimal, "square_ft" integer, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (2.3ms)[0m  DROP TABLE "users" CASCADE
+  [1m[36m (6.0ms)[0m  [1mCREATE TABLE "users" ("id" serial primary key, "username" character varying NOT NULL, "password_digest" character varying NOT NULL, "session_token" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (0.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "users"
+  [1m[36mSQL (0.9ms)[0m  [1mDELETE FROM "addresses"[0m
+  [1m[35mSQL (0.7ms)[0m  DELETE FROM "properties"
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "users" ("username", "password_digest", "session_token", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["username", "admin"], ["password_digest", "$2a$10$VIGs//MPdXYQtAYb7/P9KeVyHu1kBwKkT/iat4ho1N85YdXCyFrTa"], ["session_token", "6lfWzMkjsSzwHKqxnNk_4g"], ["created_at", "2015-11-19 01:32:42.685777"], ["updated_at", "2015-11-19 01:32:42.685777"]]
+  [1m[36m (6.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "addresses" ("property_id", "street", "unit", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["property_id", 1], ["street", "959 First Avenue"], ["unit", "#17B"], ["city", "New York City"], ["state", "New York"], ["zip", "10022"], ["created_at", "2015-11-19 01:32:42.715389"], ["updated_at", "2015-11-19 01:32:42.715389"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "properties" ("owner_user_id", "price", "bathrooms", "bedrooms", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6) RETURNING "id"  [["owner_user_id", 1], ["price", 3000], ["bathrooms", "2.0"], ["bedrooms", 2], ["created_at", "2015-11-19 01:32:42.730478"], ["updated_at", "2015-11-19 01:32:42.730478"]]
+  [1m[36m (0.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "addresses" ("property_id", "street", "unit", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["property_id", 2], ["street", "5 Roebling Street"], ["unit", "#PHB"], ["city", "New York City"], ["state", "New York"], ["zip", "11211"], ["created_at", "2015-11-19 01:32:42.735288"], ["updated_at", "2015-11-19 01:32:42.735288"]]
+  [1m[35m (0.3ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "properties" ("owner_user_id", "price", "bathrooms", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["owner_user_id", 1], ["price", 6000], ["bathrooms", "2.0"], ["created_at", "2015-11-19 01:32:42.738370"], ["updated_at", "2015-11-19 01:32:42.738370"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "addresses" ("property_id", "street", "unit", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["property_id", 3], ["street", "15 Brpad Street"], ["unit", "1900"], ["city", "New York City"], ["state", "New York"], ["zip", "10005"], ["created_at", "2015-11-19 01:32:42.741515"], ["updated_at", "2015-11-19 01:32:42.741515"]]
+  [1m[35m (0.5ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "properties" ("owner_user_id", "price", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["owner_user_id", 1], ["price", 6000], ["created_at", "2015-11-19 01:32:42.746984"], ["updated_at", "2015-11-19 01:32:42.746984"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "addresses" ("property_id", "street", "unit", "city", "state", "zip", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["property_id", 4], ["street", "5 Beekma Street"], ["unit", "#23C"], ["city", "New York City"], ["state", "New York"], ["zip", "10038"], ["created_at", "2015-11-19 01:32:42.750842"], ["updated_at", "2015-11-19 01:32:42.750842"]]
+  [1m[35m (0.4ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "properties" ("owner_user_id", "price", "square_ft", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["owner_user_id", 1], ["price", 5], ["square_ft", 2114], ["created_at", "2015-11-19 01:32:42.754276"], ["updated_at", "2015-11-19 01:32:42.754276"]]
+  [1m[36m (0.3ms)[0m  [1mCOMMIT[0m
