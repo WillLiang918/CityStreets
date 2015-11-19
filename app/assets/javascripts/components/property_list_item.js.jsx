@@ -11,9 +11,24 @@
 
     handleHover: function (event) {
       var address = this.state.property.address;
-      debugger
-    },
+      address = address.replace(/\s/g, '');
 
+      var geocoder = new google.maps.Geocoder();
+      geocoder.geocode({address: address}, function(results, status) {
+        if (status === google.maps.GeocoderStatus.OK){
+          map = document.getElementsByClassName("map");
+          debugger
+          map.setCenter(results[0].geometry.location);
+          debugger
+        }
+        debugger
+      });
+
+      // var url = "https://maps.googleapis.com/maps/api/geocode/json?";
+      // var key = "&key=AIzaSyAzXbe85FPmrTNrY3eKx7sH0E01BUHHBos";
+      // url = url + address + key;
+
+    },
 
     render: function () {
         return (

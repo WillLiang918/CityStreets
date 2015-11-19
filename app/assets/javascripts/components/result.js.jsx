@@ -1,5 +1,9 @@
 (function (root) {
   root.Result = React.createClass({
+    getInitialState: function () {
+      return { map: null };
+    },
+
     render: function () {
       return (
         <div>
@@ -8,7 +12,7 @@
             <PropertyList />
           </div>
           <div>
-            <Map />
+            <Map map={this.state.map}/>
           </div>
         </div>
       );
