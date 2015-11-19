@@ -1,7 +1,11 @@
 (function (root) {
   root.Result = React.createClass({
     getInitialState: function () {
-      return { map: null };
+      return { map: "" };
+    },
+
+    handlesMap: function (map) {
+      this.setState({ map: map});
     },
 
     render: function () {
@@ -9,10 +13,10 @@
         <div>
           <ResultHeader />
           <div>
-            <PropertyList />
+            <Map setsNewMap={this.handlesMap}/>
           </div>
           <div>
-            <Map map={this.state.map}/>
+            <PropertyList map={this.state.map}/>
           </div>
         </div>
       );
