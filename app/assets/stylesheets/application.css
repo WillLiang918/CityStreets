@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, body, div, ul, li, p, h1 {
+html, body, div, ul, li, p, h1, select, input {
   padding: 0;
   margin: 0;
   border: 0;
@@ -129,17 +129,50 @@ ul {
   height: 39px;
 }
 
-.search-location {
+.search-location-container {
   margin: 0px 5px;
+}
+
+.search-location-container > * {
+  width: 500px;
+}
+
+.search-location {
+  display: block;
 }
 
 .search-location > * {
   width: 464px;
 }
 
-.search-row input, .search-row label {
+.search-row > * {
   display: block;
   float: left;
+}
+
+.search-row select {
+  height: 45px;
+  width: 130px;
+  border: 1px solid #1a1f2c;
+}
+
+.search-price {
+  width: 300px;
+  display: block;
+}
+
+.search-bedrooms {
+  display: block;
+  width: 140px;
+}
+
+.search-bathrooms {
+  display: block;
+  width: 150px;
+}
+
+.search-button {
+  float: right;
 }
 
 /*result page*/
@@ -164,10 +197,10 @@ ul {
 .result .map {
   display: block;
   border: 1px solid black;
-  width: 32.33%;
-  height: 500px;
+  width: 300px;
+  height: 310px;
+  height: 330px;
   float: right;
-  /*margin-left: 10px;*/
 }
 
 .result .property-list {
@@ -183,7 +216,7 @@ ul {
 }
 
 .result .property-list-item:hover {
-  background-color: red; 
+  background-color: red;
 }
 
 .result .property-image {

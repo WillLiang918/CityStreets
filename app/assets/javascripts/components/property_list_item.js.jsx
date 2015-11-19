@@ -20,7 +20,7 @@
             lat: results[0].geometry.location.lat(),
             lng: results[0].geometry.location.lng()
           };
-          
+
           ApiActions.getMarker(coords);
         }
       }.bind(this));
@@ -28,7 +28,7 @@
 
     render: function () {
         return (
-          <div className="property-list-item group" onMouseOver={this.handleHover}>
+          <div className="property-list-item group" onMouseEnter={this.handleHover}>
             <div className="property-image">
               <img>IMG</img>
             </div>

@@ -11,8 +11,8 @@
           <form className="search-form group" onSubmit={this.handleSubmit}>
 
             <div className="search-row group">
-              <div className="search-location">
-                <label>Location</label>
+              <div className="search-location-container">
+                <label className="search-location">Location</label>
                 <input
                   type="text"
                   placeholder="Neighborhood / Address / Building / Keyword"/>
@@ -20,28 +20,45 @@
             </div>
 
             <div className="search-row group">
-              <label>Price</label>
-              <input
-                type="text"
-                placeholder="Any"/>
+
+              <div>
+                <label className="search-price" >Price</label>
+                <select
+                  type="text">
+                  <option>Any</option>
+                  <option>1000</option>
+                </select>
                 <label>to</label>
-              <label></label>
-              <input
-                type="text"
-                placeholder="Any"/>
-              <label>Bedrooms</label>
-              <input
-                type="text"
-                placeholder="Any Beds"/>
-              <label>Bathrooms</label>
-              <input
-                type="text"
-                placeholder="Any Baths"/>
+                <select
+                  type="text">
+                  <option>Any</option>
+                  <option>1000</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="search-bedrooms">Bedrooms</label>
+                <select
+                  type="text">
+                  <option>Any</option>
+                  <option>1000</option>
+                </select>
+              </div>
+
+              <div>
+                <label className="search-bathrooms">Bathrooms</label>
+                <select
+                  type="text">
+                  <option>Any</option>
+                  <option>1000</option>
+                </select>
+              </div>
+
               </div>
             <br/>
 
 
-            <button>Search</button>
+            <button className="search-button">Search</button>
           </form>
         </div>
       );
