@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, body, div, ul, li, p {
+html, body, div, ul, li, p, h1 {
   padding: 0;
   margin: 0;
   border: 0;
@@ -63,8 +63,16 @@ ul {
   float: right;
 }
 
-.sign-up-sign-in li{
+.header-list li {
   padding: 0px 14px 0px 7px;
+}
+
+.header-list li:hover {
+  color: #004c75;
+}
+
+.sign-in:hover {
+  color: #004c75;
 }
 
 .register-link {
@@ -72,6 +80,10 @@ ul {
   border: 1px solid #fdc435;
   line-height: 19px;
   float: right;
+}
+
+.register-link:hover {
+  background: #fdc435;
 }
 
 .register {
@@ -101,13 +113,34 @@ ul {
   float: left;
 }
 
-
 .app-logo {
   float: left;
-  font-size: 24px;
+  font-size: 38px;
 }
 
 /*root page*/
+.search-form {
+  font-size: 14px;
+  width: 640px;
+}
+
+.search-form input {
+  color: #1a1f2c;
+  height: 39px;
+}
+
+.search-location {
+  margin: 0px 5px;
+}
+
+.search-location > * {
+  width: 464px;
+}
+
+.search-row label, input {
+  display: block;
+  float: left;
+}
 
 /*result page*/
 .result-header-component {

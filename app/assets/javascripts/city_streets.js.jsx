@@ -30,7 +30,7 @@ $(function () {
 
   var routes = (
     <Route path="/" component={App}>
-      <IndexRoute component={SearchForm} />
+      <IndexRoute component={SearchForm}/>
       <Route path="result" component={ResultContainer} />
     </Route>
   );

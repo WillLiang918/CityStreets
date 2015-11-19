@@ -8,32 +8,39 @@
     render: function () {
       return (
         <div>
-          <form className="search-form" onSubmit={this.handleSubmit}>
-            <label>Location</label>
-            <input
-              type="text"
-              placeholder="Neighborhood / Address / Building / Keyword"/>
+          <form className="search-form group" onSubmit={this.handleSubmit}>
+
+            <div className="search-row group">
+              <div className="search-location">
+                <label>Location</label>
+                <input
+                  type="text"
+                  placeholder="Neighborhood / Address / Building / Keyword"/>
+              </div>
+            </div>
+
+            <div className="search-row group">
+              <label>Price</label>
+              <input
+                type="text"
+                placeholder="Any"/>
+                <label>to</label>
+              <label></label>
+              <input
+                type="text"
+                placeholder="Any"/>
+              <label>Bedrooms</label>
+              <input
+                type="text"
+                placeholder="Any Beds"/>
+              <label>Bathrooms</label>
+              <input
+                type="text"
+                placeholder="Any Baths"/>
+              </div>
             <br/>
-            <label>Price</label>
-            <input
-              type="text"
-              placeholder="Any"/>
-            <br/>
-            <label></label>
-            <input
-              type="text"
-              placeholder="Any"/>
-            <br/>
-            <label>Bedrooms</label>
-            <input
-              type="text"
-              placeholder="Any Beds"/>
-            <br/>
-            <label>Bathrooms</label>
-            <input
-              type="text"
-              placeholder="Any Baths"/>
-            <br/>
+
+
             <button>Search</button>
           </form>
         </div>

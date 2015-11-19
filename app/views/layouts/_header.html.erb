@@ -1,16 +1,15 @@
 <div class="app-header group">
   <h1 class="app-logo">CityStreets</h1>
-  <div class="sign-up-sign-in group">
+  <ul class="header-list group">
     <% if signed_in? %>
-      <%= current_user.username %>
-      <%= button_to "Sign Out", session_url, method: :delete %>
+      <li>My Properties</li>
+      <li><%= button_to "Sign Out", session_url, method: :delete %></li>
     <% else %>
-      <ul class="header-list group">
-        <li><%= link_to "Sign In", new_session_url, class: "sign-in" %></li>
-        <li class="register-link">
-          <%= link_to "Register (It's Free)", new_user_url, class: "register" %>
-        </li>
+      <li><%= link_to "Sign In", new_session_url, class: "sign-in" %></li>
+      <li class="register-link">
+        <%= link_to "Register (It's Free)", new_user_url, class: "register" %>
+      </li>
       </ul>
     <% end %>
-  </div>
+  </ul>
 </div>
