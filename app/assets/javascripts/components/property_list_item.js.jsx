@@ -20,6 +20,7 @@
             lat: results[0].geometry.location.lat(),
             lng: results[0].geometry.location.lng()
           };
+          
           ApiActions.getMarker(coords);
         }
       }.bind(this));

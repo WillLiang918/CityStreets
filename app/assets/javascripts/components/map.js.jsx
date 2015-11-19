@@ -12,19 +12,17 @@
       };
       this.markers = null;
       this.map = new google.maps.Map(map, mapOptions);
-      this.registerListeners();
       MarkerStore.addChangeListener(this._onChange);
     },
 
     _onChange: function () {
       this.removeMarker(this.marker);
       this.createMarker(MarkerStore.getMarker());
-    },
-
-    registerListeners: function () {
-      var that = this;
-      google.maps.event.addListener(this.map, 'idle', function() {
-      });
+      var latlng = {
+        lat: this.marker.position.lat(),
+        lng: this.marker.position.lng()
+      };
+      this.map.setCenter(latlng);
     },
 
     createMarker: function (coords) {
