@@ -1,5 +1,4 @@
 ApiActions = {
-
   receiveAllProperties: function (properties) {
     AppDispatcher.dispatch ({
       actionType: PropertyConstants.PROPERTIES_RECEIVED,
@@ -13,4 +12,11 @@ ApiActions = {
       property: property
     });
   },
+
+  getMarker: function (marker) {
+    AppDispatcher.dispatch ({
+      actionType: PropertyConstants.MARKER_RECEIVED,
+      marker: marker
+    });
+  }
 };
