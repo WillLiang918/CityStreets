@@ -14,7 +14,7 @@
  *= require_self
  */
 
-html, body, div, ul, li {
+html, body, div, ul, li, p{
   padding: 0;
   margin: 0;
   border: 0;
@@ -85,6 +85,7 @@ ul {
 }
 
 .result .property-list-item {
+  padding: 14px 0px;
   border-top: 1px solid #1a1f2c;
   height: 100%;
 }
@@ -96,7 +97,6 @@ ul {
 }
 
 .result .detail-component {
-  /*border: 3px solid pink;*/
   padding-left: 14px;
   width: 440px;
   float: right;
@@ -104,11 +104,30 @@ ul {
 
 .detail-title {
   color: #0080c6;
+  font-size: 18px;
+}
+
+.detail-price {
+  margin-top: 6px;
 }
 
 .detail-info {
-  padding-right: 3px
-}/*profile page*/
+  border-top: 1px solid #e5e5e5;
+  margin: 3px 0px;
+  padding: 3px;
+}
+
+.detail-info p{
+}
+
+.detail-info span{
+  padding: 0px 10px;
+  border-right: 1px solid #e5e5e5;
+  color: #1a1f2c;
+  font-size: 16px;
+}
+
+/*profile page*/
 
 .property-list {
   /*border: 5px solid black;*/
@@ -192,11 +211,4 @@ ul {
   background: #ccc;
   height: 500px;
 
-}
-
-.detail-info p{
-  border-top: 1px solid #e5e5e5;
-  /*display: block;
-  background: #ccc;
-  height: 200px;*/
 }

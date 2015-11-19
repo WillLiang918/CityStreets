@@ -27,7 +27,7 @@ class Property < ActiveRecord::Base
   end
 
   def get_bathrooms
-    "#{self.bathrooms} beds" unless self.bathrooms.nil?
+    "#{self.bathrooms} baths" unless self.bathrooms.nil?
   end
 
   def get_square_ft

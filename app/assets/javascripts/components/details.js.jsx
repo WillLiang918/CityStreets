@@ -15,14 +15,19 @@
     render: function () {
       return(
         <div className="detail-component">
-          <div className="detail-title">{this.state.property.address}</div>
-          <div className="details-info">
-            <p>
-              {this.state.property.price}
-            </p>
+          <div className="detail-title">
+            {this.state.property.address}
+          </div>
+          <div className="detail-price">
+            {this.state.property.price}
+          </div>
+          <div className="detail-info">
             <p>
               {this.state.property.details}
             </p>
+          </div>
+          <div className="detail-info">
+            Listed by
           </div>
         </div>
       );
