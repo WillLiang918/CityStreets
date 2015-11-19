@@ -34,6 +34,7 @@ html {
 body {
   width: 980px;
   margin: auto;
+  font-family: Source Sans Pro,Helvetica,Arial,Geneva,sans-serif;
 }
 
 ul {
@@ -53,21 +54,57 @@ ul {
 }
 
 .app-header {
-  border-bottom: 5px solid black;
+  border-bottom: 4px solid #1a1f2c;
   color: #0080c6;
 }
 
 .sign-up-sign-in {
-  border: 1px solid black;
+  display: block;
   float: right;
 }
 
-.sign-up-sign-in div{
+.sign-up-sign-in li{
+  padding: 0px 14px 0px 7px;
+}
+
+.register-link {
+  margin-left: 10px;
+  border: 1px solid #fdc435;
+  line-height: 19px;
   float: right;
 }
+
+.register {
+  display: block;
+  color: black;
+  font-size: 12px;
+  padding: 0px 10px;
+  text-align: left;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.sign-in {
+  text-decoration: none;
+  display: block;
+  font-size: 14px;
+  color: #0080c6;
+  float: left;
+}
+
+.header-list {
+  float: right;
+}
+
+.header-list > li {
+  float: left;
+}
+
 
 .app-logo {
   float: left;
+  font-size: 24px;
 }
 
 /*root page*/
@@ -77,8 +114,18 @@ ul {
   font-size: 38px;
 }
 
-.result-header-component {
-  padding: 10px;
+.result-header-options-component {
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+.refine-search-button {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px solid #0080c6;
+  color: #0080c6;
+  background-color: white;
+  text-transform: uppercase;
 }
 
 .result .Map-component {

@@ -3,10 +3,8 @@
     render: function () {
       return (
         <div className="result-header-component">
-          header
-          <div className="result-header-option-component">
-            Header Options
-          </div>
+          Search Results
+          <ResultHeaderOptions />
         </div>
       );
     }
