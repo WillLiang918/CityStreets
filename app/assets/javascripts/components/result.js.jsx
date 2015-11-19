@@ -13,10 +13,10 @@
         <div>
           <ResultHeader />
           <div>
-            <Map setsNewMap={this.handlesMap}/>
+            <PropertyList />
           </div>
           <div>
-            <PropertyList map={this.state.map}/>
+            <Map />
           </div>
         </div>
       );

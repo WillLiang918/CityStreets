@@ -30,6 +30,8 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 gem 'figaro'
+gem 'mongoid', '~> 4.0.0'
+gem 'geocoder', '1.1.5'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

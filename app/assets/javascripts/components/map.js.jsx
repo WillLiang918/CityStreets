@@ -12,23 +12,13 @@
       };
       this.markers = [];
       this.map = new google.maps.Map(map, mapOptions);
-      this.sendMap();
       this.registerListeners();
-      PropertyStore.addChangeListener(this._onChange);
-    },
-
-    _onChange: function () {
-
     },
 
     registerListeners: function () {
       var that = this;
       google.maps.event.addListener(this.map, 'idle', function() {
       });
-    },
-
-    sendMap: function () {
-      this.props.setsNewMap(this.map);
     },
 
     render: function () {

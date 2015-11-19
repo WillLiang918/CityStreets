@@ -4,14 +4,10 @@
     componentDidMount: function() {
     },
 
-    _onChange: function (callback) {
-      // sends callback to property list item
-    },
-
     render: function () {
       return(
         <div className="detail-component">
-          <div className="detail-title" onChange={this._onChange}>
+          <div className="detail-title" >
             {this.props.property.address}
           </div>
           <div className="detail-price">

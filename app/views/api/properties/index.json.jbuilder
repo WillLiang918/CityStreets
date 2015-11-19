@@ -1,8 +1,8 @@
 json.array! @properties do |property|
   json.id property.id
   json.address property.get_address
+  json.fullAddress property.get_full_address
   json.price property.get_price
-
 
   json.details do
     json.bedrooms property.get_bedrooms

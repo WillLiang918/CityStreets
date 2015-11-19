@@ -10,6 +10,10 @@ class Property < ActiveRecord::Base
     "#{self.address.street} #{self.address.unit}"
   end
 
+  def get_full_address
+    "#{get_address}, #{self.address.city}, #{self.address.state}, #{self.address.zip} "
+  end
+
   def get_price
     "$#{self.price}"
   end

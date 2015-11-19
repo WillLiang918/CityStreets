@@ -10,26 +10,19 @@
     },
 
     handleHover: function (event) {
-      var address = this.state.property.address;
+      var address = this.state.property.fullAddress;
       address = address.replace(/\s/g, '');
-
 
       var geocoder = new google.maps.Geocoder();
       geocoder.geocode({address: address}, function(results, status) {
         if (status === google.maps.GeocoderStatus.OK){
-
-          // this is the map passed from result.state.map
-
-          // this.props.map = document.getElementsByClassName("map");
-          // map.setCenter(results[0].geometry.location);
+          coords = {
+            lat: results[0].geometry.location.lat(),
+            lng: results[0].geometry.location.lng()
+          };
+          ApiActions.getMarker(coords);
         }
       }.bind(this));
-      debugger
-
-      // var url = "https://maps.googleapis.com/maps/api/geocode/json?";
-      // var key = "&key=AIzaSyAzXbe85FPmrTNrY3eKx7sH0E01BUHHBos";
-      // url = url + address + key;
-
     },
 
     render: function () {
