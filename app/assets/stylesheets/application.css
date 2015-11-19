@@ -161,9 +161,13 @@ ul {
   text-transform: uppercase;
 }
 
-.result .Map-component {
-  width: 310px;
+.result .map {
+  display: block;
+  border: 1px solid black;
+  width: 32.33%;
+  height: 500px;
   float: right;
+  /*margin-left: 10px;*/
 }
 
 .result .property-list {
@@ -294,9 +298,9 @@ ul {
   height: 300px;
 }
 
-.Map-component {
+/*.Map-component {
   display: block;
   background: #ccc;
   height: 500px;
 
-}
+}*/

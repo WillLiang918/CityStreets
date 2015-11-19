@@ -7,8 +7,7 @@
           <div>
             <PropertyList />
           </div>
-          <div className="Map-component">
-            Map
+          <div>
             <Map />
           </div>
         </div>
