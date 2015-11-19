@@ -182,6 +182,10 @@ ul {
   height: 100%;
 }
 
+.result .property-list-item:hover {
+  background-color: red; 
+}
+
 .result .property-image {
   border: 3px solid blue;
   width: 165px;
