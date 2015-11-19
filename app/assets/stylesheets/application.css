@@ -137,7 +137,7 @@ ul {
   width: 464px;
 }
 
-.search-row label, input {
+.search-row input, .search-row label {
   display: block;
   float: left;
 }
