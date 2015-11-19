@@ -3,6 +3,7 @@
     render: function () {
       return (
         <div>
+          <ResultHeader />
           <div>
             <PropertyList />
           </div>
