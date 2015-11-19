@@ -14,12 +14,16 @@
       ApiUtil.fetchProperties();
     },
 
+    handleHover: function () {
+      debugger
+    },
+
     render: function () {
       return (
         <ul className="property-list group">
           {this.state.properties.map( function (property) {
             return (
-              <PropertyListItem id={property.id} key={property.id} />
+              <PropertyListItem  handleHover={this.handleHover} id={property.id} key={property.id} />
             );
           })}
         </ul>

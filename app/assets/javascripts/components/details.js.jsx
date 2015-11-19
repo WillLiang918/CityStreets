@@ -1,29 +1,25 @@
 (function(root){
 
   root.Detail = React.createClass({
-    getStateFromStore: function () {
-      return { property: PropertyStore.find(parseInt(this.props.id))};
-    },
-
-    getInitialState: function () {
-      return this.getStateFromStore();
-    },
-
     componentDidMount: function() {
+    },
+
+    _onChange: function (callback) {
+      // sends callback to property list item
     },
 
     render: function () {
       return(
         <div className="detail-component">
-          <div className="detail-title">
-            {this.state.property.address}
+          <div className="detail-title" onChange={this._onChange}>
+            {this.props.property.address}
           </div>
           <div className="detail-price">
-            {this.state.property.price}
+            {this.props.property.price}
           </div>
           <div className="detail-info">
             <p>
-              {this.state.property.details}
+              {this.props.property.details}
             </p>
           </div>
           <div className="detail-info">
