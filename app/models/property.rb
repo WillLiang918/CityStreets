@@ -6,13 +6,6 @@ class Property < ActiveRecord::Base
   has_one :address, class_name: "Address", foreign_key: :property_id
   has_many :photos, class_name: "Photo", foreign_key: :property_id
 
-  def get_address
-    "#{self.address.street} #{self.address.unit}"
-  end
-
-  def get_full_address
-    "#{get_address}, #{self.address.city}, #{self.address.state}, #{self.address.zip} "
-  end
 
   def get_price
     "$#{self.price}"

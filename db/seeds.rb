@@ -15,6 +15,13 @@ user1 = User.create!(
   password: "password"
 )
 
+property1 = Property.create!(
+  owner_user_id: 1,
+  price: 3000,
+  bathrooms: 2,
+  bedrooms: 2
+)
+
 address1 = Address.create!(
   property_id: 1,
   street: "959 First Avenue",
@@ -24,11 +31,10 @@ address1 = Address.create!(
   zip: 10022
 )
 
-property1 = Property.create!(
+property2 = Property.create!(
   owner_user_id: 1,
-  price: 3000,
-  bathrooms: 2,
-  bedrooms: 2
+  price: 6000,
+  bathrooms: 2
 )
 
 address2 = Address.create!(
@@ -40,10 +46,9 @@ address2 = Address.create!(
   zip: 11211
 )
 
-property2 = Property.create!(
+property3 = Property.create!(
   owner_user_id: 1,
-  price: 6000,
-  bathrooms: 2
+  price: 6000
 )
 
 address3 = Address.create!(
@@ -55,9 +60,10 @@ address3 = Address.create!(
   zip: 10005
 )
 
-property3 = Property.create!(
+property4 = Property.create!(
   owner_user_id: 1,
-  price: 6000
+  price: 5,
+  square_ft: 2114
 )
 
 address4 = Address.create!(
@@ -67,12 +73,6 @@ address4 = Address.create!(
   city: "New York City",
   state: "New York",
   zip: 10038
-)
-
-property4 = Property.create!(
-  owner_user_id: 1,
-  price: 5,
-  square_ft: 2114
 )
 # address3 = Address.create!(
 #   property_id: 3,
