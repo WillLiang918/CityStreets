@@ -1,5 +1,5 @@
 (function(root) {
-  root.PropertyForm = React.createClass({
+  root.PhotoForm = React.createClass({
     getInitialState: function() {
       return { title: "", imageUrl: "", imageFile: null };
     },
@@ -7,7 +7,7 @@
     render: function() {
       return (
         <div>
-          <h2>New Property</h2>
+          <h2>New Photo</h2>
           <form onSubmit={this.handleSubmit}>
             <label>Title
               <input type="text" onChange={this.changeTitle} value={this.state.title} />
@@ -33,7 +33,7 @@
 
       reader.onloadend = function() {
         that.setState({ imageUrl: reader.result, imageFile: file });
-      }
+      };
 
       if (file) {
         reader.readAsDataURL(file);
@@ -49,10 +49,12 @@
       var file = this.state.imageFile;
 
       var formData = new FormData();
-      formData.append("post[title]", title);
-      formData.append("post[image]", file);
+      formData.append("photo[title]", title);
+      formData.append("photo[property_id]", 1);
+      formData.append("photo[image]", file);
+      debugger
 
-      ApiUtil.createPost(formData, this.resetForm);
+      ApiUtil.createPhoto(formData, this.resetForm);
     },
 
     resetForm: function() {

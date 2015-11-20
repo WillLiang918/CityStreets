@@ -31,6 +31,7 @@ $(function () {
   var routes = (
     <Route path="/" component={App}>
       <IndexRoute component={SearchForm}/>
+      <Route path="photo" component={PhotoForm} />
       <Route path="result" component={ResultContainer} />
     </Route>
   );

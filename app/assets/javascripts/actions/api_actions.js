@@ -18,5 +18,13 @@ ApiActions = {
       actionType: PropertyConstants.MARKER_RECEIVED,
       marker: marker
     });
+  },
+
+  receivePhoto: function(photo) {
+    AppDispatcher.dispatch({
+      actionType: PropertyConstants.RECEIVE_PHOTO,
+      photo: photo
+    });
   }
+
 };
