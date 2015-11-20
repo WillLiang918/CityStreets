@@ -14,6 +14,10 @@
       ApiUtil.fetchProperties();
     },
 
+    componentWillUnmount: function () {
+      PropertyStore.removeChangeListener(this._onChange);
+    },
+
     handleHover: function () {
     },
 

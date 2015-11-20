@@ -26,7 +26,7 @@
     },
 
     removeChangeListener: function (callback) {
-      this.removeListner(CHANGE_EVENT, callback);
+      this.removeListener(CHANGE_EVENT, callback);
     },
 
     render: function () {
