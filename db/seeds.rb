@@ -74,16 +74,3 @@ address4 = Address.create!(
   state: "New York",
   zip: 10038
 )
-# address3 = Address.create!(
-#   property_id: 3,
-#   street: "no streets",
-#   unit: "unit 1 billion",
-#   city: "NYZ",
-#   state: "NEW YORK",
-#   zip: 11111
-# )
-#
-# property3 = Property.create!(
-#   owner_user_id: 1,
-#   price: 1000
-# )

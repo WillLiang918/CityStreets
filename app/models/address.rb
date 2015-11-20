@@ -17,4 +17,8 @@ class Address < ActiveRecord::Base
     "#{get_address}, #{self.city}, #{self.state}, #{self.zip} "
   end
 
+  def get_lnglat
+    { lat: self.latitude, lng: self.longitude }
+  end
+
 end

@@ -10,20 +10,7 @@
     },
 
     handleHover: function (event) {
-      var address = this.state.property.fullAddress;
-      address = address.replace(/\s/g, '');
-
-      var geocoder = new google.maps.Geocoder();
-      geocoder.geocode({address: address}, function(results, status) {
-        if (status === google.maps.GeocoderStatus.OK){
-          coords = {
-            lat: results[0].geometry.location.lat(),
-            lng: results[0].geometry.location.lng()
-          };
-
-          ApiActions.getMarker(coords);
-        }
-      }.bind(this));
+      ApiActions.getMarker(this.state.property.latlng);
     },
 
     render: function () {

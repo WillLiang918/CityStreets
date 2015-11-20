@@ -29,7 +29,6 @@
         case PropertyConstants.MARKER_RECEIVED:
           resetMarker(payload.marker);
           MarkerStore.emit(CHANGE_EVENT);
-          console.log(MarkerStore.getMarker());
           break;
       }
     })

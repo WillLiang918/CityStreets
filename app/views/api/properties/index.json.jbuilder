@@ -2,6 +2,7 @@ json.array! @properties do |property|
   json.id property.id
   json.address property.address.get_address
   json.fullAddress property.address.get_full_address
+  json.latlng property.address.get_lnglat
   json.price property.get_price
 
   json.details do
