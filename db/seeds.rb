@@ -22,6 +22,23 @@ property1 = Property.create!(
   bedrooms: 2
 )
 
+property2 = Property.create!(
+  owner_user_id: 1,
+  price: 6000,
+  bathrooms: 2
+)
+
+property3 = Property.create!(
+  owner_user_id: 1,
+  price: 6000
+)
+
+property4 = Property.create!(
+  owner_user_id: 1,
+  price: 5,
+  square_ft: 2114
+)
+
 address1 = Address.create!(
   property_id: 1,
   street: "959 First Avenue",
@@ -29,12 +46,6 @@ address1 = Address.create!(
   city: "New York City",
   state: "New York",
   zip: 10022
-)
-
-property2 = Property.create!(
-  owner_user_id: 1,
-  price: 6000,
-  bathrooms: 2
 )
 
 address2 = Address.create!(
@@ -46,11 +57,6 @@ address2 = Address.create!(
   zip: 11211
 )
 
-property3 = Property.create!(
-  owner_user_id: 1,
-  price: 6000
-)
-
 address3 = Address.create!(
   property_id: 3,
   street: "15 Brpad Street",
@@ -58,12 +64,6 @@ address3 = Address.create!(
   city: "New York City",
   state: "New York",
   zip: 10005
-)
-
-property4 = Property.create!(
-  owner_user_id: 1,
-  price: 5,
-  square_ft: 2114
 )
 
 address4 = Address.create!(
@@ -74,3 +74,14 @@ address4 = Address.create!(
   state: "New York",
   zip: 10038
 )
+
+photo1 = Photo.create!(
+  property_id: 1,
+  
+
+)
+
+# photo1 = property1.photos.new()
+photo2 = property2.photos.new()
+photo3 = property3.photos.new()
+photo4 = property4.photos.new()
