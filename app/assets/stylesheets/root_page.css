@@ -1,0 +1,55 @@
+.search-form {
+  font-size: 14px;
+  width: 640px;
+}
+
+.search-form input {
+  color: #1a1f2c;
+  height: 39px;
+}
+
+.search-location-container {
+  margin: 0px 5px;
+}
+
+.search-location-container > * {
+  width: 500px;
+}
+
+.search-location {
+  display: block;
+}
+
+.search-location > * {
+  width: 464px;
+}
+
+.search-row > * {
+  display: block;
+  float: left;
+}
+
+.search-row select {
+  height: 45px;
+  width: 130px;
+  border: 1px solid #1a1f2c;
+}
+
+.search-price {
+  width: 300px;
+  display: block;
+}
+
+.search-bedrooms {
+  display: block;
+  width: 140px;
+}
+
+.search-bathrooms {
+  display: block;
+  width: 150px;
+}
+
+.search-button {
+  float: right;
+}

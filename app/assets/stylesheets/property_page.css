@@ -1,0 +1,16 @@
+.property-page {
+  margin: 20px 0px;
+}
+
+.property-page .detail-component {
+  width: 39%;
+  float: right;
+  border: 1px solid black;
+}
+
+.property-page .slide-show {
+  width: 55%;
+  float: left;
+  height: 400px;
+  border: 1px solid black;
+}
