@@ -1,5 +1,6 @@
 (function(root){
   root.SearchForm = React.createClass ({
+
     handleSubmit: function (event) {
       event.preventDefault();
       this.props.history.pushState(null, "result");

@@ -1,5 +1,5 @@
 (function (root) {
-  var ListItemPhoto = root.ListItemPhoto = React.createClass ({
+  root.ListItemPhoto = React.createClass ({
     componentDidMount: function () {
       ApiUtil.fetchPhotos(this.props.property.id);
     },

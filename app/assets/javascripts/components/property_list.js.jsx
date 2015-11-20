@@ -18,11 +18,16 @@
     },
 
     render: function () {
+      var that = this;
       return (
         <ul className="property-list group">
-          {this.state.properties.map( function (property) {
+          {that.state.properties.map( function (property) {
             return (
-              <PropertyListItem handleHover={this.handleHover} id={property.id} key={property.id} />
+              <PropertyListItem
+                history={that.props.history}
+                handleHover={that.handleHover}
+                id={property.id}
+                key={property.id} />
             );
           })}
         </ul>

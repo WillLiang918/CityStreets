@@ -13,9 +13,17 @@
       ApiActions.getMarker(this.state.property.latlng);
     },
 
+    handleClick: function (event) {
+      event.preventDefault();
+      this.props.history.pushState(null, "properties/" + this.state.property.id);
+    },
+
     render: function () {
         return (
-          <div className="property-list-item group" onMouseEnter={this.handleHover}>
+          <div
+            className="property-list-item group"
+            onMouseEnter={this.handleHover}
+            onClick={this.handleClick}>
             <div className="property-image">
               <ListItemPhoto property={this.state.property} />
             </div>

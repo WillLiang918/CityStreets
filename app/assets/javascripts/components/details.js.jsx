@@ -1,6 +1,6 @@
 (function(root){
 
-  root.Detail = React.createClass({
+  var Detail = root.Detail = React.createClass({
     componentDidMount: function() {
     },
 
