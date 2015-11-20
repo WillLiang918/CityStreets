@@ -4,32 +4,39 @@
       return { image: "" };
     },
 
-    componentWillMount: function () {
-      propertyId = this.props.property.id;
-      ApiUtil.fetchPhotos(propertyId);
-      this.findPhotos(propertyId);
-    },
+    // componentDidMount: function () {
+    //   propertyId = this.props.property.id;
+    //   ApiUtil.fetchPhotos(propertyId);
+    //   this.findPhotos(propertyId);
+    // },
+    //
+    // findPhotos: function (id) {
+    //   var photo = PhotoStore.find(id)[0];
+    //   if (typeof photo != "undefined") {
+    //     this.setState({ image: photo.image_url});
+    //   }
+    //   console.log(this.state);
+    // },
 
-    findPhotos: function (id) {
+    _getPhotos: function () {
+      var id = this.props.property.id;
       var photo = PhotoStore.find(id)[0];
       if (typeof photo != "undefined") {
         this.setState({ image: photo.image_url});
       }
     },
 
+    componentDidMount: function () {
+      this._getPhotos();
+      PhotoStore.addChangeListener(this._getPhotos);
+      ApiUtil.fetchProperties();
+    },
+
+    componentWillUnmount: function () {
+      PropertyStore.removeChangeListener(this._getPhotos);
+    },
+
     render: function () {
-      // var image = function () {
-      //   if (this.photo.length > 0 ) {
-      //     return <img src={this.photo.image_url} />;
-      //   }
-      // };
-      //
-      // var test = function () {
-      //   debugger
-      //   image = PhotoStore.find(1)[0];
-      // };
-
-
       return (
         <div>
           <img className="normal-image" src={this.state.image} />

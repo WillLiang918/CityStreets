@@ -78,8 +78,17 @@ address4 = Address.create!(
 photo1 = Photo.create!(
   property_id: 1,
 )
-photo2 = Photo.create!(
+photo11 = Photo.create!(
   property_id: 1,
+)
+photo2 = Photo.create!(
+  property_id: 2,
+)
+photo3 = Photo.create!(
+  property_id: 3,
+)
+photo4 = Photo.create!(
+  property_id: 4,
 )
 
 
