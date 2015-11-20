@@ -77,3 +77,8 @@
   color: #1a1f2c;
   font-size: 16px;
 }
+
+.normal-image {
+  width: auto;
+  max-width: 160px;
+}

@@ -31,4 +31,8 @@ class Property < ActiveRecord::Base
     "#{self.square_ft} ft²" unless self.square_ft.nil?
   end
 
+  def get_photos
+    self.photos.map { |photo| photo.image.url }
+  end
+
 end

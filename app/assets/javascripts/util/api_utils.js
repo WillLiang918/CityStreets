@@ -24,7 +24,7 @@ ApiUtil = {
     });
   },
 
-  fetchPhotos: function(property_id) {
+  fetchPhotos: function(properties_id) {
     $.ajax({
       url: '/api/photos',
       type: 'GET',

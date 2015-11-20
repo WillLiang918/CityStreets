@@ -77,9 +77,11 @@ address4 = Address.create!(
 
 photo1 = Photo.create!(
   property_id: 1,
-  
-
 )
+photo2 = Photo.create!(
+  property_id: 1,
+)
+
 
 # photo1 = property1.photos.new()
 photo2 = property2.photos.new()

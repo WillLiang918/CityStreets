@@ -2,7 +2,10 @@
   root.PropertyList = React.createClass({
 
     getInitialState: function () {
-      return { properties: PropertyStore.all() };
+      return {
+        properties: PropertyStore.all(),
+        photos: PhotoStore.all()
+      };
     },
 
     _onChange: function () {
@@ -11,16 +14,19 @@
 
     componentDidMount: function () {
       PropertyStore.addChangeListener(this._onChange);
+      PhotoStore.addChangeListener(this._onChange);
       ApiUtil.fetchProperties();
+      ApiUtil.fetchPhotos();
     },
 
     componentWillUnmount: function () {
       PropertyStore.removeChangeListener(this._onChange);
+      PhotoStore.removeChangeListener(this._onChange);
     },
 
     handleHover: function () {
     },
-
+    
     render: function () {
       var that = this;
       return (
