@@ -52,7 +52,6 @@
       formData.append("photo[title]", title);
       formData.append("photo[property_id]", 1);
       formData.append("photo[image]", file);
-      debugger
 
       ApiUtil.createPhoto(formData, this.resetForm);
     },

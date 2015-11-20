@@ -17,7 +17,7 @@
         return (
           <div className="property-list-item group" onMouseEnter={this.handleHover}>
             <div className="property-image">
-              <img>{this.state.property.photos}</img>
+              <ListItemPhoto property={this.state.property} />
             </div>
             <div>
               <Detail id={this.props.id} property={this.state.property}/>

@@ -25,6 +25,13 @@ ApiActions = {
       actionType: PropertyConstants.RECEIVE_PHOTO,
       photo: photo
     });
+  },
+
+  receivePhotos: function(photos) {
+    AppDispatcher.dispatch({
+      actionType: PropertyConstants.RECEIVE_PHOTOS,
+      photos: photos
+    });
   }
 
 };
