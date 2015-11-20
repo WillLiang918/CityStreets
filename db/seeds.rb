@@ -90,9 +90,3 @@ photo3 = Photo.create!(
 photo4 = Photo.create!(
   property_id: 4,
 )
-
-
-# photo1 = property1.photos.new()
-photo2 = property2.photos.new()
-photo3 = property3.photos.new()
-photo4 = property4.photos.new()

@@ -13,7 +13,6 @@
     },
 
     find: function (property_id) {
-      console.log(_photos);
       var photos = [];
       _photos.map(function (p) {
         if(p.property_id === property_id) {

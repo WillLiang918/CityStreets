@@ -1,7 +1,11 @@
 class Api::PhotosController < ApplicationController
 
-  def index
-    @photos = Photo.order(created_at: :desc).all
+  def index (filter = nil)
+    if !filter
+      @photos = Photo.order(created_at: :desc).all
+    else
+      
+    end
   end
 
   def create

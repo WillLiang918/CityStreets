@@ -42,7 +42,6 @@
 }
 
 .result .property-image {
-  border: 3px solid blue;
   width: 165px;
   float: left;
 }
@@ -58,7 +57,7 @@
   font-size: 18px;
 }
 
-.detail-price {
+.detail-price { 
   margin-top: 6px;
 }
 
@@ -80,5 +79,5 @@
 
 .normal-image {
   width: auto;
-  max-height: 160px;
+  max-height: 119px;
 }
