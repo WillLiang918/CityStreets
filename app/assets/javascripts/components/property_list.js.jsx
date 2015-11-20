@@ -24,6 +24,7 @@
           {that.state.properties.map( function (property) {
             return (
               <PropertyListItem
+                property={property}
                 history={that.props.history}
                 handleHover={that.handleHover}
                 id={property.id}

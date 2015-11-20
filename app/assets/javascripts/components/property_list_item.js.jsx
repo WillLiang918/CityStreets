@@ -1,21 +1,21 @@
 (function (root) {
   root.PropertyListItem = React.createClass ({
 
-    getInitialState: function () {
-      return this.getStateFromStore();
-    },
-
-    getStateFromStore: function () {
-      return { property: PropertyStore.find(parseInt(this.props.id))};
-    },
+    // getInitialState: function () {
+    //   return this.getStateFromStore();
+    // },
+    //
+    // getStateFromStore: function () {
+    //   return { property: PropertyStore.find(parseInt(this.props.id))};
+    // },
 
     handleHover: function (event) {
-      ApiActions.getMarker(this.state.property.latlng);
+      ApiActions.getMarker(this.props.property.latlng);
     },
 
     handleClick: function (event) {
       event.preventDefault();
-      this.props.history.pushState(null, "properties/" + this.state.property.id);
+      this.props.history.pushState(null, "properties/" + this.props.property.id);
     },
 
     render: function () {
@@ -25,10 +25,13 @@
             onMouseEnter={this.handleHover}
             onClick={this.handleClick}>
             <div className="property-image">
-              <ListItemPhoto property={this.state.property} />
+              <ListItemPhoto property={this.props.property} />
             </div>
             <div>
-              <Detail id={this.props.id} property={this.state.property}/>
+              <Detail
+                id={this.props.id}
+                key={this.props.id}
+                property={this.props.property}/>
             </div>
           </div>
         );

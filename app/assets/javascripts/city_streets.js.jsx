@@ -33,7 +33,7 @@ $(function () {
       <IndexRoute component={SearchForm}/>
       <Route path="photo" component={PhotoForm} />
       <Route path="result" component={Result} />
-      <Route path="property/:propertyId" component={PropertyShow} />
+      <Route path="properties/:propertyId" component={PropertyShow} />
     </Route>
   );
 
