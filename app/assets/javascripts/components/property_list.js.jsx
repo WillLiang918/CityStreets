@@ -16,7 +16,7 @@
       PropertyStore.addChangeListener(this._onChange);
       PhotoStore.addChangeListener(this._onChange);
       ApiUtil.fetchProperties();
-      ApiUtil.fetchPhotos();
+      ApiUtil.fetchPhotos(PropertyStore.getIds);
     },
 
     componentWillUnmount: function () {
@@ -26,7 +26,7 @@
 
     handleHover: function () {
     },
-    
+
     render: function () {
       var that = this;
       return (

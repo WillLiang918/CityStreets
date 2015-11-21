@@ -21,6 +21,14 @@
       return property;
     },
 
+    getIds: function () {
+      var ids = [];
+      _properties.forEach(function (p) {
+        ids.push(p.id);
+      });
+      return ids;
+    },
+
     addChangeListener: function (callback) {
       this.on(CHANGE_EVENT, callback);
     },

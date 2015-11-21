@@ -29,6 +29,7 @@ ApiUtil = {
       url: '/api/photos',
       type: 'GET',
       dataType: 'json',
+      id: properties_id,
       success: function(photos) {
         ApiActions.receivePhotos(photos);
       }

@@ -14,8 +14,7 @@
 
     componentDidMount: function () {
       PhotoStore.addChangeListener(this._getPhotos);
-      ApiUtil.fetchPhotos();
-      // this._getPhotos();
+      ApiUtil.fetchPhotos(PropertyStore.getIds);
     },
 
     componentWillUnmount: function () {

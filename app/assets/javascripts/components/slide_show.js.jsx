@@ -16,7 +16,7 @@
 
     componentDidMount: function () {
       PhotoStore.addChangeListener(this._getPhotos);
-      ApiUtil.fetchPhotos();
+      ApiUtil.fetchPhotos(PropertyStore.getIds);
       // this._getPhotos();
     },
 

@@ -1,10 +1,10 @@
 class Api::PhotosController < ApplicationController
 
-  def index (filter = nil)
-    if !filter
-      @photos = Photo.order(created_at: :desc).all
+  def index
+    if (params[:id] && params[:id].length == 1)
+      @photo = Photo.where(property_id: params[:id])
     else
-      
+      @photos = Photo.order(created_at: :desc).all
     end
   end
 
