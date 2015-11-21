@@ -26,12 +26,9 @@
       PhotoStore.removeChangeListener(this._getPhotos);
     },
 
-    // componentDidMount: function ()
-    //   ApiUtil.fetchPhotos();
-    //   propertyId = this.props.property.id;
-    //   var photos = PhotoStore.find(propertyId);
-    //   debugger
-    // },
+    handleClick: function (event) {
+      this.setState({currentPhoto: event.target.src});
+    },
 
     render: function () {
       var that = this;
@@ -39,11 +36,17 @@
       return (
         <div className="slide-show">
           <img className="selected-photo"
-               src={this.state.currentPhoto} />
+             src={this.state.currentPhoto} />
           <ul>
             {
               that.state.photos.map( function (photo) {
-                return <li><img className="thumb" src={photo.image_url}/></li>;
+                return <li key={photo.id}>
+                  <img
+                    className="thumb"
+                    onClick={that.handleClick}
+                    src={photo.image_url}
+                  />
+                </li>;
               })
             }
           </ul>
