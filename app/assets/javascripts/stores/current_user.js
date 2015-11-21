@@ -17,7 +17,7 @@
     },
 
     isSignedIn: function () {
-      return (typeof _currentUser === "undefined");
+      return ( _currentUser !== null );
     },
 
     addChangeListener: function (callback) {
@@ -33,6 +33,10 @@
 
         case PropertyConstants.CURRENT_USER_RECEIVED:
           resetCurrentUser(payload.currentUser);
+          break;
+        case PropertyConstants.CURRENT_USER_REMOVED:
+          _currentUser = null;
+          CurrentUserStore.emit(CHANGE_EVENT);
           break;
       }
     })

@@ -36,6 +36,17 @@ ApiUtil = {
     });
   },
 
+  fetchCurrentUser: function () {
+    $.ajax({
+      url: '/api/session',
+      type: 'GET',
+      dataType: 'json',
+      success: function(currentUser) {
+        ApiActions.receiveCurrentUser(currentUser);
+      }
+    });
+  },
+
   signIn: function (credentials, callback) {
     $.ajax({
       url: '/api/session',
@@ -45,6 +56,17 @@ ApiUtil = {
       success: function (currentUser) {
         ApiActions.receiveCurrentUser(currentUser);
         callback && callback(currentUser);
+      },
+    });
+  },
+
+  signOut: function () {
+    $.ajax({
+      url: '/api/session',
+      type: 'DELETE',
+      dataType: 'json',
+      success: function (currentUser) {
+        ApiActions.removeCurrentUser();
       },
     });
   }

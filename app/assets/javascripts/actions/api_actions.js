@@ -27,6 +27,12 @@ ApiActions = {
     });
   },
 
+  removeCurrentUser: function () {
+    AppDispatcher.dispatch ({
+      actionType: PropertyConstants.CURRENT_USER_REMOVED,
+    });
+  },
+
   receivePhoto: function(photo) {
     AppDispatcher.dispatch({
       actionType: PropertyConstants.RECEIVE_PHOTO,

@@ -7,38 +7,47 @@
 
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this._onChange);
+      ApiUtil.fetchCurrentUser();
     },
 
     _onChange: function () {
       this.setState({ currentUser: CurrentUserStore.currentUser() });
     },
 
+    handleSignOut: function () {
+      ApiUtil.signOut();
+    },
+
     render: function () {
 
-      var headerList = function () {
+      var headerList;
 
-        if ( typeof CurrentUserStore.currentUser !== "undefined") {
-          return (
-            <div>
-              <li className="header-list-item">My Properties</li>
-              <li className="header-list-item">Sign Out</li>
-            </div>
-          );
-        } else {
-          return (
-            <div>
-              <li className="sign-in header-list-item">Sign In</li>
-              <li className="register header-list-item">
-                "Register (It's Free)"
-              </li>
-            </div>
-          );
-        }
-      };
+      if ( this.state.currentUser !== null) {
+        headerList = (
+          <div>
+            <li className="header-list-item">My Properties</li>
+            <li className="header-list-item"
+                onClick={this.handleSignOut}>
+              Sign Out
+            </li>
+          </div>
+        );
+      } else {
+        headerList = (
+          <div>
+            <li className="sign-in header-list-item">
+              <a href="#/signin">Sign In</a>
+            </li>
+            <li className="register-link header-list-item">
+              <a className="register">{"Register (It's Free)"}</a>
+            </li>
+          </div>
+        );
+      }
 
       return (
         <ul className="header-list group">
-          { headerList() }
+          { headerList }
         </ul>
       );
     }

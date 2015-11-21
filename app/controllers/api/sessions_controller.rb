@@ -1,5 +1,14 @@
 class Api::SessionsController < ApplicationController
 
+  def show
+    if current_user
+      @user = current_user
+      render json: @user
+    else
+      render json: {}
+    end
+  end
+
   def create
     @user = User.find_by_credentials(
       params[:username],
@@ -13,5 +22,10 @@ class Api::SessionsController < ApplicationController
       render json: { errors: "Invalid username or password combination"}
     end
   end
-  
+
+  def destroy
+    sign_out
+    render json: {}
+  end
+
 end

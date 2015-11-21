@@ -17,18 +17,6 @@ $(function () {
     }
   });
 
-  // var ResultContainer = React.createClass ({
-  //   render: function () {
-  //     return (
-  //       <div>
-  //         <div className="result">
-  //           <Result />
-  //         </div>
-  //       </div>
-  //     );
-  //   }
-  // });
-
   var routes = (
     <Route path="/" component={App}>
       <IndexRoute component={SearchForm}/>

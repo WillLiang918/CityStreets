@@ -12,7 +12,11 @@ window.SignInPage = React.createClass({
       if (typeof currentUser.id !== "undefined") {
         this.history.pushState(null, "/");
       } else {
-        this.setState({errors: currentUser.errors});
+        this.setState({
+          username: "",
+          password: "",
+          errors: currentUser.errors
+        });
       }
     }.bind(this));
   },
