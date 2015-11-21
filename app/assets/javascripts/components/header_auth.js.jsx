@@ -39,7 +39,7 @@
               <a href="#/signin">Sign In</a>
             </li>
             <li className="register-link header-list-item">
-              <a className="register">{"Register (It's Free)"}</a>
+              <a href="#/signup"className="register">{"Register (It's Free)"}</a>
             </li>
           </div>
         );

@@ -3,7 +3,7 @@
     render: function () {
       return (
         <div className="app-header group">
-          <h1 className="app-logo">CityStreets</h1>
+          <a href="/" className="app-logo">CityStreets</a>
           <HeaderAuth />
         </div>
       );

@@ -60,6 +60,19 @@ ApiUtil = {
     });
   },
 
+  signUp: function (credentials, callback) {
+    $.ajax({
+      url: '/api/users',
+      type: 'POST',
+      dataType: 'json',
+      data: { user: credentials },
+      success: function (currentUser) {
+        ApiActions.receiveCurrentUser(currentUser);
+        callback && callback(currentUser);
+      },
+    });
+  },
+
   signOut: function () {
     $.ajax({
       url: '/api/session',

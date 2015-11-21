@@ -41,6 +41,10 @@ ul {
   list-style: none;
 }
 
+input {
+  border: 1px solid black;
+}
+
 .group:after {
   content: "";
   display: block;
@@ -125,10 +129,3 @@ ul {
   background: #ccc;
   height: 300px;
 }
-
-/*.Map-component {
-  display: block;
-  background: #ccc;
-  height: 500px;
-
-}*/

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     resources :properties, only: [:create, :destroy, :index, :update]
     resources :photos, only: [:create, :show, :index]
     resource :session, only: [:create, :destroy, :show]
+    resources :users, only: [:create, :show]
   end
 
   namespace :api do
