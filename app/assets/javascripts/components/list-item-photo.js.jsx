@@ -19,7 +19,7 @@
     },
 
     componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._getPhotos);
+      PhotoStore.removeChangeListener(this._getPhotos);
     },
 
     render: function () {

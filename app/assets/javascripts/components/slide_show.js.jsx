@@ -1,16 +1,16 @@
 (function (root) {
 
   var SlideShow = root.SlideShow = React.createClass ({
-
     getInitialState: function () {
-      return { image: "" };
+      return { photos: [] };
     },
 
     _getPhotos: function () {
       var id = this.props.property.id;
       var photos = PhotoStore.find(id);
-      if (typeof photo != "undefined") {
-        this.setState({ image: photo.image_url});
+      if (photos.length > 0 ) {
+        this.setState({ photos: photos});
+        debugger
       }
     },
 
@@ -21,22 +21,27 @@
     },
 
     componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._getPhotos);
+      PhotoStore.removeChangeListener(this._getPhotos);
     },
 
 
 
-    componentDidMount: function () {
-      ApiUtil.fetchPhotos();
-      propertyId = this.props.property.id;
-      var photos = PhotoStore.find(propertyId);
-      debugger
-    },
+    // componentDidMount: function () {
+    //   ApiUtil.fetchPhotos();
+    //   propertyId = this.props.property.id;
+    //   var photos = PhotoStore.find(propertyId);
+    //   debugger
+    // },
 
     render: function () {
+      var that = this;
       return (
         <div className="slide-show">
-
+        {
+          that.state.photos.map( function (photo) {
+            return <img src={photo.image_url}/>;
+          })
+        }
         </div>
       );
     }
