@@ -9,7 +9,7 @@ ApiUtil = {
     });
   },
 
-  createPhoto: function(formData, callback) {
+  createPhoto: function (formData, callback) {
     $.ajax({
       url: '/api/photos',
       type: 'POST',
@@ -24,7 +24,7 @@ ApiUtil = {
     });
   },
 
-  fetchPhotos: function(properties_id) {
+  fetchPhotos: function (properties_id) {
     $.ajax({
       url: '/api/photos',
       type: 'GET',
@@ -33,6 +33,21 @@ ApiUtil = {
       success: function(photos) {
         ApiActions.receivePhotos(photos);
       }
+    });
+  },
+
+  signIn: function (credentials, callback) {
+    debugger
+    $.ajax({
+      url: '/api/session',
+      type: 'POST',
+      dataType: 'json',
+      data: credentials,
+      success: function (currentUser) {
+        ApiActions.receiveCurrentUser(currentUser);
+        debugger
+        callback && callback(currentUser);
+      },
     });
   }
 };

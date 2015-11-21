@@ -3,6 +3,13 @@
   var _currentUser = null;
   var CHANGE_EVENT = "change";
 
+  var resetCurrentUser = function (currentUser) {
+    if (typeof currentUser.id !== "undefined") {
+      _currentUser = currentUser;
+      CurrentUserStore.emit(CHANGE_EVENT);
+    }
+  };
+
   root.CurrentUserStore = $.extend({}, EventEmitter.prototype,{
 
     currentUser: function () {
@@ -23,10 +30,9 @@
 
     dispatcherID: AppDispatcher.register( function (payload) {
       switch (payload.actionType) {
-        
+
         case PropertyConstants.CURRENT_USER_RECEIVED:
-          _currentUser = payload.currentUser;
-          CurrentUserStore.emit(CHANGE_EVENT);
+          resetCurrentUser(payload.currentUser);
           break;
       }
     })

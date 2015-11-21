@@ -33,6 +33,8 @@ $(function () {
     <Route path="/" component={App}>
       <IndexRoute component={SearchForm}/>
       <Route path="photo" component={PhotoForm} />
+      <Route path="signin" component={SignInPage} />
+      // <Route path="signup" component={PhotoForm} />
       <Route path="result" component={Result} />
       <Route path="properties/:propertyId" component={PropertyShow} />
     </Route>

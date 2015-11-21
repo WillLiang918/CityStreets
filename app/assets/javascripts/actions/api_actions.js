@@ -20,7 +20,7 @@ ApiActions = {
     });
   },
 
-  getCurrentUser: function (currentUser) {
+  receiveCurrentUser: function (currentUser) {
     AppDispatcher.dispatch ({
       actionType: PropertyConstants.CURRENT_USER_RECEIVED,
       currentUser: currentUser
