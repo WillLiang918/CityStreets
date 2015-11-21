@@ -37,7 +37,6 @@ ApiUtil = {
   },
 
   signIn: function (credentials, callback) {
-    debugger
     $.ajax({
       url: '/api/session',
       type: 'POST',

@@ -3,19 +3,17 @@ window.SignInPage = React.createClass({
   mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
 
   getInitialState: function () {
-    return { username: "", password: "" };
+    return { username: "", password: "", errors: "" };
   },
 
   handleSubmit: function (e) {
     e.preventDefault();
-    debugger
     ApiUtil.signIn(this.state, function (currentUser) {
-      debugger
       if (typeof currentUser.id !== "undefined") {
         debugger
         this.history.pushState(null, "/");
       } else {
-        debugger
+        this.setState({errors: currentUser.errors});
       }
     }.bind(this));
   },
@@ -23,6 +21,7 @@ window.SignInPage = React.createClass({
   render: function () {
     return (
       <div>
+        <p valueLink={this.state.errors}>{this.state.errors}</p>
         <h1>Sign In</h1>
         <form onSubmit={ this.handleSubmit }>
         <label>
