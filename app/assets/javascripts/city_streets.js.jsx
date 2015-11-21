@@ -10,23 +10,24 @@ $(function () {
     render: function () {
       return (
         <div>
+          <MainHeader />
           {this.props.children}
         </div>
       );
     }
   });
 
-  var ResultContainer = React.createClass ({
-    render: function () {
-      return (
-        <div>
-          <div className="result">
-            <Result />
-          </div>
-        </div>
-      );
-    }
-  });
+  // var ResultContainer = React.createClass ({
+  //   render: function () {
+  //     return (
+  //       <div>
+  //         <div className="result">
+  //           <Result />
+  //         </div>
+  //       </div>
+  //     );
+  //   }
+  // });
 
   var routes = (
     <Route path="/" component={App}>

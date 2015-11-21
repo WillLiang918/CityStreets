@@ -20,6 +20,13 @@ ApiActions = {
     });
   },
 
+  getCurrentUser: function (currentUser) {
+    AppDispatcher.dispatch ({
+      actionType: PropertyConstants.CURRENT_USER_RECEIVED,
+      currentUser: currentUser
+    });
+  },
+
   receivePhoto: function(photo) {
     AppDispatcher.dispatch({
       actionType: PropertyConstants.RECEIVE_PHOTO,

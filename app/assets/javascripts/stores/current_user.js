@@ -1,12 +1,16 @@
 (function (root) {
 
-  var _marker = null;
+  var _currentUser = null;
   var CHANGE_EVENT = "change";
 
-  root.MarkerStore = $.extend({}, EventEmitter.prototype,{
+  root.CurrentUserStore = $.extend({}, EventEmitter.prototype,{
 
-    getMarker: function () {
-      return _marker;
+    currentUser: function () {
+      return _currentUser;
+    },
+
+    isSignedIn: function () {
+      return (typeof _currentUser === "undefined");
     },
 
     addChangeListener: function (callback) {
@@ -19,9 +23,10 @@
 
     dispatcherID: AppDispatcher.register( function (payload) {
       switch (payload.actionType) {
-        case PropertyConstants.MARKER_RECEIVED:
-          _marker = payload.marker;
-          MarkerStore.emit(CHANGE_EVENT);
+        
+        case PropertyConstants.CURRENT_USER_RECEIVED:
+          _currentUser = payload.currentUser;
+          CurrentUserStore.emit(CHANGE_EVENT);
           break;
       }
     })

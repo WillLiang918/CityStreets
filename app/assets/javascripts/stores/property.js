@@ -3,11 +3,11 @@
   var _properties = [];
   var CHANGE_EVENT = "change";
 
-  var resetProperties = function (properties) {
-    _properties = properties.slice(0);
-  };
+  // var resetProperties = function (properties) {
+  //   _properties = properties.slice(0);
+  // };
 
-  var PropertyStore = root.PropertyStore = $.extend({}, EventEmitter.prototype,{
+  root.PropertyStore = $.extend({}, EventEmitter.prototype,{
     all: function () {
       return _properties.slice(0);
     },
@@ -37,14 +37,11 @@
       this.removeListener(CHANGE_EVENT, callback);
     },
 
-    render: function () {
-
-    },
-
     dispatcherID: AppDispatcher.register( function (payload) {
       switch (payload.actionType) {
         case PropertyConstants.PROPERTIES_RECEIVED:
-          resetProperties(payload.properties);
+          _properties = payload.properties.slice(0);
+          // resetProperties(payload.properties);
           PropertyStore.emit(CHANGE_EVENT);
           break;
         case PropertyConstants.PROPERTY_RECEIVED:
