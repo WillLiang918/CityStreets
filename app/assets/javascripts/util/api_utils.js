@@ -44,7 +44,6 @@ ApiUtil = {
       data: credentials,
       success: function (currentUser) {
         ApiActions.receiveCurrentUser(currentUser);
-        debugger
         callback && callback(currentUser);
       },
     });

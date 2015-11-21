@@ -10,7 +10,6 @@ window.SignInPage = React.createClass({
     e.preventDefault();
     ApiUtil.signIn(this.state, function (currentUser) {
       if (typeof currentUser.id !== "undefined") {
-        debugger
         this.history.pushState(null, "/");
       } else {
         this.setState({errors: currentUser.errors});
