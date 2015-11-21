@@ -36,9 +36,9 @@
   height: 100%;
 }
 
-.result .property-list-item:hover {
+/*.result .property-list-item:hover {
   background-color: red;
-}
+}*/
 
 .result .property-image {
   width: 165px;
@@ -51,22 +51,22 @@
   float: right;
 }
 
-.detail-title {
+.result .detail-title {
   color: #0080c6;
   font-size: 18px;
 }
 
-.detail-price {
+.result .detail-price {
   margin-top: 6px;
 }
 
-.detail-info {
+.result .detail-info {
   border-top: 1px solid #e5e5e5;
   margin: 3px 0px;
   padding: 3px;
 }
 
-.detail-info p{
+.result .detail-info p{
 }
 
 .detail-info span{

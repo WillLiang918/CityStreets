@@ -44,7 +44,7 @@
       // }
 
       return (
-        <div className="property-page">
+        <div className="property-page group">
           <SlideShow property={this.state.property} />
           <Detail property={this.state.property} />
         </div>

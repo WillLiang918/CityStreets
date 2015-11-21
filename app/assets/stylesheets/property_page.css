@@ -8,6 +8,35 @@
   float: right;
 }
 
+.property-page .detail-title {
+  color: #1a1f2c;;
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 12px;
+}
+
+.property-page .detail-price {
+  margin: 3px 0px 8px 0px;
+  font-size: 27px;
+  font-weight: bold;
+}
+
+.detail-info {
+  border-top: 1px solid #e5e5e5;
+  margin: 3px 0px;
+  padding: 3px;
+}
+
+.detail-info p{
+}
+
+.detail-info span{
+  padding: 0px 10px;
+  border-right: 1px solid #e5e5e5;
+  color: #1a1f2c;
+  font-size: 16px;
+}
+
 .property-page .slide-show {
   box-sizing: border-box;
   width: 60%;
