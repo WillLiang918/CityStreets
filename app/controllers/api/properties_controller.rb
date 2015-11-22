@@ -8,16 +8,16 @@ class Api::PropertiesController < ApplicationController
 
     @properties = Property.all
     if minPrice.present? && minPrice != "Any"
-      @properties = @properties.where("price > ?", minPrice )
+      @properties = @properties.where("price >= ?", minPrice )
     end
     if maxPrice.present? && maxPrice != "Any"
-      @properties = @properties.where("price < ?", maxPrice )
+      @properties = @properties.where("price <= ?", maxPrice )
     end
     if bedrooms.present? && bedrooms != "Any"
-      @properties = @properties.where("bedrooms > ?", bedrooms )
+      @properties = @properties.where("bedrooms >= ?", bedrooms )
     end
     if bathrooms.present? && bathrooms != "Any"
-      @properties = @properties.where("bathrooms > ?", bathrooms )
+      @properties = @properties.where("bathrooms >= ?", bathrooms )
     end
 
     @properties

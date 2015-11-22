@@ -302,8 +302,33 @@ end
 8.times do |i|
   Photo.create!(
     property_id: i + 1,
+    :image => File.open(
+      "#{Rails.root}/public/images/Sample" + rand(1..10).to_s + ".jpg", 'r'
+    )
   )
 end
+
+40.times do
+  Photo.create!(
+    property_id: rand(1..8),
+    :image => File.open(
+      "#{Rails.root}/public/images/Sample" + rand(1..10).to_s + ".jpg", 'r'
+    )
+  )
+end
+
+
+# file = File.open("#{Rails.root}/public/images/nyc#{Random.rand(21) + 1}.jpg")
+#
+# File.open("#{Rails.root}/public/images/Sample1.jpg")
+#
+# File.open("#{Rails.root}/public/images/Sample1.jpg", 'r')
+#
+# x = Photo.create!(:image => File.open("#{Rails.root}/public/images/Sample1.jpg", 'r'))
+#
+# Photo.each do |photo|
+#   photo.image.url "Sample" + rand(1..11).to_s + ".jpg"
+# end
 
 # property1 = Property.create!(
 #   owner_user_id: 1,

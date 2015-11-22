@@ -54,6 +54,12 @@
                   type="text">
                   <option>Any</option>
                   <option>1000</option>
+                  <option>2000</option>
+                  <option>3000</option>
+                  <option>4000</option>
+                  <option>5000</option>
+                  <option>6000</option>
+                  <option>7000</option>
                 </select>
                 <label>to</label>
                 <select
@@ -61,6 +67,12 @@
                   type="text">
                   <option>Any</option>
                   <option>1000</option>
+                  <option>2000</option>
+                  <option>3000</option>
+                  <option>4000</option>
+                  <option>5000</option>
+                  <option>6000</option>
+                  <option>7000</option>
                 </select>
               </div>
 
