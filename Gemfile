@@ -32,6 +32,7 @@ gem 'aws-sdk', '~> 1.6'
 gem 'figaro'
 gem 'mongoid', '~> 4.0.0'
 gem 'geocoder'
+gem 'ny_address', git: 'git://gist.github.com/1672379.git'
 
 # Use Unicorn as the app server
 # gem 'unicorn'

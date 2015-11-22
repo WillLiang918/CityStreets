@@ -14,7 +14,8 @@ class Address < ActiveRecord::Base
   end
 
   def get_full_address
-    "#{get_address}, #{self.city}, #{self.state}, #{self.zip} "
+    # "#{get_address}, #{self.city}, #{self.state}, #{self.zip} "
+    "#{self.street}, #{self.city}, #{self.state}"
   end
 
   def get_lnglat
