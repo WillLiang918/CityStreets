@@ -70,7 +70,11 @@
                 valueLink={this.linkState("bedrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1000</option>
+                  <option>1</option>
+                  <option>2</option>
+                  <option>3</option>
+                  <option>4</option>
+                  <option>5</option>
                 </select>
               </div>
 
@@ -80,7 +84,13 @@
                 valueLink={this.linkState("bathrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1000</option>
+                  <option>1</option>
+                  <option>1.5</option>
+                  <option>2</option>
+                  <option>2.5</option>
+                  <option>3</option>
+                  <option>3.5</option>
+                  <option>4</option>
                 </select>
               </div>
 
