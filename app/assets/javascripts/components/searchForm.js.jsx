@@ -1,6 +1,17 @@
 (function(root){
   root.SearchForm = React.createClass ({
 
+    mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
+
+    getInitialState: function () {
+      return {
+          location: "",
+          minPrice: 0,
+          maxPrice: null,
+          bedrooms: 0,
+          bathrooms: 0 };
+    },
+
     handleSubmit: function (event) {
       event.preventDefault();
       this.props.history.pushState(null, "result");
@@ -16,6 +27,7 @@
                 <label className="search-location">Location</label>
                 <input
                   type="text"
+                  valueLink={this.linkState("location")}
                   placeholder="Neighborhood / Address / Building / Keyword"/>
               </div>
             </div>
@@ -25,12 +37,14 @@
               <div>
                 <label className="search-price" >Price</label>
                 <select
+                valueLink={this.linkState("minPrice")}
                   type="text">
                   <option>Any</option>
                   <option>1000</option>
                 </select>
                 <label>to</label>
                 <select
+                valueLink={this.linkState("maxPrice")}
                   type="text">
                   <option>Any</option>
                   <option>1000</option>
@@ -40,6 +54,7 @@
               <div>
                 <label className="search-bedrooms">Bedrooms</label>
                 <select
+                valueLink={this.linkState("bedrooms")}
                   type="text">
                   <option>Any</option>
                   <option>1000</option>
@@ -49,6 +64,7 @@
               <div>
                 <label className="search-bathrooms">Bathrooms</label>
                 <select
+                valueLink={this.linkState("bathrooms")}
                   type="text">
                   <option>Any</option>
                   <option>1000</option>

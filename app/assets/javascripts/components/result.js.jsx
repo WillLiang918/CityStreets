@@ -11,7 +11,7 @@
     render: function () {
       return (
         <div className="result">
-          <ResultHeader />
+          <ResultHeader history={this.props.history}/>
           <div>
             <PropertyList history={this.props.history}/>
           </div>
