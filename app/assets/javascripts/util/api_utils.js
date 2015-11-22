@@ -1,8 +1,10 @@
 ApiUtil = {
   fetchProperties: function () {
+    var filter = FilterParamsStore.params();
     $.ajax ({
       url: 'api/properties',
       dataType: 'json',
+      data: filter,
       success: function (properties){
         ApiActions.receiveAllProperties(properties);
       }

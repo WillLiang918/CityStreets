@@ -6,15 +6,28 @@
     getInitialState: function () {
       return {
           location: "",
-          minPrice: 0,
+          minPrice: null,
           maxPrice: null,
-          bedrooms: 0,
-          bathrooms: 0 };
+          bedrooms: null,
+          bathrooms: null };
+    },
+
+    componentDidMount: function () {
+      FilterParamsStore.addChangeListener(this._onChange);
+      ApiUtil.fetchProperties();
     },
 
     handleSubmit: function (event) {
       event.preventDefault();
+
+      ApiActions.updateSearchParams(this.state);
+      var params = FilterParamsStore.params();
+      this.setState(params);
+      ApiUtil.fetchProperties();
       this.props.history.pushState(null, "result");
+    },
+
+    _onChange: function () {
     },
 
     render: function () {

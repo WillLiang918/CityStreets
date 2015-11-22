@@ -1,7 +1,26 @@
 class Api::PropertiesController < ApplicationController
 
   def index
+    minPrice = params[:minPrice]
+    maxPrice = params[:maxPrice]
+    bedrooms = params[:bedrooms]
+    bathrooms = params[:bathrooms]
+
     @properties = Property.all
+    if minPrice.present? && minPrice != "Any"
+      @properties = @properties.where("price > ?", minPrice )
+    end
+    if maxPrice.present? && maxPrice != "Any"
+      @properties = @properties.where("price < ?", maxPrice )
+    end
+    if bedrooms.present? && bedrooms != "Any"
+      @properties = @properties.where("bedrooms > ?", bedrooms )
+    end
+    if bathrooms.present? && bathrooms != "Any"
+      @properties = @properties.where("bathrooms > ?", bathrooms )
+    end
+
+    @properties
   end
 
   def create

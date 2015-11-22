@@ -45,6 +45,13 @@ ApiActions = {
       actionType: PropertyConstants.RECEIVE_PHOTOS,
       photos: photos
     });
+  },
+
+  updateSearchParams: function(params) {
+    AppDispatcher.dispatch({
+      actionType: FilterConstants.UPDATE_PARAMS,
+      params: params
+    });
   }
 
 };
