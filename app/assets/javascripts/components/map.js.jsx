@@ -15,6 +15,10 @@
       MarkerStore.addChangeListener(this._onChange);
     },
 
+    componentWillUnmount: function () {
+      MarkerStore.removeChangeListener(this._onChange);
+    },
+
     _onChange: function () {
       this.removeMarker(this.marker);
       this.createMarker(MarkerStore.getMarker());

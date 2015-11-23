@@ -17,6 +17,10 @@
       ApiUtil.fetchProperties();
     },
 
+    componentWillUnmount: function () {
+      // FilterParamsStore.removeChangeListener(this._onChange);
+    },
+
     handleSubmit: function (event) {
       event.preventDefault();
 

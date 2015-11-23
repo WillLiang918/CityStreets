@@ -10,6 +10,10 @@
       ApiUtil.fetchCurrentUser();
     },
 
+    componentWillUnmount: function () {
+      CurrentUserStore.removeChangeListener(this._onChange);
+    },
+
     _onChange: function () {
       this.setState({ currentUser: CurrentUserStore.currentUser() });
     },

@@ -1,6 +1,9 @@
 (function (root) {
   root.PropertyListItem = React.createClass ({
 
+    getInitialState: function () {
+      return { saved: CurrentUserStore.isSaved(this.props.property.id) };
+    },
     // getInitialState: function () {
     //   return this.getStateFromStore();
     // },
@@ -14,17 +17,15 @@
     },
 
     changeButton: function () {
-
+      debugger
+      this.setState({ saved: !this.state.saved });
     },
 
     handleClick: function (event) {
       event.preventDefault();
+      var that = this;
       if ( event.target.className == "detail-save-button") {
-        ApiUtil.createSavedProperty({
-          user_id: CurrentUserStore.currentUser().id,
-          property_id: this.props.property.id
-        }, this.changeButton);
-        debugger
+
       } else {
         this.props.history.pushState(null, "properties/" + this.props.property.id);
       }

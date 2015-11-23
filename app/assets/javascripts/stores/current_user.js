@@ -19,11 +19,13 @@
     isSaved: function (id) {
       var saved = false;
       var properties = _currentUser.saved_properties;
-      properties.forEach( function (property) {
-        if (property.property_id === id) {
-          saved = true;
-        }
-      });
+      if (properties) {
+        properties.forEach( function (property) {
+          if (property.property_id === id) {
+            saved = true;
+          }
+        });
+      }
       return saved;
     },
 
@@ -36,7 +38,7 @@
     },
 
     removeChangeListener: function (callback) {
-      this.removeListner(CHANGE_EVENT, callback);
+      this.removeListener(CHANGE_EVENT, callback);
     },
 
     dispatcherID: AppDispatcher.register( function (payload) {
