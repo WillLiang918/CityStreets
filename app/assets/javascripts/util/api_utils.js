@@ -38,16 +38,27 @@ ApiUtil = {
     });
   },
 
-  createSavedProperty: function (saved_property, callback) {
+  createSavedProperty: function (saved_property) {
     $.ajax({
       url: '/api/saved_properties',
       type: 'POST',
       dataType: 'json',
       data: { saved_property: saved_property},
       success: function(saved_property) {
+        ApiActions.receiveSingleSavedProperty(saved_property);
+      }
+    });
+  },
+
+  destroySavedProperty: function (saved_property) {
+    $.ajax({
+      url: '/api/saved_properties/' ,
+      type: 'DELETE',
+      dataType: 'json',
+      data: { saved_property: saved_property},
+      success: function(saved_property) {
         debugger
         ApiActions.receiveSingleSavedProperty(saved_property);
-        callback && callback();
       }
     });
   },

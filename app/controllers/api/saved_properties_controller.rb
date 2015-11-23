@@ -16,6 +16,14 @@ class Api::SavedPropertiesController < ApplicationController
     render json: @saved_property
   end
 
+  def destroy
+    debugger
+    @saved_property = SavedProperty.find(params[:id])
+    @saved_property.destroy
+    render json: @saved_property
+  end
+
+
   private
     def saved_property_params
       params.require(:saved_property).permit(

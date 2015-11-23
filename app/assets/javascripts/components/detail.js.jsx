@@ -29,10 +29,18 @@
         });
       }
 
-      // ApiUtil.createSavedProperty({
-      //   user_id: CurrentUserStore.currentUser().id,
-      //   property_id: that.props.property.id
-      // }, that.changeButton);
+      if (this.state.saved){
+        ApiUtil.destroySavedProperty({
+          user_id: CurrentUserStore.currentUser().id,
+          property_id: this.props.property.id
+        });
+      } else {
+        ApiUtil.createSavedProperty({
+          user_id: CurrentUserStore.currentUser().id,
+          property_id: this.props.property.id
+        });
+      }
+
       // ApiUtil.fetchCurrentUser();
     },
 
