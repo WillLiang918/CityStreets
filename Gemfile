@@ -30,7 +30,6 @@ gem 'bcrypt', '~> 3.1.7'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 gem 'figaro'
-gem 'mongoid', '~> 4.0.0'
 gem 'geocoder'
 gem 'ny_address', git: 'git://gist.github.com/1672379.git'
 

@@ -2,9 +2,10 @@ class Property < ActiveRecord::Base
 
   validates :owner_user_id, :price, presence: true
 
-  belongs_to :owners, class_name: "User", foreign_key: :owner_user_id
+  belongs_to :owner, class_name: "User", foreign_key: :owner_user_id
   has_one :address, class_name: "Address", foreign_key: :property_id
   has_many :photos, class_name: "Photo", foreign_key: :property_id
+  has_many :saved_properties, class_name: "SavedProperty", foreign_key: :property_id
 
 
   def get_price

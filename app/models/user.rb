@@ -4,6 +4,8 @@ class User < ActiveRecord::Base
   after_initialize :ensure_session_token
 
   has_many :properties, class_name: "Property", foreign_key: :owner_user_id
+  has_many :saved_properties, class_name: "SavedProperty", foreign_key: :user_id
+
   attr_reader :password
 
   def self.find_by_credentials(username, password)
