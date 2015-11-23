@@ -291,7 +291,7 @@ end
 8.times do |i|
   Address.create!(
   property_id: i + 1,
-  street: ADDRESSES.sample,
+  street: ADDRESSES.sample.split.map(&:capitalize).join(' '),
   unit: "##{rand(1..15).to_s + ("A".."N").to_a.sample}",
   city: "New York City",
   state: "New York",
@@ -303,16 +303,16 @@ end
   Photo.create!(
     property_id: i + 1,
     :image => File.open(
-      "#{Rails.root}/public/images/Sample" + rand(1..10).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..20).to_s + ".jpg", 'r'
     )
   )
 end
 
-40.times do
+30.times do
   Photo.create!(
     property_id: rand(1..8),
     :image => File.open(
-      "#{Rails.root}/public/images/Sample" + rand(1..10).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..20).to_s + ".jpg", 'r'
     )
   )
 end

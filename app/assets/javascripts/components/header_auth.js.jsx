@@ -25,7 +25,7 @@
       if ( this.state.currentUser !== null) {
         headerList = (
           <div>
-            <li className="header-list-item">My Properties</li>
+            <li className="header-list-item">Saved Properties</li>
             <li className="header-list-item"
                 onClick={this.handleSignOut}>
               Sign Out

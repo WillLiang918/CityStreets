@@ -7,9 +7,10 @@
     render: function () {
       return(
         <div className="detail-component">
-          <div className="detail-title" >
-            {this.props.property.address}
-          </div>
+          <ul className="detail-title group" >
+            <li className="detail-address">{this.props.property.address}</li>
+            <li className="detail-save-button">★ save</li>
+          </ul>
           <div className="detail-price">
             {this.props.property.price}
           </div>

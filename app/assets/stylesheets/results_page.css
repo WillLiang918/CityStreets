@@ -45,28 +45,47 @@
   float: left;
 }
 
-.result .detail-component {
+.detail-component {
   padding-left: 14px;
   width: 440px;
   float: right;
 }
 
-.result .detail-title {
+.detail-title {
   color: #0080c6;
   font-size: 18px;
 }
 
-.result .detail-price {
+.detail-address {
+  float: left;
+  display: block;
+}
+
+.detail-save-button {
+  font-weight: bold;
+  line-height: 30px;
+  color: black;
+  box-sizing: border-box;
+  float: right;
+  padding: 0px 16px;
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid #fdc435;
+  font-size: 14px;
+}
+
+.detail-save-button:hover {
+  background-color: #fdc435
+}
+
+.detail-price {
   margin-top: 6px;
 }
 
-.result .detail-info {
+.detail-info {
   border-top: 1px solid #e5e5e5;
   margin: 3px 0px;
   padding: 3px;
-}
-
-.result .detail-info p{
 }
 
 .detail-info span{

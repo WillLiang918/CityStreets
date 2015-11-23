@@ -4,6 +4,7 @@
 }
 
 .property-page .detail-component {
+  padding: 0px;
   width: 39%;
   float: right;
 }
@@ -27,9 +28,6 @@
   padding: 3px;
 }
 
-.detail-info p{
-}
-
 .detail-info span{
   padding: 0px 10px;
   border-right: 1px solid #e5e5e5;
@@ -38,10 +36,20 @@
 }
 
 .property-page .slide-show {
+  padding-right: 14px;
   box-sizing: border-box;
   width: 60%;
   float: left;
   height: 400px;
+}
+
+.property-page .detail-address {
+  float: none;
+}
+
+.property-page .detail-save-button {
+  float: left;
+  display: block;
 }
 
 .property-page .selected-photo {
