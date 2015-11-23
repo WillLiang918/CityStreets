@@ -16,6 +16,17 @@
       return _currentUser;
     },
 
+    isSaved: function (id) {
+      var saved = false;
+      var properties = _currentUser.saved_properties;
+      properties.forEach( function (property) {
+        if (property.property_id === id) {
+          saved = true;
+        }
+      });
+      return saved;
+    },
+
     isSignedIn: function () {
       return ( _currentUser !== null );
     },

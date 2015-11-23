@@ -15,12 +15,10 @@
     componentDidMount: function () {
       PropertyStore.addChangeListener(this._onChange);
       PhotoStore.addChangeListener(this._onChange);
-      // SavedPropertyStore.addChangeListener(this._onChange);
       ApiUtil.fetchProperties();
       ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
-      ApiUtil.fetchSavedProperties();
-      debugger
+      // ApiUtil.fetchSavedProperties();
     },
 
     componentWillUnmount: function () {

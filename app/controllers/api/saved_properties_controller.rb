@@ -4,7 +4,6 @@ class Api::SavedPropertiesController < ApplicationController
     @user_id = params[:user][:id]
     if @user_id.present?
       @user = User.where(id: @user_id)
-      debugger
       render json: @user.saved_properties
     end
   end

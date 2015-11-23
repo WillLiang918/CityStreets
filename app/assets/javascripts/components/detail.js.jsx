@@ -2,17 +2,25 @@
 
   var Detail = root.Detail = React.createClass({
     componentDidMount: function() {
-      ApiUtil.fetchSavedProperties();
+      //  This will throw 500 server errors
+      // ApiUtil.fetchSavedProperties();
     },
 
     render: function () {
-      // debugger
+
+      var savedButton;
+      if (CurrentUserStore.isSaved(this.props.property.id)) {
+        savedButton = <div>x</div>;
+      } else {
+        savedButton = <div>★ save</div>;
+      }
+
       return(
         <div className="detail-component">
           <ul className="detail-title group" >
             <li className="detail-address">{this.props.property.address}</li>
             <li className="detail-save-button"
-                onClick={this.handleClick}>★ save</li>
+                onClick={this.handleClick}>{savedButton}</li>
           </ul>
           <div className="detail-price">
             {this.props.property.price}
