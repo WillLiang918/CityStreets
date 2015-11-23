@@ -5,7 +5,7 @@
       return { currentUser: CurrentUserStore.currentUser() };
     },
 
-    componentDidMount: function () {
+    componentWillMount: function () {
       CurrentUserStore.addChangeListener(this._onChange);
       ApiUtil.fetchCurrentUser();
     },

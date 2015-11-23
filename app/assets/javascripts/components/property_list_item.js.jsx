@@ -13,9 +13,21 @@
       ApiActions.getMarker(this.props.property.latlng);
     },
 
+    changeButton: function () {
+
+    },
+
     handleClick: function (event) {
       event.preventDefault();
-      this.props.history.pushState(null, "properties/" + this.props.property.id);
+      if ( event.target.className == "detail-save-button") {
+        ApiUtil.createSavedProperty({
+          user_id: CurrentUserStore.currentUser().id,
+          property_id: this.props.property.id
+        }, this.changeButton);
+        debugger
+      } else {
+        this.props.history.pushState(null, "properties/" + this.props.property.id);
+      }
     },
 
     render: function () {

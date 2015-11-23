@@ -11,6 +11,20 @@ ApiUtil = {
     });
   },
 
+  fetchSavedProperties: function () {
+    var user = CurrentUserStore.currentUser();
+    debugger
+    $.ajax ({
+      url: 'api/saved_properties',
+      dataType: 'json',
+      data: { user: user },
+      success: function (properties){
+        debugger
+        ApiActions.receiveAllSavedProperties(properties);
+      }
+    });
+  },
+
   createPhoto: function (formData, callback) {
     $.ajax({
       url: '/api/photos',
@@ -21,6 +35,20 @@ ApiUtil = {
       data: formData,
       success: function(photo) {
         ApiActions.receivePhoto(photo);
+        callback && callback();
+      }
+    });
+  },
+
+  createSavedProperty: function (saved_property, callback) {
+    $.ajax({
+      url: '/api/saved_properties',
+      type: 'POST',
+      dataType: 'json',
+      data: { saved_property: saved_property},
+      success: function(saved_property) {
+        debugger
+        ApiActions.receiveSingleSavedProperty(saved_property);
         callback && callback();
       }
     });

@@ -3,10 +3,6 @@
   var _properties = [];
   var CHANGE_EVENT = "change";
 
-  // var resetProperties = function (properties) {
-  //   _properties = properties.slice(0);
-  // };
-
   root.PropertyStore = $.extend({}, EventEmitter.prototype,{
     all: function () {
       return _properties.slice(0);

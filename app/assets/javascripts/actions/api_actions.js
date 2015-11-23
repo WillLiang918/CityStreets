@@ -6,10 +6,24 @@ ApiActions = {
     });
   },
 
+  receiveAllSavedProperties: function (saved_properties) {
+    AppDispatcher.dispatch ({
+      actionType: PropertyConstants.SAVED_PROPERTIES_RECEIVED,
+      saved_properties: saved_properties
+    });
+  },
+
   receiveSingleProperty: function (property) {
     AppDispatcher.dispatch ({
       actionType: PropertyConstants.PROPERTY_RECEIVED,
       property: property
+    });
+  },
+
+  receiveSingleSavedProperty: function (saved_property) {
+    AppDispatcher.dispatch ({
+      actionType: PropertyConstants.SAVED_PROPERTY_RECEIVED,
+      saved_property: saved_property
     });
   },
 

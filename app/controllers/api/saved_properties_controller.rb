@@ -1,8 +1,12 @@
 class Api::SavedPropertiesController < ApplicationController
 
   def index
-    @user = params[:user]
-    render json: @user.saved_properties
+    @user_id = params[:user][:id]
+    if @user_id.present?
+      @user = User.where(id: @user_id)
+      debugger
+      render json: @user.saved_properties
+    end
   end
 
   def show
@@ -16,6 +20,7 @@ class Api::SavedPropertiesController < ApplicationController
   private
     def saved_property_params
       params.require(:saved_property).permit(
+        :user,
         :user_id,
         :property_id
       )
