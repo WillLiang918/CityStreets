@@ -15,6 +15,11 @@ user1 = User.create!(
   password: "password"
 )
 
+User.create!(
+  username: "demo",
+  pasword: "password"
+)
+
 BEDROOMS = [
   1, 1, 1, 1,
   2, 2, 2, 2, 2, 2, 2, 2, 2, 2,

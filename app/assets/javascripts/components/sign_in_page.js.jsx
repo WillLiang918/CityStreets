@@ -2,8 +2,23 @@ window.SignInPage = React.createClass({
 
   mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
 
+
   getInitialState: function () {
     return { username: "", password: "", errors: "" };
+  },
+
+  demoUser: function (e) {
+    ApiUtil.signIn({username: "admin", password: "password"}, function (currentUser) {
+      if (typeof currentUser.id !== "undefined") {
+        this.history.pushState(null, "/");
+      } else {
+        this.setState({
+          username: "",
+          password: "",
+          errors: currentUser.errors
+        });
+      }
+    }.bind(this));
   },
 
   handleSubmit: function (e) {
@@ -43,6 +58,8 @@ window.SignInPage = React.createClass({
 
         <button>SIGN IN</button>
         </form>
+        <a href="#/signup">Register New Account</a>
+        <div onClick={this.demoUser}>Demo User</div>
       </div>
     );
   }
