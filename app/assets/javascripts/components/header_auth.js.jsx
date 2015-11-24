@@ -5,7 +5,7 @@
       return { currentUser: CurrentUserStore.currentUser() };
     },
 
-    componentWillMount: function () {
+    componentDidMount: function () {
       CurrentUserStore.addChangeListener(this._onChange);
       ApiUtil.fetchCurrentUser();
     },
@@ -22,6 +22,10 @@
       ApiUtil.signOut();
     },
 
+    handlesSavedProps: function () {
+      debugger
+    },
+
     render: function () {
 
       var headerList;
@@ -30,7 +34,7 @@
         headerList = (
           <div>
             <li className="header-list-item">
-              <a href="#/savedLIstings">Saved Properties</a>
+              <a href="#/savedListings">Saved Properties</a>
             </li>
             <li className="header-list-item"
                 onClick={this.handleSignOut}>

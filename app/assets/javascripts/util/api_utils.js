@@ -11,13 +11,14 @@ ApiUtil = {
     });
   },
 
-  fetchSavedProperties: function () {
-    var user = CurrentUserStore.currentUser();
+  fetchSavedProperties: function (user) {
+    debugger
     $.ajax ({
       url: 'api/saved_properties',
       dataType: 'json',
       data: { user: user },
       success: function (properties){
+        debugger
         ApiActions.receiveAllSavedProperties(properties);
       }
     });

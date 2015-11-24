@@ -1,10 +1,13 @@
 class Api::SavedPropertiesController < ApplicationController
 
   def index
-    @user_id = params[:user][:id]
-    if @user_id.present?
+    @user = params[:user]
+
+    if @user.present? && @user[:id].present?
       @user = User.where(id: @user_id)
       render json: @user.saved_properties
+    else
+      render json: []
     end
   end
 

@@ -52,6 +52,7 @@
       switch (payload.actionType) {
 
         case PropertyConstants.CURRENT_USER_RECEIVED:
+        
           resetCurrentUser(payload.currentUser);
           break;
         case PropertyConstants.CURRENT_USER_REMOVED:

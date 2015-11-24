@@ -14,11 +14,13 @@
 
     componentDidMount: function () {
       PhotoStore.addChangeListener(this._getPhotos);
+      CurrentUserStore.addChangeListener(this._getPhotos);
       ApiUtil.fetchPhotos(PropertyStore.getIds);
     },
 
     componentWillUnmount: function () {
       PhotoStore.removeChangeListener(this._getPhotos);
+      CurrentUserStore.removeChangeListener(this._getPhotos);
     },
 
     render: function () {

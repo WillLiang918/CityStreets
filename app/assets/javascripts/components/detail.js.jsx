@@ -50,7 +50,6 @@
       } else {
         savedButton = <div onClick={this.save} className="detail-save-button">★ save</div>;
       }
-
       return(
         <div className="detail-component">
           <ul className="detail-title group" >

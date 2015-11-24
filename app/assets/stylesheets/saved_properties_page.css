@@ -1,0 +1,104 @@
+/*header-component {
+  font-size: 38px;
+}
+
+header-options-component {
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+.refine-search-button {
+  display: inline-block;
+  padding: 7px 13px;
+  border: 1px solid #0080c6;
+  color: #0080c6;
+  background-color: white;
+  text-transform: uppercase;
+}
+
+.map {
+  display: block;
+  border: 1px solid black;
+  width: 300px;
+  height: 310px;
+  height: 330px;
+  float: right;
+}
+
+.property-list {
+  width: 66.66%;
+  float: left;
+  height: 200px;
+  display: block;
+  border-top: 10px solid #1a1f2c;
+}
+
+.property-list-item {
+  padding: 14px 0px;
+  height: 200px;
+  display: block;
+}
+
+/*.property-list-item:hover {
+  background-color: red;
+}*/
+
+/*.property-image {
+  width: 165px;
+  float: left;
+}
+
+.detail-component {
+  padding-left: 14px;
+  width: 440px;
+  float: right;
+}
+
+.detail-title {
+  color: #0080c6;
+  font-size: 18px;
+}
+
+.detail-address {
+  float: left;
+  display: block;
+}
+
+.detail-save-button {
+  font-weight: bold;
+  line-height: 30px;
+  color: black;
+  box-sizing: border-box;
+  float: right;
+  padding: 0px 16px;
+  text-transform: uppercase;
+  position: relative;
+  border: 1px solid #fdc435;
+  font-size: 14px;
+}
+
+.detail-save-button:hover {
+  background-color: #fdc435
+}
+
+.detail-price {
+  margin-top: 6px;
+}
+
+.detail-info {
+  border-top: 1px solid #e5e5e5;
+  margin: 3px 0px;
+  padding: 3px;
+}
+
+.detail-info span{
+  padding: 0px 10px;
+  border-right: 1px solid #e5e5e5;
+  color: #1a1f2c;
+  font-size: 16px;
+}
+
+.normal-image {
+  width: auto;
+  max-height: 119px;
+}*/

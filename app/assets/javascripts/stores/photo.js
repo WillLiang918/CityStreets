@@ -15,6 +15,8 @@
     find: function (property_id) {
       var photos = [];
       _photos.map(function (p) {
+        console.log(p.property_id);
+        console.log(property_id);
         if(p.property_id === property_id) {
           photos.push(p);
         }
