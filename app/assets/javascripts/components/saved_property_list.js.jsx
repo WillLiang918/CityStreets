@@ -38,14 +38,14 @@
       var that = this;
       if (!!(CurrentUserStore.currentUser())) {
         savedlist = (<ul className="property-list group">
-          {CurrentUserStore.currentUser().saved_properties.map( function (property) {
+          {CurrentUserStore.currentUser().saved_properties.map( function (saved_property) {
             debugger
             return (
               <PropertyListItem
-                property={property}
+                property={saved_property.property}
                 history={that.props.history}
-                id={property.id}
-                key={property.id} />
+                id={saved_property.property.id}
+                key={saved_property.id} />
             );
           })}
         </ul> );

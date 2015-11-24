@@ -8,6 +8,7 @@ window.SignInPage = React.createClass({
   },
 
   demoUser: function (e) {
+    e.preventDefault();
     ApiUtil.signIn({username: "admin", password: "password"}, function (currentUser) {
       if (typeof currentUser.id !== "undefined") {
         this.history.pushState(null, "/");

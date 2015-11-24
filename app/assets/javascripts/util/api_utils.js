@@ -40,14 +40,12 @@ ApiUtil = {
   },
 
   createSavedProperty: function (saved_property) {
-    debugger
     $.ajax({
       url: '/api/saved_properties',
       type: 'POST',
       dataType: 'json',
       data: { saved_property: saved_property},
       success: function(saved_property) {
-        debugger
         ApiActions.receiveSingleSavedProperty(saved_property);
       }
     });
