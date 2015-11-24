@@ -8,17 +8,17 @@
       return { saved: !!CurrentUserStore.isSaved(this.props.property.id) };
     },
 
-    handleClick: function () {
-      if (!!CurrentUserStore.isSaved(this.props.property.id)){
-        var id = CurrentUserStore.isSaved(this.props.property.id);
-        ApiUtil.destroySavedProperty(id, this.onSuccess);
-      } else {
-        ApiUtil.createSavedProperty({
-          user_id: CurrentUserStore.currentUser().id,
-          property_id: this.props.property.id
-        });
-      }
-    },
+    // handleClick: function () {
+    //   if (!!CurrentUserStore.isSaved(this.props.property.id)){
+    //     var id = CurrentUserStore.isSaved(this.props.property.id);
+    //     ApiUtil.destroySavedProperty(id, this.onSuccess);
+    //   } else {
+    //     ApiUtil.createSavedProperty({
+    //       user_id: CurrentUserStore.currentUser().id,
+    //       property_id: this.props.property.id
+    //     });
+    //   }
+    // },
 
     unsave: function () {
       if (CurrentUserStore.currentUser()) {

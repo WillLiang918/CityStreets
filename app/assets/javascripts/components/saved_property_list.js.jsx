@@ -39,6 +39,7 @@
       if (!!(CurrentUserStore.currentUser())) {
         savedlist = (<ul className="property-list group">
           {CurrentUserStore.currentUser().saved_properties.map( function (property) {
+            debugger
             return (
               <PropertyListItem
                 property={property}

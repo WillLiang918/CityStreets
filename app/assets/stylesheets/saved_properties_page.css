@@ -1,8 +1,8 @@
-/*header-component {
+.saved-listings-header-component {
   font-size: 38px;
 }
 
-header-options-component {
+.result-header-options-component {
   padding: 10px 0px;
   font-size: 14px;
 }
@@ -16,7 +16,7 @@ header-options-component {
   text-transform: uppercase;
 }
 
-.map {
+.saved-listings .map {
   display: block;
   border: 1px solid black;
   width: 300px;
@@ -25,25 +25,18 @@ header-options-component {
   float: right;
 }
 
-.property-list {
+.saved-listings .property-list {
   width: 66.66%;
   float: left;
-  height: 200px;
-  display: block;
-  border-top: 10px solid #1a1f2c;
 }
 
-.property-list-item {
+.saved-listings .property-list-item {
   padding: 14px 0px;
-  height: 200px;
-  display: block;
+  border-top: 1px solid #1a1f2c;
+  height: 100%;
 }
 
-/*.property-list-item:hover {
-  background-color: red;
-}*/
-
-/*.property-image {
+.saved-listings .property-image {
   width: 165px;
   float: left;
 }
@@ -101,4 +94,4 @@ header-options-component {
 .normal-image {
   width: auto;
   max-height: 119px;
-}*/
+}

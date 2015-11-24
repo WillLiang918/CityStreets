@@ -17,7 +17,7 @@ user1 = User.create!(
 
 User.create!(
   username: "demo",
-  pasword: "password"
+  password: "password"
 )
 
 BEDROOMS = [
