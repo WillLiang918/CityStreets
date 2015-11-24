@@ -21,19 +21,24 @@
     },
 
     unsave: function () {
-      var id = CurrentUserStore.isSaved(this.props.property.id);
-      ApiUtil.destroySavedProperty(id);
-      ApiUtil.fetchCurrentUser();
-      this.setState({ saved: false });
+      if (CurrentUserStore.currentUser()) {
+        var id = CurrentUserStore.isSaved(this.props.property.id);
+        ApiUtil.destroySavedProperty(id);
+        ApiUtil.fetchCurrentUser();
+        this.setState({ saved: false });
+      }
     },
 
     save: function () {
-      ApiUtil.createSavedProperty({
-        user_id: CurrentUserStore.currentUser().id,
-        property_id: this.props.property.id
-      });
-      ApiUtil.fetchCurrentUser();
-      this.setState({ saved: true });
+      if (CurrentUserStore.currentUser()) {
+        ApiUtil.createSavedProperty({
+          user_id: CurrentUserStore.currentUser().id,
+          property_id: this.props.property.id
+        });
+        ApiUtil.fetchCurrentUser();
+        this.setState({ saved: true });
+      }
+      this.history.pushState(null, "/signin");
     },
 
     render: function () {
