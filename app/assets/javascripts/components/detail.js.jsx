@@ -37,8 +37,9 @@
         });
         ApiUtil.fetchCurrentUser();
         this.setState({ saved: true });
+      } else {
+        this.history.pushState(null, "/signin");
       }
-      this.history.pushState(null, "/signin");
     },
 
     render: function () {

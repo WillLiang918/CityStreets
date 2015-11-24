@@ -24,6 +24,7 @@ $(function () {
       <Route path="signin" component={SignInPage} />
       <Route path="signup" component={SignUpPage} />
       <Route path="result" component={Result} />
+      <Route path="savedListings" component={Result} />
       <Route path="properties/:propertyId" component={PropertyShow} />
     </Route>
   );
