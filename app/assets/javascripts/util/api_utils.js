@@ -50,14 +50,13 @@ ApiUtil = {
     });
   },
 
-  destroySavedProperty: function (saved_property) {
+  destroySavedProperty: function (id) {
     $.ajax({
-      url: '/api/saved_properties/' ,
+      url: '/api/saved_properties/' + id,
       type: 'DELETE',
       dataType: 'json',
-      data: { saved_property: saved_property},
+      data: { saved_property: id},
       success: function(saved_property) {
-        debugger
         ApiActions.receiveSingleSavedProperty(saved_property);
       }
     });

@@ -16,15 +16,22 @@
       return _currentUser;
     },
 
+    savePropertyId: function (property_id) {
+
+    },
+
     isSaved: function (id) {
       var saved = false;
-      var properties = _currentUser.saved_properties;
-      if (properties) {
-        properties.forEach( function (property) {
-          if (property.property_id === id) {
-            saved = true;
-          }
-        });
+      if (_currentUser) {
+        var properties = CurrentUserStore.currentUser().saved_properties;
+        if (properties) {
+          properties.forEach( function (property) {
+            if (property.property_id === id) {
+
+              saved = property.id;
+            }
+          });
+        }
       }
       return saved;
     },

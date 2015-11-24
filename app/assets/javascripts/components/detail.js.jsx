@@ -5,56 +5,51 @@
     mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
 
     getInitialState: function () {
-      return { saved: CurrentUserStore.isSaved(this.props.property.id) };
+      return { saved: !!CurrentUserStore.isSaved(this.props.property.id) };
     },
 
-    // componentDidMount: function() {
-    //   CurrentUserStore.addChangeListener(this._onChange);
-    //   //  This will throw 500 server errors
-    //   // ApiUtil.fetchSavedProperties();
-    // },
-    //
-    // componentWillUnmount: function () {
-    //   CurrentUserStore.removeChangeListener(this._onChange);
-    // },
-
     handleClick: function () {
-      if (CurrentUserStore.isSaved(this.props.property.id)) {
-        this.setState({
-          saved: false
-        });
-      } else {
-        this.setState({
-          saved: true
-        });
-      }
-
-      if (this.state.saved){
-        ApiUtil.destroySavedProperty({
-          user_id: CurrentUserStore.currentUser().id,
-          property_id: this.props.property.id
-        });
+      if (!!CurrentUserStore.isSaved(this.props.property.id)){
+        var id = CurrentUserStore.isSaved(this.props.property.id);
+        ApiUtil.destroySavedProperty(id, this.onSuccess);
       } else {
         ApiUtil.createSavedProperty({
           user_id: CurrentUserStore.currentUser().id,
           property_id: this.props.property.id
         });
       }
+    },
 
-      // ApiUtil.fetchCurrentUser();
+    unsave: function () {
+      var id = CurrentUserStore.isSaved(this.props.property.id);
+      ApiUtil.destroySavedProperty(id);
+      ApiUtil.fetchCurrentUser();
+      this.setState({ saved: false });
+    },
+
+    save: function () {
+      ApiUtil.createSavedProperty({
+        user_id: CurrentUserStore.currentUser().id,
+        property_id: this.props.property.id
+      });
+      ApiUtil.fetchCurrentUser();
+      this.setState({ saved: true });
     },
 
     render: function () {
 
-      var savedButton = this.state.saved ?
-          <div className="detail-save-button">x</div> :
-          <div className="detail-save-button">★ save</div>;
+      var savedButton;
+      if (this.state.saved) {
+        savedButton = <div onClick={this.unsave} className="detail-save-button">x</div>;
+      } else {
+        savedButton = <div onClick={this.save} className="detail-save-button">★ save</div>;
+      }
 
       return(
         <div className="detail-component">
           <ul className="detail-title group" >
             <li className="detail-address">{this.props.property.address}</li>
-            <li onClick={this.handleClick}>{savedButton}</li>
+            <li>{savedButton}</li>
           </ul>
           <div className="detail-price">
             {this.props.property.price}

@@ -17,7 +17,6 @@ class Api::SavedPropertiesController < ApplicationController
   end
 
   def destroy
-    debugger
     @saved_property = SavedProperty.find(params[:id])
     @saved_property.destroy
     render json: @saved_property
