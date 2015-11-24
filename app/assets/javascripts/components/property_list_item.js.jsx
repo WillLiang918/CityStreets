@@ -4,20 +4,12 @@
     getInitialState: function () {
       return { saved: CurrentUserStore.isSaved(this.props.property.id) };
     },
-    // getInitialState: function () {
-    //   return this.getStateFromStore();
-    // },
-    //
-    // getStateFromStore: function () {
-    //   return { property: PropertyStore.find(parseInt(this.props.id))};
-    // },
 
     handleHover: function (event) {
       ApiActions.getMarker(this.props.property.latlng);
     },
 
     changeButton: function () {
-      debugger
       this.setState({ saved: !this.state.saved });
     },
 

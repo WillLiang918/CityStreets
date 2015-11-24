@@ -18,7 +18,6 @@
       ApiUtil.fetchProperties();
       ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
-      // ApiUtil.fetchSavedProperties();
     },
 
     componentWillUnmount: function () {

@@ -34,15 +34,6 @@
     },
 
     render: function () {
-      // var propertyFound;
-      // var that = this;
-      //
-      // if (that.state.property.id == this.state.property.id ) {
-      //   propertyFound = <Detail property={that.state.property} />;
-      // } else {
-      //   propertyFound = <div></div>;
-      // }
-
       return (
         <div className="property-page group">
           <SlideShow property={this.state.property} />
