@@ -2,7 +2,7 @@
   var Detail = root.Detail = React.createClass({
 
     unsave: function () {
-      var id = this.props.isSaved(this.props.property.id);
+      var id = this.props.isSaved(this.props.id);
       console.log(id);
       ApiUtil.destroySavedProperty(id);
       this.updateSave();
@@ -12,7 +12,7 @@
       if (CurrentUserStore.currentUser()) {
         ApiUtil.createSavedProperty({
           user_id: this.props.currentUser.id,
-          property_id: this.props.property.id
+          property_id: this.props.id
         });
         this.updateSave();
       } else {

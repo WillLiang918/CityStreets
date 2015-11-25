@@ -1,8 +1,7 @@
 (function (root) {
   root.PropertyList = React.createClass({
 
-    getPhoto: function (property) {
-      var id = property.id;
+    getPhoto: function (id) {
       var photo = PhotoStore.find(id)[0];
       if (typeof photo != "undefined") {
         return photo.image_url;
@@ -18,7 +17,7 @@
               <PropertyListItem
                 currentUser={that.props.currentUser}
                 property={property}
-                photo={that.getPhoto(property)}
+                photo={that.getPhoto(property.id)}
                 history={that.props.history}
                 id={property.id}
                 key={property.id} />

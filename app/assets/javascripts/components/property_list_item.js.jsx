@@ -1,8 +1,8 @@
 (function (root) {
   root.PropertyListItem = React.createClass ({
-    
+
     getInitialState: function () {
-      return { saved: !!this.isSaved(this.props.property.id) };
+      return { saved: !!this.isSaved(this.props.id) };
     },
 
     isSaved: function (id) {
@@ -35,7 +35,8 @@
               savedId={ this.state.savedId }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
-              property={this.props.property}/>
+              property={this.props.property}
+              id={this.props.id}/>
           </div>
         </div>
       );

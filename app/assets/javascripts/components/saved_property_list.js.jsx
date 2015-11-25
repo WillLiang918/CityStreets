@@ -6,8 +6,15 @@
         properties: PropertyStore.all(),
         photos: PhotoStore.all(),
         // saved: SavedPropertyStore.all()
-        saved: ""
+        // currentUser: CurrentUserStore.currentUser()
       };
+    },
+
+    getPhoto: function (id) {
+      var photo = PhotoStore.find(id)[0];
+      if (typeof photo != "undefined") {
+        return photo.image_url;
+      }
     },
 
     // _onChange: function () {
@@ -33,22 +40,23 @@
     // },
 
     render: function () {
-
       var savedlist = "Hi";
       var that = this;
-      if (!!(CurrentUserStore.currentUser())) {
-        savedlist = (<ul className="property-list group">
-          {CurrentUserStore.currentUser().saved_properties.map( function (saved_property) {
-            return (
-              <PropertyListItem
-                property={saved_property}
-                history={that.props.history}
-                id={saved_property.property_id}
-                key={saved_property.id} />
-            );
-          })}
-        </ul> );
-      }
+        if (this.props.currentUser) {
+          savedlist = (<ul className="property-list group">
+            {this.props.currentUser.saved_properties.map( function (saved_property) {
+              return (
+                <PropertyListItem
+                  currentUser={that.props.currentUser}
+                  property={saved_property}
+                  photo={that.getPhoto(saved_property.property_id)}
+                  history={that.props.history}
+                  id={saved_property.property_id}
+                  key={saved_property.id} />
+              );
+            })}
+          </ul> );
+        }
       return (
         <div>{savedlist}</div>
       );

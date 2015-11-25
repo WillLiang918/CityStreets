@@ -1,5 +1,6 @@
 (function (root) {
   root.Result = React.createClass({
+
     getInitialState: function () {
       return {
         refineSearch: false,
@@ -22,10 +23,6 @@
       CurrentUserStore.removeChangeListener(this._updateCurrentUser);
       PropertyStore.removeChangeListener(this._updateProperties);
       PhotoStore.removeChangeListener(this._updatePhotos);
-    },
-
-    _onChange: function () {
-      this.setState({ properties: PropertyStore.all() });
     },
 
     render: function () {
