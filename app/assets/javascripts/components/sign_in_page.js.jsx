@@ -2,7 +2,6 @@ window.SignInPage = React.createClass({
 
   mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
 
-
   getInitialState: function () {
     return { username: "", password: "", errors: "" };
   },
@@ -41,7 +40,6 @@ window.SignInPage = React.createClass({
     return (
       <div>
         <p className="error" valueLink={this.state.errors}>{this.state.errors}</p>
-        <h2>Sign In</h2>
         <form onSubmit={ this.handleSubmit }>
         <label>
           Username
@@ -57,7 +55,7 @@ window.SignInPage = React.createClass({
             valueLink={this.linkState("password")} />
         </label>
 
-        <button>SIGN IN</button>
+        <button className="submit-form">SIGN IN</button>
         </form>
         <a href="#/signup">Register New Account</a>
         <div onClick={this.demoUser}>Demo User</div>

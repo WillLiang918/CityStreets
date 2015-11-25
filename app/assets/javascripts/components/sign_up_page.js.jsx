@@ -32,7 +32,6 @@ window.SignUpPage = React.createClass({
               );
           }.bind(this))}
         </ul>
-        <h2>Sign Up</h2>
         <form onSubmit={ this.handleSubmit }>
         <label>
           Username
@@ -48,7 +47,7 @@ window.SignUpPage = React.createClass({
             valueLink={this.linkState("password")} />
         </label>
 
-        <button>SIGN IN</button>
+        <button className="submit-form">Register</button>
         </form>
       </div>
     );

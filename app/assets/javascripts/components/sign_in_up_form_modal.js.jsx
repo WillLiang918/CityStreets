@@ -21,8 +21,18 @@
         <div className=".sign-in-up-modal">
           <SignModalTitle />
           <div className="sign-in-up-form-modal">
-            <div onClick={ this.handleRegister}>Register</div>
-            <div onClick={ this.handleSignIn }>Sign</div>
+            <div className="new-user-text">
+              Register for free to access all
+              CityStreets has to offer including premium
+              data and advanced features.</div>
+            <div className="modal-tabs-container group">
+              <div
+                className="register-tab"
+                onClick={ this.handleRegister}>Register</div>
+              <div
+                className="signIn-tab"
+                onClick={ this.handleSignIn }>Sign In</div>
+            </div>
             { signInUpChoice }
           </div>
         </div>

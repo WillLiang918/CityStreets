@@ -72,6 +72,38 @@
   padding: 14px 15px;
 }
 
+.modal-tabs-container {
+  text-align: center;
+  width: auto;
+  line-height: 40px;
+  font-size: 14px;
+}
+
+.modal-tabs-container > * {
+  padding: 0px 15px;
+  border: 1px solid #ccc;
+  text-transform: uppercase;
+}
+
+.register-tab {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.signIn-tab {
+  display: inline-block;
+}
+
+.submit-form {
+  border: 1px solid gold;
+}
+
+.new-user-text {
+  text-align: center;
+  font-size: 13px;
+  line-height: 1.6em:
+}
+
 .search-modal-navbar-left {
   float: left;
   display: block;
