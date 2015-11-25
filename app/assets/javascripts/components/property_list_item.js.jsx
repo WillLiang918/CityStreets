@@ -8,13 +8,13 @@
     isSaved: function (id) {
       var saved = false;
       var that = this;
-      var saved_properties = this.props.currentUser.saved_properties;
-      if (saved_properties) {
-        saved_properties.forEach( function ( saved_property ) {
-          if (saved_property.property_id === id) {
-            saved = saved_property.id;
-          }
-        });
+      var currentUser = this.props.currentUser;
+      if (currentUser && currentUser.saved_properties) {
+          currentUser.saved_properties.forEach( function ( saved_property ) {
+            if (saved_property.property_id === id) {
+              saved = saved_property.id;
+            }
+          });
       }
       return saved;
     },
@@ -37,7 +37,8 @@
               savedId={ this.state.savedId }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
-              property={this.props.property}
+              property={ this.props.property }
+              history={ this.props.history }
               id={this.props.id}/>
           </div>
         </div>
@@ -52,7 +53,7 @@
       event.preventDefault();
       var that = this;
       if ( event.target.className !== "detail-save-button") {
-        this.props.history.pushState(null, "properties/" + this.props.property.id);
+        this.props.history.pushState(null, "properties/" + this.props.id);
       }
     },
 

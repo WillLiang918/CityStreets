@@ -15,7 +15,7 @@
         });
         this.updateSave();
       } else {
-        this.history.pushState(null, "/signin");
+        this.props.history.pushState(null, "/signin");
       }
     },
 

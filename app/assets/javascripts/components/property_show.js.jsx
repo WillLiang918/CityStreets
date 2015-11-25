@@ -8,22 +8,6 @@
       return { property: property };
     },
 
-    _findPropertyById: function (id) {
-      var result;
-      PropertyStore.all().forEach( function (property) {
-        if (id == property.id) {
-          result = property;
-        }
-      }.bind(this));
-      return result;
-    },
-
-    _getState: function () {
-      var propertyId = this.props.params.propertyId;
-      var property = this._findPropertyById(propertyId);
-      this.setState({ property: property });
-    },
-
     componentDidMount: function () {
       PropertyStore.addChangeListener(this._getState);
       ApiUtil.fetchProperties();
@@ -40,6 +24,22 @@
           <Detail property={this.state.property} />
         </div>
       );
-    }
+    },
+
+    _findPropertyById: function (id) {
+      var result;
+      PropertyStore.all().forEach( function (property) {
+        if (id == property.id) {
+          result = property;
+        }
+      }.bind(this));
+      return result;
+    },
+
+    _getState: function () {
+      var propertyId = this.props.params.propertyId;
+      var property = this._findPropertyById(propertyId);
+      this.setState({ property: property });
+    },
   });
 })(this);
