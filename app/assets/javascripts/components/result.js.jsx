@@ -59,7 +59,7 @@
     },
 
     _updatePhotos: function () {
-      this.setState({ photos: PhotoStore.all(), });
+      this.setState({ photos: PhotoStore.all() });
     },
 
   });

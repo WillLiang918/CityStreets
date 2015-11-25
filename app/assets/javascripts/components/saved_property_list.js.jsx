@@ -8,13 +8,6 @@
       };
     },
 
-    getPhoto: function (id) {
-      var photo = PhotoStore.find(id)[0];
-      if (typeof photo != "undefined") {
-        return photo.image_url;
-      }
-    },
-
     render: function () {
       var savedlist = "";
       var that = this;
@@ -25,7 +18,6 @@
                 <PropertyListItem
                   currentUser={that.props.currentUser}
                   property={saved_property}
-                  photo={that.getPhoto(saved_property.property_id)}
                   history={that.props.history}
                   id={saved_property.property_id}
                   key={saved_property.id} />

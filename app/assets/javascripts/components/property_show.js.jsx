@@ -9,13 +9,28 @@
     },
 
     componentDidMount: function () {
-      PropertyStore.addChangeListener(this._getState);
+      CurrentUserStore.addChangeListener(this._updateCurrentUser);
+      PropertyStore.addChangeListener(this._updateProperties);
+      PhotoStore.addChangeListener(this._updatePhotos);
       ApiUtil.fetchProperties();
+      ApiUtil.fetchPhotos(PropertyStore.getIds);
+      ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._getState);
+      CurrentUserStore.removeChangeListener(this._updateCurrentUser);
+      PropertyStore.removeChangeListener(this._updateProperties);
+      PhotoStore.removeChangeListener(this._updatePhotos);
     },
+
+    // componentDidMount: function () {
+    //   PropertyStore.addChangeListener(this._getState);
+    //   ApiUtil.fetchProperties();
+    // },
+    //
+    // componentWillUnmount: function () {
+    //   PropertyStore.removeChangeListener(this._getState);
+    // },
 
     render: function () {
       return (
@@ -24,6 +39,21 @@
           <Detail property={this.state.property} />
         </div>
       );
+    },
+
+    _updateCurrentUser: function () {
+      this.setState({ currentUser: CurrentUserStore.currentUser() });
+    },
+
+    _updateProperties: function () {
+      // this.setState({ propertie PropertyStore.all() });
+      var propertyId = this.props.params.propertyId;
+      var property = this._findPropertyById(propertyId);
+      this.setState({ property: property });
+    },
+
+    _updatePhotos: function () {
+      this.setState({ photos: PhotoStore.all() });
     },
 
     _findPropertyById: function (id) {

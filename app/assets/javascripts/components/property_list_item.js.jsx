@@ -27,7 +27,7 @@
           onClick={ this.handleClick }>
           <div className="property-image">
             <ListItemPhoto
-              photo={ this.props.photo }
+              photo={ this.getPhoto(this.props.id) }
               saved={ this.state.saved }/>
           </div>
           <div>
@@ -54,6 +54,13 @@
       var that = this;
       if ( event.target.className !== "detail-save-button") {
         this.props.history.pushState(null, "properties/" + this.props.id);
+      }
+    },
+
+    getPhoto: function (id) {
+      var photo = PhotoStore.find(id)[0];
+      if (typeof photo != "undefined") {
+        return photo.image_url;
       }
     },
 
