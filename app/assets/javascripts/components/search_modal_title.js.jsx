@@ -4,11 +4,17 @@
     toggleRefineSearch: function () {
       this.props.toggleRefineSearch();
     },
-    
+
+    handleApply: function () {
+      this.props.handleApply();
+    },
+
     render: function () {
       return (
         <div className="search-modal-navbar group">
-          <div className="search-modal-navbar-left">
+          <div
+            className="search-modal-navbar-left"
+            onClick={ this.toggleRefineSearch }>
             Close
           </div>
           <div className="search-modal-navbar-middle">
@@ -16,7 +22,7 @@
           </div>
           <div
             className="search-modal-navbar-right"
-            onClick={ this.toggleRefineSearch }>
+            onClick={ this.handleApply }>
             Apply
           </div>
         </div>
