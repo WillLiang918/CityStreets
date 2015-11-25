@@ -37,8 +37,8 @@
     render: function () {
       return (
         <div>
-          <div>Title</div>
-          <form className="search-form group" onSubmit={this.handleSubmit}>
+          <SearchModalTitle />
+          <form className="search-form-modal group" onSubmit={this.handleSubmit}>
 
             <div className="search-row group">
               <div className="search-location-container">

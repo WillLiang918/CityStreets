@@ -26,8 +26,10 @@
     },
 
     render: function () {
+      var background = (this.state.refineSearch) ? "active" : "non-active";
       return (
         <div className="result">
+          <div className={ "modal-screen " + background }></div>
           <ResultHeader
             refineSearch={ this.state.refineSearch }
             toggleRefineSearch= { this.toggleRefineSearch }

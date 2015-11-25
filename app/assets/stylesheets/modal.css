@@ -8,15 +8,64 @@
   background: rgba(0, 0, 0, 0.7);
 }*/
 
+.active {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: rgba(0, 0, 0, 0.7);
+}
+
 .search-modal {
   position: absolute;
   z-index: 1000;
   top: 50%;
   left: 50%;
   width: 640px;
-  /*padding: 50px;*/
+  color: #1a1f2c;
   margin-left: -320px;
   transform: translateY(-50%);
   background: white;
   border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+  background-clip: padding-box;
+}
+
+.search-form-modal {
+  padding: 15px;
+}
+
+.search-modal-navbar {
+  background-color: #0080c6;
+  border-color: #0080c6;
+  border-bottom: 1px solid #e5e5e5;
+  color: white;
+  text-align: center;
+  min-height: 31px;
+}
+
+.search-modal-navbar > * {
+  padding: 14px 15px;
+}
+
+.search-modal-navbar-left {
+  float: left;
+  display: block;
+  text-transform: uppercase;
+  /*position: absolute;*/
+}
+
+.search-modal-navbar-right {
+  float: right;
+  display: block;
+  text-transform: uppercase;
+}
+
+.search-modal-navbar-middle {
+  display: inline-block;
+  font-size: 18px;
 }
