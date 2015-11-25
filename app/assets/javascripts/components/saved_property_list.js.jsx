@@ -39,12 +39,11 @@
       if (!!(CurrentUserStore.currentUser())) {
         savedlist = (<ul className="property-list group">
           {CurrentUserStore.currentUser().saved_properties.map( function (saved_property) {
-            debugger
             return (
               <PropertyListItem
-                property={saved_property.property}
+                property={saved_property}
                 history={that.props.history}
-                id={saved_property.property.id}
+                id={saved_property.property_id}
                 key={saved_property.id} />
             );
           })}

@@ -2,6 +2,7 @@
   root.Result = React.createClass({
 
     render: function () {
+      debugger
       return (
         <div className="result">
           <ResultHeader history={this.props.history}/>
