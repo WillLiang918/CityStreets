@@ -3,22 +3,25 @@
     getInitialState: function () {
       return {
         refineSearch: false,
+        currentUser: CurrentUserStore.currentUser(),
         properties: PropertyStore.all(),
         photos: PhotoStore.all()
        };
     },
 
     componentDidMount: function () {
-      PropertyStore.addChangeListener(this._onChange);
-      PhotoStore.addChangeListener(this._onChange);
+      CurrentUserStore.addChangeListener(this._updateCurrentUser);
+      PropertyStore.addChangeListener(this._updateProperties);
+      PhotoStore.addChangeListener(this._updatePhotos);
       ApiUtil.fetchProperties();
       ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._onChange);
-      PhotoStore.removeChangeListener(this._onChange);
+      CurrentUserStore.removeChangeListener(this._updateCurrentUser);
+      PropertyStore.removeChangeListener(this._updateProperties);
+      PhotoStore.removeChangeListener(this._updatePhotos);
     },
 
     _onChange: function () {
@@ -26,6 +29,7 @@
     },
 
     render: function () {
+      console.log(this.state.properties);
       return (
         <div className="result">
           <ResultHeader
@@ -34,6 +38,7 @@
             history={this.props.history}/>
           <div>
             <PropertyList
+              currentUser={this.state.currentUser}
               properties={this.state.properties}
               photos={this.state.photos}
               history={this.props.history}/>
@@ -48,5 +53,18 @@
     toggleRefineSearch: function () {
       this.setState({ refineSearch: !this.state.refineSearch });
     },
+
+    _updateCurrentUser: function () {
+      this.setState({ currentUser: CurrentUserStore.currentUser() });
+    },
+
+    _updateProperties: function () {
+      this.setState({ properties: PropertyStore.all() });
+    },
+
+    _updatePhotos: function () {
+      this.setState({ photos: PhotoStore.all(), });
+    },
+
   });
 })(this);

@@ -1,33 +1,12 @@
 (function (root) {
   root.PropertyList = React.createClass({
 
-    getInitialState: function () {
-      return {
-        // properties: PropertyStore.all(),
-        // photos: PhotoStore.all()
-        properties: this.props.properties,
-        photos: this.props.photos
-      };
-    },
-
-    // _onChange: function () {
-    //   this.setState({ properties: PropertyStore.all() });
-    // },
-
-    // componentDidMount: function () {
-    //   PropertyStore.addChangeListener(this._onChange);
-    //   PhotoStore.addChangeListener(this._onChange);
-    //   ApiUtil.fetchProperties();
-    //   ApiUtil.fetchPhotos(PropertyStore.getIds);
-    //   ApiUtil.fetchCurrentUser();
-    // },
-
-    // componentWillUnmount: function () {
-    //   PropertyStore.removeChangeListener(this._onChange);
-    //   PhotoStore.removeChangeListener(this._onChange);
-    // },
-
-    handleHover: function () {
+    getPhoto: function (property) {
+      var id = property.id;
+      var photo = PhotoStore.find(id)[0];
+      if (typeof photo != "undefined") {
+        return photo.image_url;
+      }
     },
 
     render: function () {
@@ -37,9 +16,10 @@
           {that.props.properties.map( function (property) {
             return (
               <PropertyListItem
+                currentUser={that.props.currentUser}
                 property={property}
+                photo={that.getPhoto(property)}
                 history={that.props.history}
-                handleHover={that.handleHover}
                 id={property.id}
                 key={property.id} />
             );
