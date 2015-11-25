@@ -26,7 +26,9 @@
           onMouseEnter={ this.handleHover }
           onClick={ this.handleClick }>
           <div className="property-image">
-            <ListItemPhoto photo={ this.props.photo } />
+            <ListItemPhoto
+              photo={ this.props.photo }
+              saved={ this.state.saved }/>
           </div>
           <div>
             <Detail

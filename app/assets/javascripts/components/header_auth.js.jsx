@@ -22,10 +22,6 @@
       ApiUtil.signOut();
     },
 
-    handlesSavedProps: function () {
-      debugger
-    },
-
     render: function () {
 
       var headerList;

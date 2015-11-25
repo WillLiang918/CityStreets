@@ -3,7 +3,6 @@
 
     unsave: function () {
       var id = this.props.isSaved(this.props.id);
-      console.log(id);
       ApiUtil.destroySavedProperty(id);
       this.updateSave();
     },
