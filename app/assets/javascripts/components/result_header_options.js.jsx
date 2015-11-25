@@ -4,14 +4,10 @@
       return { refineSearch: false };
     },
 
-    handleClick: function () {
-      this.setState({ refineSearch: !this.state.refineSearch });
-    },
-
     render: function () {
 
       var refineSearch;
-      if (this.state.refineSearch) {
+      if (this.props.refineSearch) {
         refineSearch = (
           <div>
             <SearchForm history={this.props.history} />
@@ -26,7 +22,7 @@
 
       return (
         <div className="result-header-options-component">
-          <a onClick={ this.handleClick } className="refine-search-button">Refine This Search</a>
+          <a onClick={ this.props.toggleRefineSearch } className="refine-search-button">Refine This Search</a>
           <div> { refineSearch }</div>
         </div>
       );
