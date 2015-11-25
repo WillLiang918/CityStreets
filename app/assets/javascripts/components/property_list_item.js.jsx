@@ -66,7 +66,12 @@
 
     updateSave: function () {
       this.setState({ saved: !this.state.saved });
+      this.updatedUser();
     },
+
+    updatedUser: function () {
+      ApiUtil.fetchCurrentUser();
+    }
 
   });
 })(this);

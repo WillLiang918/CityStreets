@@ -20,7 +20,7 @@
     },
 
     updateSave: function () {
-      ApiUtil.fetchCurrentUser();
+      // ApiUtil.fetchCurrentUser();
       this.props.updateSave();
     },
 
