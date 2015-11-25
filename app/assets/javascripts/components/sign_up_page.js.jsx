@@ -7,10 +7,13 @@ window.SignUpPage = React.createClass({
   },
 
   demoUser: function (e) {
+    var that = this;
     e.preventDefault();
     ApiUtil.signIn({username: "admin", password: "password"}, function (currentUser) {
       if (typeof currentUser.id !== "undefined") {
-        this.history.pushState(null, "/");
+        this.props.toggleAuth();
+        ApiUtil.fetchCurrentUser();
+        // this.history.pushState(null, "/");
       } else {
         this.setState({
           username: "",

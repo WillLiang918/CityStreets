@@ -5,12 +5,14 @@ window.SignInPage = React.createClass({
   getInitialState: function () {
     return { username: "", password: "", errors: "" };
   },
-  
+
   handleSubmit: function (e) {
     e.preventDefault();
     ApiUtil.signIn(this.state, function (currentUser) {
       if (typeof currentUser.id !== "undefined") {
-        this.history.pushState(null, "/");
+        this.props.toggleAuth();
+        ApiUtil.fetchCurrentUser();
+        // this.history.pushState(null, "/");
       } else {
         this.setState({
           username: "",

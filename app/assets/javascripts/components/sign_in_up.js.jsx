@@ -9,7 +9,7 @@
           <div className={ this.props.auth }>
             <SignInUpFormModal
               history={this.props.history}
-              toggleRefineSearch={ this.props.toggleAuth } />
+              toggleAuth={ this.props.toggleAuth } />
           </div>
         );
       }

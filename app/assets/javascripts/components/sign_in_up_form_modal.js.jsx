@@ -5,15 +5,16 @@
     },
 
     render: function () {
-
       var signInUpChoice;
       if ( this.state.register ) {
         signInUpChoice = (
-          <SignUpPage />
+          <SignUpPage
+            toggleAuth={ this.props.toggleAuth }/>
         );
       } else {
         signInUpChoice = (
-          <SignInPage />
+          <SignInPage
+            toggleAuth={ this.props.toggleAuth }/>
         );
       }
 
