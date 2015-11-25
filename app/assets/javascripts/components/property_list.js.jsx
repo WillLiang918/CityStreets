@@ -3,27 +3,29 @@
 
     getInitialState: function () {
       return {
-        properties: PropertyStore.all(),
-        photos: PhotoStore.all()
+        // properties: PropertyStore.all(),
+        // photos: PhotoStore.all()
+        properties: this.props.properties,
+        photos: this.props.photos
       };
     },
 
-    _onChange: function () {
-      this.setState({ properties: PropertyStore.all() });
-    },
+    // _onChange: function () {
+    //   this.setState({ properties: PropertyStore.all() });
+    // },
 
-    componentDidMount: function () {
-      PropertyStore.addChangeListener(this._onChange);
-      PhotoStore.addChangeListener(this._onChange);
-      ApiUtil.fetchProperties();
-      ApiUtil.fetchPhotos(PropertyStore.getIds);
-      ApiUtil.fetchCurrentUser();
-    },
+    // componentDidMount: function () {
+    //   PropertyStore.addChangeListener(this._onChange);
+    //   PhotoStore.addChangeListener(this._onChange);
+    //   ApiUtil.fetchProperties();
+    //   ApiUtil.fetchPhotos(PropertyStore.getIds);
+    //   ApiUtil.fetchCurrentUser();
+    // },
 
-    componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._onChange);
-      PhotoStore.removeChangeListener(this._onChange);
-    },
+    // componentWillUnmount: function () {
+    //   PropertyStore.removeChangeListener(this._onChange);
+    //   PhotoStore.removeChangeListener(this._onChange);
+    // },
 
     handleHover: function () {
     },
@@ -32,7 +34,7 @@
       var that = this;
       return (
         <ul className="property-list group">
-          {that.state.properties.map( function (property) {
+          {that.props.properties.map( function (property) {
             return (
               <PropertyListItem
                 property={property}
