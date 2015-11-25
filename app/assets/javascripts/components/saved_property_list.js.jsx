@@ -16,7 +16,7 @@
     },
 
     render: function () {
-      var savedlist = "Hi";
+      var savedlist = "";
       var that = this;
         if (this.props.currentUser) {
           savedlist = (<ul className="property-list group">

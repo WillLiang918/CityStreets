@@ -16,12 +16,21 @@
   text-transform: uppercase;
 }
 
+.map-container {
+  display: block;
+  float: right;
+  background-color: #ccc;
+  left: calc(100% / 2 + 200px );
+  width: 300px;
+  height: 310px;
+  position: fixed;
+}
+
 .result .map {
   display: block;
   border: 1px solid black;
-  width: 300px;
-  height: 310px;
-  height: 330px;
+  width: 100%;
+  height: 100%;
   float: right;
 }
 

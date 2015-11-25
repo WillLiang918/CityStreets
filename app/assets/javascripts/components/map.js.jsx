@@ -46,7 +46,9 @@
 
     render: function () {
       return (
-        <div className="map" ref="map"></div>
+        <div className="map-container">
+          <div className="map" ref="map"></div>
+        </div>
       );
     }
   });
