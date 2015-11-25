@@ -1,10 +1,10 @@
 (function (root) {
   root.ResultHeaderOptions = React.createClass({
-    getInitialState: function () {
-      return {
-        refineSearch: false,
-      };
-    },
+    // getInitialState: function () {
+    //   return {
+    //     refineSearch: false,
+    //   };
+    // },
 
     render: function () {
 

@@ -2,7 +2,10 @@
   var HeaderAuth = root.HeaderAuth = React.createClass({
 
     getInitialState: function () {
-      return { currentUser: CurrentUserStore.currentUser() };
+      return {
+        currentUser: CurrentUserStore.currentUser(),
+        auth: false
+      };
     },
 
     componentDidMount: function () {
@@ -14,18 +17,9 @@
       CurrentUserStore.removeChangeListener(this._onChange);
     },
 
-    _onChange: function () {
-      this.setState({ currentUser: CurrentUserStore.currentUser() });
-    },
-
-    handleSignOut: function () {
-      ApiUtil.signOut();
-    },
-
     render: function () {
-
+      var background = (this.state.auth) ? "active" : "non-active";
       var headerList;
-
       if ( this.state.currentUser !== null) {
         headerList = (
           <div>
@@ -44,6 +38,11 @@
             <li className="sign-in header-list-item">
               <a href="#/signin">Sign In</a>
             </li>
+            <li>
+              <SignInUp
+                toggleAuth={ this.toggleAuth }
+                auth={ this.state.auth } />
+            </li>
             <li className="register-link header-list-item">
               <a href="#/signup"className="register">{"Register (It's Free)"}</a>
             </li>
@@ -53,9 +52,30 @@
 
       return (
         <ul className="header-list group">
+          <div
+            onClick={ this.exitModal }
+            className={ "modal-screen " + background }>
+          </div>
           { headerList }
         </ul>
       );
-    }
+    },
+
+    _onChange: function () {
+      this.setState({ currentUser: CurrentUserStore.currentUser() });
+    },
+
+    handleSignOut: function () {
+      ApiUtil.signOut();
+    },
+
+    exitModal: function () {
+      this.setState({ auth: false });
+    },
+
+    toggleAuth: function () {
+      this.setState({ auth: !this.state.auth });
+    },
+
   });
 })(this);

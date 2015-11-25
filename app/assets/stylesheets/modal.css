@@ -25,11 +25,41 @@
   background-clip: padding-box;
 }
 
+.sign-in-up-modal {
+  position: absolute;
+  z-index: 1000;
+  top: 50%;
+  left: 50%;
+  width: 350px;
+  color: #1a1f2c;
+  margin-left: -175px;
+  transform: translateY(-50%);
+  background: white;
+  border-radius: 5px;
+  background-color: #fff;
+  border: 1px solid rgba(0,0,0,0.2);
+  box-shadow: 0 3px 9px rgba(0,0,0,0.5);
+  background-clip: padding-box;
+}
+
 .search-form-modal {
   padding: 15px;
 }
 
+.sign-in-up-form-modal {
+  padding: 15px;
+}
+
 .search-modal-navbar {
+  background-color: #0080c6;
+  border-color: #0080c6;
+  border-bottom: 1px solid #e5e5e5;
+  color: white;
+  text-align: center;
+  min-height: 31px;
+}
+
+.sign-in-up-modal-navbar {
   background-color: #0080c6;
   border-color: #0080c6;
   border-bottom: 1px solid #e5e5e5;
