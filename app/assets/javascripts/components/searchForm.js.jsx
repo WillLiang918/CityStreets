@@ -54,29 +54,31 @@
               <div>
                 <label className="search-price" >Price</label>
                 <select
-                valueLink={this.linkState("minPrice")}
-                  type="text">
-                  <option>Any</option>
-                  <option>1000</option>
-                  <option>2000</option>
-                  <option>3000</option>
-                  <option>4000</option>
-                  <option>5000</option>
-                  <option>6000</option>
-                  <option>7000</option>
+                  className="price-params"
+                  valueLink={this.linkState("minPrice")}
+                    type="text">
+                    <option>Any</option>
+                    <option>1000</option>
+                    <option>2000</option>
+                    <option>3000</option>
+                    <option>4000</option>
+                    <option>5000</option>
+                    <option>6000</option>
+                    <option>7000</option>
                 </select>
-                <label>to</label>
+                <label className="between-price">to</label>
                 <select
-                valueLink={this.linkState("maxPrice")}
-                  type="text">
-                  <option>Any</option>
-                  <option>1000</option>
-                  <option>2000</option>
-                  <option>3000</option>
-                  <option>4000</option>
-                  <option>5000</option>
-                  <option>6000</option>
-                  <option>7000</option>
+                  className="price-params"
+                  valueLink={this.linkState("maxPrice")}
+                    type="text">
+                    <option>Any</option>
+                    <option>1000</option>
+                    <option>2000</option>
+                    <option>3000</option>
+                    <option>4000</option>
+                    <option>5000</option>
+                    <option>6000</option>
+                    <option>7000</option>
                 </select>
               </div>
 
