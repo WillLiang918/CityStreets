@@ -19,6 +19,15 @@
       return saved;
     },
 
+    updateSave: function () {
+      this.setState({ saved: !this.state.saved });
+      this.updatedUser();
+    },
+
+    updatedUser: function () {
+      ApiUtil.fetchCurrentUser();
+    },
+
     render: function () {
       return (
         <div
@@ -33,13 +42,12 @@
           <div>
             <Detail
               currentUser={ this.props.currentUser }
+              property={ this.props.property }
               saved={ this.state.saved }
-              savedId={ this.state.savedId }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
-              property={ this.props.property }
               history={ this.props.history }
-              id={this.props.id}/>
+              id={ this.props.id }/>
           </div>
         </div>
       );
@@ -64,14 +72,6 @@
       }
     },
 
-    updateSave: function () {
-      this.setState({ saved: !this.state.saved });
-      this.updatedUser();
-    },
-
-    updatedUser: function () {
-      ApiUtil.fetchCurrentUser();
-    }
 
   });
 })(this);
