@@ -12,14 +12,14 @@
           bathrooms: null };
     },
 
-    componentDidMount: function () {
-      FilterParamsStore.addChangeListener(this._onChange);
-      ApiUtil.fetchProperties();
-    },
-
-    componentWillUnmount: function () {
-      // FilterParamsStore.removeChangeListener(this._onChange);
-    },
+    // componentDidMount: function () {
+    //   FilterParamsStore.addChangeListener(this._onChange);
+    //   ApiUtil.fetchProperties();
+    // },
+    //
+    // componentWillUnmount: function () {
+    //   FilterParamsStore.removeChangeListener(this._onChange);
+    // },
 
     handleSubmit: function (event) {
       event.preventDefault();
@@ -28,6 +28,7 @@
       var params = FilterParamsStore.params();
       this.setState(params);
       ApiUtil.fetchProperties();
+      this.props.toggleRefineSearch();
       this.props.history.pushState(null, "result");
     },
 
@@ -37,7 +38,8 @@
     render: function () {
       return (
         <div>
-          <SearchModalTitle />
+          <SearchModalTitle
+            toggleRefineSearch={ this.props.toggleRefineSearch }/>
           <form className="search-form-modal group" onSubmit={this.handleSubmit}>
 
             <div className="search-row group">

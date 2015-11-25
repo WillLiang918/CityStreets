@@ -31,8 +31,8 @@
         <div className="result">
           <div className={ "modal-screen " + background }></div>
           <ResultHeader
+            toggleRefineSearch={ this.toggleRefineSearch }
             refineSearch={ this.state.refineSearch }
-            toggleRefineSearch= { this.toggleRefineSearch }
             history={this.props.history}/>
           <div>
             <PropertyList

@@ -12,7 +12,9 @@
       if (this.props.refineSearch) {
         refineSearch = (
           <div className={ this.props.refineSearch }>
-            <SearchFormModal history={this.props.history} />
+            <SearchFormModal
+              history={this.props.history}
+              toggleRefineSearch={ this.props.toggleRefineSearch } />
           </div>
         );
       }
