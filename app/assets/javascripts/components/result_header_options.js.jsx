@@ -1,7 +1,9 @@
 (function (root) {
   root.ResultHeaderOptions = React.createClass({
     getInitialState: function () {
-      return { refineSearch: false };
+      return {
+        refineSearch: false,
+      };
     },
 
     render: function () {
@@ -9,21 +11,18 @@
       var refineSearch;
       if (this.props.refineSearch) {
         refineSearch = (
-          <div>
-            <SearchForm history={this.props.history} />
-          </div>
-        );
-      } else {
-        refineSearch = (
-          <div>
+          <div className={ this.props.refineSearch }>
+            <SearchFormModal history={this.props.history} />
           </div>
         );
       }
 
       return (
         <div className="result-header-options-component">
-          <a onClick={ this.props.toggleRefineSearch } className="refine-search-button">Refine This Search</a>
-          <div> { refineSearch }</div>
+          <a onClick={ this.props.toggleRefineSearch } className="refine-search-button ">Refine This Search</a>
+          <div className={ "search-modal "+ this.props.refineSearch }>
+            { refineSearch }
+          </div>
         </div>
       );
     }

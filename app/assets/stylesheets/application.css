@@ -50,7 +50,13 @@ input {
   display: block;
   clear: both;
 }
+.false {
+  display: none;
+}
 
+.true {
+  display: block;
+}
 /*profile page*/
 
 .property-list {
