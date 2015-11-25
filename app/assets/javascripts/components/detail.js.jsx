@@ -1,51 +1,33 @@
 (function(root){
-
   var Detail = root.Detail = React.createClass({
 
-    mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
-
-    getInitialState: function () {
-      return { saved: !!CurrentUserStore.isSaved(this.props.property.id) };
-    },
-
-    // handleClick: function () {
-    //   if (!!CurrentUserStore.isSaved(this.props.property.id)){
-    //     var id = CurrentUserStore.isSaved(this.props.property.id);
-    //     ApiUtil.destroySavedProperty(id, this.onSuccess);
-    //   } else {
-    //     ApiUtil.createSavedProperty({
-    //       user_id: CurrentUserStore.currentUser().id,
-    //       property_id: this.props.property.id
-    //     });
-    //   }
-    // },
-
     unsave: function () {
-      if (CurrentUserStore.currentUser()) {
-        var id = CurrentUserStore.isSaved(this.props.property.id);
-        ApiUtil.destroySavedProperty(id);
-        ApiUtil.fetchCurrentUser();
-        this.setState({ saved: false });
-      }
+      var id = this.props.isSaved(this.props.property.id);
+      console.log(id);
+      ApiUtil.destroySavedProperty(id);
+      this.updateSave();
     },
 
     save: function () {
       if (CurrentUserStore.currentUser()) {
         ApiUtil.createSavedProperty({
-          user_id: CurrentUserStore.currentUser().id,
+          user_id: this.props.currentUser.id,
           property_id: this.props.property.id
         });
-        ApiUtil.fetchCurrentUser();
-        this.setState({ saved: true });
+        this.updateSave();
       } else {
         this.history.pushState(null, "/signin");
       }
     },
 
-    render: function () {
+    updateSave: function () {
+      ApiUtil.fetchCurrentUser();
+      this.props.updateSave();
+    },
 
+    render: function () {
       var savedButton;
-      if (this.state.saved) {
+      if (this.props.saved) {
         savedButton = <div onClick={this.unsave} className="detail-save-button">x</div>;
       } else {
         savedButton = <div onClick={this.save} className="detail-save-button">★ save</div>;

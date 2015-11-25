@@ -29,7 +29,6 @@
     },
 
     render: function () {
-      console.log(this.state.properties);
       return (
         <div className="result">
           <ResultHeader
