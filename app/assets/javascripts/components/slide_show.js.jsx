@@ -2,16 +2,18 @@
 
   var SlideShow = root.SlideShow = React.createClass ({
     getInitialState: function () {
-      return { currentphoto: "",
-               photos: [] };
+      return {
+        currentphoto: "",
+        propertyPhotos: []
+      };
     },
 
     _getPhotos: function () {
-      var id = this.props.property.id;
+      var id = this.props.id;
       var photos = PhotoStore.find(id);
       if (photos.length > 0 ) {
         this.setState({
-          photos: photos,
+          propertyPhotos: photos,
           currentPhoto: photos[0].image_url
         });
       }
@@ -26,20 +28,15 @@
       PhotoStore.removeChangeListener(this._getPhotos);
     },
 
-    handleClick: function (event) {
-      this.setState({currentPhoto: event.target.src});
-    },
-
     render: function () {
       var that = this;
-
       return (
         <div className="slide-show">
           <img className="selected-photo"
              src={this.state.currentPhoto} />
           <ul>
             {
-              that.state.photos.map( function (photo) {
+              that.state.propertyPhotos.map( function (photo) {
                 return <li key={photo.id}>
                   <img
                     className="thumb"
@@ -52,6 +49,11 @@
           </ul>
         </div>
       );
-    }
+    },
+
+    handleClick: function (event) {
+      this.setState({currentPhoto: event.target.src});
+    },
+
   });
 })(this);

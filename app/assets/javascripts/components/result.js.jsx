@@ -3,10 +3,10 @@
 
     getInitialState: function () {
       return {
-        refineSearch: false,
         currentUser: CurrentUserStore.currentUser(),
         properties: PropertyStore.all(),
-        photos: PhotoStore.all()
+        photos: PhotoStore.all(),
+        refineSearch: false,
        };
     },
 

@@ -2,12 +2,10 @@
   root.PropertyShow = React.createClass ({
 
     getInitialState: function () {
-      ApiUtil.fetchProperties();
-      var propertyId = this.props.params.propertyId;
-      var property = this._findPropertyById(propertyId);
+      var property = this._findPropertyById(this.props.params.propertyId);
       return {
-        property: property,
         currentUser: CurrentUserStore.currentUser(),
+        property: property,
         saved: !!this.isSaved(this.props.params.propertyId),
       };
     },
@@ -38,7 +36,6 @@
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this._updateCurrentUser);
       PropertyStore.addChangeListener(this._updateProperties);
-      PhotoStore.addChangeListener(this._updatePhotos);
       ApiUtil.fetchProperties();
       ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
@@ -47,17 +44,7 @@
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this._updateCurrentUser);
       PropertyStore.removeChangeListener(this._updateProperties);
-      PhotoStore.removeChangeListener(this._updatePhotos);
     },
-
-    // componentDidMount: function () {
-    //   PropertyStore.addChangeListener(this._getState);
-    //   ApiUtil.fetchProperties();
-    // },
-    //
-    // componentWillUnmount: function () {
-    //   PropertyStore.removeChangeListener(this._getState);
-    // },
 
     render: function () {
       var detail;
@@ -75,7 +62,9 @@
       }
       return (
         <div className="property-page group">
-          <SlideShow property={ this.state.property } />
+          <SlideShow
+            property={ this.state.property }
+            id={ parseInt(this.props.params.propertyId) }/>
           {detail}
         </div>
       );
@@ -86,14 +75,9 @@
     },
 
     _updateProperties: function () {
-      // this.setState({ propertie PropertyStore.all() });
       var propertyId = this.props.params.propertyId;
       var property = this._findPropertyById(propertyId);
       this.setState({ property: property });
-    },
-
-    _updatePhotos: function () {
-      this.setState({ photos: PhotoStore.all() });
     },
 
     _findPropertyById: function (id) {
