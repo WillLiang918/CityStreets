@@ -19,7 +19,7 @@ $(function () {
 
   var routes = (
     <Route path="/" component={App}>
-      <IndexRoute component={SearchForm}/>
+      <IndexRoute component={SplashPage}/>
       <Route path="photo" component={PhotoForm} />
       <Route path="signin" component={SignInPage} />
       <Route path="signup" component={SignUpPage} />

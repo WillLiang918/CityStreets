@@ -1,29 +1,6 @@
 (function(root){
   var Detail = root.Detail = React.createClass({
 
-    unsave: function () {
-      var id = this.props.isSaved(this.props.id);
-      ApiUtil.destroySavedProperty(id);
-      this.updateSave();
-    },
-
-    save: function () {
-      if (CurrentUserStore.currentUser()) {
-        ApiUtil.createSavedProperty({
-          user_id: this.props.currentUser.id,
-          property_id: this.props.id
-        });
-        this.updateSave();
-      } else {
-        this.props.history.pushState(null, "/signin");
-      }
-    },
-
-    updateSave: function () {
-      // ApiUtil.fetchCurrentUser();
-      this.props.updateSave();
-    },
-
     render: function () {
       var savedButton;
       if (this.props.saved) {
@@ -50,6 +27,30 @@
           </div>
         </div>
       );
-    }
+    },
+
+    unsave: function () {
+      var id = this.props.isSaved(this.props.id);
+      ApiUtil.destroySavedProperty(id);
+      this.updateSave();
+    },
+
+    save: function () {
+      if (CurrentUserStore.currentUser()) {
+        ApiUtil.createSavedProperty({
+          user_id: this.props.currentUser.id,
+          property_id: this.props.id
+        });
+        this.updateSave();
+      } else {
+        this.props.history.pushState(null, "/signin");
+      }
+    },
+
+    updateSave: function () {
+      ApiUtil.fetchCurrentUser();
+      this.props.updateSave();
+    },
+
   });
 })(this);

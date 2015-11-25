@@ -57,6 +57,12 @@ input {
   /*border: 5px solid black;*/
 }
 
+.splash-header {
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 12px;
+}
+
 .photo-container {
   height: 400px;
   width: 60%;
@@ -115,7 +121,6 @@ input {
   height: 100px;
   display: block;
   background: #ccc;
-
 }
 
 .MyListings-component {

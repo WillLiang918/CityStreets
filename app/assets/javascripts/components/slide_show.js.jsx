@@ -34,7 +34,7 @@
         <div className="slide-show">
           <img className="selected-photo"
              src={this.state.currentPhoto} />
-          <ul>
+          <ul className="thumb-photos group">
             {
               that.state.propertyPhotos.map( function (photo) {
                 return <li key={photo.id}>
