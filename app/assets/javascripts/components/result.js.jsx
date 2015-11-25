@@ -7,7 +7,7 @@
         properties: PropertyStore.all(),
         photos: PhotoStore.all(),
         refineSearch: false,
-       };
+      };
     },
 
     componentDidMount: function () {
@@ -29,7 +29,10 @@
       var background = (this.state.refineSearch) ? "active" : "non-active";
       return (
         <div className="result">
-          <div className={ "modal-screen " + background }></div>
+          <div
+            onClick={ this.exitModal }
+            className={ "modal-screen " + background }>
+            </div>
           <ResultHeader
             toggleRefineSearch={ this.toggleRefineSearch }
             refineSearch={ this.state.refineSearch }
@@ -50,6 +53,10 @@
 
     toggleRefineSearch: function () {
       this.setState({ refineSearch: !this.state.refineSearch });
+    },
+
+    exitModal: function () {
+      this.setState({ refineSearch: false });
     },
 
     _updateCurrentUser: function () {
