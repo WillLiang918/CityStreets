@@ -3,7 +3,7 @@
     render: function () {
       return (
         <div className="sign-in-up-modal-navbar">
-          TITLE
+          Sign In
         </div>
       );
     }

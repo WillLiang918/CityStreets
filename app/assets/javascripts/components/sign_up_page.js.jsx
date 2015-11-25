@@ -6,6 +6,21 @@ window.SignUpPage = React.createClass({
     return { username: "", password: "", errors: [] };
   },
 
+  demoUser: function (e) {
+    e.preventDefault();
+    ApiUtil.signIn({username: "admin", password: "password"}, function (currentUser) {
+      if (typeof currentUser.id !== "undefined") {
+        this.history.pushState(null, "/");
+      } else {
+        this.setState({
+          username: "",
+          password: "",
+          errors: currentUser.errors
+        });
+      }
+    }.bind(this));
+  },
+
   handleSubmit: function (e) {
     e.preventDefault();
     ApiUtil.signUp(this.state, function (currentUser) {
@@ -22,7 +37,7 @@ window.SignUpPage = React.createClass({
 
   render: function () {
     return (
-      <div>
+      <div className="sign-up-page">
         <ul valueLink={this.state.errors}>
           {this.state.errors.map( function (error, idx) {
               return (
@@ -34,21 +49,24 @@ window.SignUpPage = React.createClass({
         </ul>
         <form onSubmit={ this.handleSubmit }>
         <label>
-          Username
           <input
             type="text"
+            placeholder="Username"
             valueLink={this.linkState("username")} />
         </label>
 
         <label>
-          Password
           <input
             type="password"
+            placeholder="Password (at least 6 characters)"
             valueLink={this.linkState("password")} />
         </label>
 
-        <button className="submit-form">Register</button>
+        <button className="submit-button">Register</button>
         </form>
+        <button
+          className="submit-button"
+          onClick={this.demoUser}>Demo User</button>
       </div>
     );
   }
