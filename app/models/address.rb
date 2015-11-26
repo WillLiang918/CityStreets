@@ -1,6 +1,7 @@
 class Address < ActiveRecord::Base
 
   include PgSearch
+  pg_search_scope :search_by_neighborhood, against: :neighborhood
   multisearchable :against => [:street, :unit, :city, :state, :zip, :neighborhood]
 
   belongs_to :property, class_name: "Property", foreign_key: :property_id

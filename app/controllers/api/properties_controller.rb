@@ -6,8 +6,27 @@ class Api::PropertiesController < ApplicationController
     bedrooms = params[:bedrooms]
     bathrooms = params[:bathrooms]
     neighborhood = params[:neighborhood]
+    location = params[:location]
 
-    @properties = Property.joins(:address)
+    if neighborhood.present?
+      @properties = Property.joins(:address)
+      @properties = @properties.where("neighborhood LIKE ?", neighborhood)
+    else
+      @properties = Property.all
+    end
+
+    if location.present?
+      property_ids = []
+      @search_results = PgSearch.multisearch(location).includes(:searchable)
+      @search_results.map do |result|
+        result = result.searchable
+        if result.class == Address
+          property_ids << result.property_id
+        end
+      end
+      @properties = @properties.where(id: property_ids)
+    end
+
     if minPrice.present? && minPrice != "Any"
       @properties = @properties.where("price >= ?", minPrice.gsub(/\D/,'').to_i )
     end
@@ -19,9 +38,6 @@ class Api::PropertiesController < ApplicationController
     end
     if bathrooms.present? && bathrooms != "Any"
       @properties = @properties.where("bathrooms >= ?", bathrooms.gsub(/[^\d\.]/, '').to_f )
-    end
-    if neighborhood.present?
-      @properties = @properties.where("neighborhood LIKE ?", neighborhood)
     end
     @properties
   end
