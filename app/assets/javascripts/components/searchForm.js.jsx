@@ -11,7 +11,7 @@
           bedrooms: null,
           bathrooms: null,
           matches: [],
-          dropdown: false
+          canShow: true
       };
     },
 
@@ -40,7 +40,10 @@
 
     handleKeyPress: function (e) {
       var matches = [];
-      this.setState({ location: e.target.value });
+      this.setState({
+        location: e.target.value,
+        canShow: true
+      });
       var searchText = new RegExp(e.target.value.toUpperCase());
       for ( var i = 0; i < SearchConstants.NEIGHBORHOOD.length; i++ ) {
         var neighborhood = SearchConstants.NEIGHBORHOOD[i];
@@ -55,15 +58,19 @@
       this.setState({ location: location });
     },
 
+    toggleCanShow: function () {
+      this.setState({ canShow: false });
+    },
+
     render: function () {
       var locationDetail;
-      if ( this.state.location.length > 0 ) {
+      if ( this.state.location.length > 0 && this.state.canShow) {
         locationDetail = <SearchLocation
+                            toggleCanShow={ this.toggleCanShow }
                             setLocation={ this.setLocation }
                             location={ this.state.location }
                             matches={ this.state.matches }/>;
       }
-
       return (
         <div>
           <form className="search-form group" onSubmit={this.handleSubmit}>

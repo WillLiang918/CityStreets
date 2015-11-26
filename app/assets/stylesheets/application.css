@@ -37,7 +37,7 @@ body {
   font-family: Source Sans Pro,Helvetica,Arial,Geneva,sans-serif;
 }
 
-ul {
+ul, li {
   list-style: none;
 }
 
