@@ -9,7 +9,7 @@ class Property < ActiveRecord::Base
 
 
   def get_price
-    "$#{self.price}"
+    "$#{self.price}".to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
   end
 
   def get_details

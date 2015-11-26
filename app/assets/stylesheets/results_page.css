@@ -35,6 +35,8 @@
 }
 
 .result .property-list {
+  padding-left: 10px;
+  box-sizing: border-box;
   width: 66.66%;
   float: left;
 }
