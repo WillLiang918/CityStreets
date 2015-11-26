@@ -9,7 +9,10 @@
           minPrice: null,
           maxPrice: null,
           bedrooms: null,
-          bathrooms: null };
+          bathrooms: null,
+          matches: [],
+          dropdown: false
+      };
     },
 
     componentDidMount: function () {
@@ -18,6 +21,7 @@
     },
 
     componentWillUnmount: function () {
+      // Not sure why I commented this out
       // FilterParamsStore.removeChangeListener(this._onChange);
     },
 
@@ -34,7 +38,32 @@
     _onChange: function () {
     },
 
+    handleKeyPress: function (e) {
+      var matches = [];
+      this.setState({ location: e.target.value });
+      var searchText = new RegExp(e.target.value.toUpperCase());
+      for ( var i = 0; i < SearchConstants.NEIGHBORHOOD.length; i++ ) {
+        var neighborhood = SearchConstants.NEIGHBORHOOD[i];
+        if ( neighborhood.match(searchText) ) {
+          matches.push( neighborhood );
+        }
+      }
+      this.setState({ matches: matches });
+    },
+
+    setLocation: function (location) {
+      this.setState({ location: location });
+    },
+
     render: function () {
+      var locationDetail;
+      if ( this.state.location.length > 0 ) {
+        locationDetail = <SearchLocation
+                            setLocation={ this.setLocation }
+                            location={ this.state.location }
+                            matches={ this.state.matches }/>;
+      }
+
       return (
         <div>
           <form className="search-form group" onSubmit={this.handleSubmit}>
@@ -44,8 +73,10 @@
                 <label className="search-location">Location</label>
                 <input
                   type="text"
-                  valueLink={this.linkState("location")}
+                  onChange={ this.handleKeyPress }
+                  value={ this.state.location }
                   placeholder="Neighborhood / Address / Building / Keyword"/>
+                { locationDetail }
               </div>
             </div>
 

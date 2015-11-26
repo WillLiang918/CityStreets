@@ -11,11 +11,11 @@ and React.js. CityStreets allows users to:
 
 <!-- This is a Markdown checklist. Use it to keep track of your progress! -->
 
-- [ ] Create an account
-- [ ] Log in / Log out
+- [x] Create an account
+- [x] Log in / Log out
 - [ ] Create, read, edit, and delete listings/properties
 - [ ] Search through listings by criteria
-- [ ] Map search page results using google maps api
+- [x] Map search page results using google maps api
 
 ## Design Docs
 * [View Wireframes][view]

@@ -308,7 +308,7 @@ ADDRESSES = [
   Photo.create!(
     property_id: i + 1,
     :image => File.open(
-      "#{Rails.root}/app/assets/images/Sample" + rand(1..20).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..42).to_s + ".jpg", 'r'
     )
   )
 
@@ -320,11 +320,11 @@ end
 10.times do |i|
 end
 
-30.times do
+50.times do
   Photo.create!(
     property_id: rand(1..8),
     :image => File.open(
-      "#{Rails.root}/app/assets/images/Sample" + rand(1..20).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..42).to_s + ".jpg", 'r'
     )
   )
 end
