@@ -47,7 +47,7 @@
             <div
               onClick={ this.exitModal }
               className={ "modal-screen " + background }>
-              </div>
+            </div>
             <ResultHeader
               toggleRefineSearch={ this.toggleRefineSearch }
               refineSearch={ this.state.refineSearch }

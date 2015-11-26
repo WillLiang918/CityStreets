@@ -64,7 +64,7 @@
     },
 
     exitModal: function () {
-      this.setState({ auth: false });
+      this.props.toggleAuth();
     },
 
     // toggleAuth: function () {

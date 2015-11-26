@@ -7,6 +7,7 @@
         currentUser: CurrentUserStore.currentUser(),
         property: property,
         saved: !!this.isSaved(this.props.params.propertyId),
+        auth: false
       };
     },
 
@@ -56,12 +57,18 @@
             saved={ this.state.saved }
             isSaved={ this.isSaved }
             updateSave={ this.updateSave }
+            toggleAuth= { this.toggleAuth }
             history={ this.props.history }
             id={ this.props.params.propertyId }/>
           );
       }
       return (
         <div>
+          <MainHeader
+            currentUser={ this.state.currentUser }
+            auth={ this.state.auth }
+            toggleAuth={ this.toggleAuth }
+            history={ this.props.history }/>
           <div className="property-page group">
             <div className="left-three-fifths group">
               <SlideShow
@@ -102,6 +109,10 @@
       var propertyId = this.props.params.propertyId;
       var property = this._findPropertyById(propertyId);
       this.setState({ property: property });
+    },
+
+    toggleAuth: function () {
+      this.setState({ auth: !this.state.auth });
     },
   });
 })(this);

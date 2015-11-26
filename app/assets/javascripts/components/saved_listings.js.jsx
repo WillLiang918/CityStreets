@@ -35,6 +35,7 @@
     render: function () {
       return (
         <div>
+          <MainHeader />
           <div className="saved-listings">
             <div>
               <h2>Saved Properties</h2>
