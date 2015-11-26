@@ -52,7 +52,6 @@
 
         case PropertyConstants.CURRENT_USER_RECEIVED:
           resetCurrentUser(payload.currentUser);
-          CurrentUserStore.emit(CHANGE_EVENT);
           break;
         case PropertyConstants.CURRENT_USER_REMOVED:
           _currentUser = null;

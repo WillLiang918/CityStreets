@@ -1,10 +1,6 @@
 (function (root) {
   root.PropertyListItem = React.createClass ({
 
-    getInitialState: function () {
-      return { saved: !!this.isSaved(this.props.id) };
-    },
-
     isSaved: function (id) {
       var saved = false;
       var that = this;
@@ -20,11 +16,6 @@
     },
 
     updateSave: function () {
-      this.setState({ saved: !this.state.saved });
-      this.updatedUser();
-    },
-
-    updatedUser: function () {
       ApiUtil.fetchCurrentUser();
     },
 
@@ -37,13 +28,13 @@
           <div className="property-image">
             <ListItemPhoto
               photo={ this.getPhoto(this.props.id) }
-              saved={ this.state.saved }/>
+              saved={ !!this.isSaved(this.props.id) }/>
           </div>
           <div>
             <Detail
               currentUser={ this.props.currentUser }
               property={ this.props.property }
-              saved={ this.state.saved }
+              saved={ !!this.isSaved(this.props.id) }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
               history={ this.props.history }

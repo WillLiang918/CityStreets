@@ -1,5 +1,4 @@
 ( function (root) {
-
   var SplashPage = root.SplashPage = React.createClass({
     mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
 

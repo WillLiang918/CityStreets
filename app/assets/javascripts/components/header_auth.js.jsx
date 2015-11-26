@@ -9,8 +9,8 @@
     },
 
     componentDidMount: function () {
-      CurrentUserStore.addChangeListener(this._onChange);
       ApiUtil.fetchCurrentUser();
+      CurrentUserStore.addChangeListener(this._onChange);
     },
 
     componentWillUnmount: function () {
@@ -35,16 +35,10 @@
       } else {
         headerList = (
           <div>
-            <li className="sign-in header-list-item">
-              <a href="#/signin">Sign In</a>
-            </li>
             <li>
               <SignInUp
                 toggleAuth={ this.toggleAuth }
                 auth={ this.state.auth } />
-            </li>
-            <li className="register-link header-list-item">
-              <a href="#/signup"className="register">{"Register (It's Free)"}</a>
             </li>
           </div>
         );

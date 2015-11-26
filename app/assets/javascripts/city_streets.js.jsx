@@ -21,8 +21,8 @@ $(function () {
     <Route path="/" component={App}>
       <IndexRoute component={SplashPage}/>
       <Route path="photo" component={PhotoForm} />
-      <Route path="signin" component={SignInPage} />
-      <Route path="signup" component={SignUpPage} />
+      // <Route path="signin" component={SignInPage} />
+      // <Route path="signup" component={SignUpPage} />
       <Route path="result" component={Result} />
       <Route path="savedListings" component={SavedListings} />
       <Route path="properties/:propertyId" component={PropertyShow} />

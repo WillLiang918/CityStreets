@@ -13,10 +13,9 @@ class Api::SessionsController < ApplicationController
       params[:username],
       params[:password]
     )
-
     if @user
       sign_in(@user)
-      render json: @user
+      render :show
     else
       render json: { errors: "Invalid username or password combination"}
     end

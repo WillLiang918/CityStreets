@@ -61,16 +61,18 @@
           );
       }
       return (
-        <div className="property-page group">
-          <div className="left-three-fifths group">
-            <SlideShow
-              property={ this.state.property }
-              id={ parseInt(this.props.params.propertyId) }/>
-            <Description />
-          </div>
-          <div className="right-two-fifths">
-            {detail}
-            Transit Stuff
+        <div>
+          <div className="property-page group">
+            <div className="left-three-fifths group">
+              <SlideShow
+                property={ this.state.property }
+                id={ parseInt(this.props.params.propertyId) }/>
+              <Description />
+            </div>
+            <div className="right-two-fifths">
+              {detail}
+              Transit Stuff
+            </div>
           </div>
         </div>
       );

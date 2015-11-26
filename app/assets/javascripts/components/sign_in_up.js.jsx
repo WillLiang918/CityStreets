@@ -15,9 +15,16 @@
       }
 
       return (
-        <div>
-          <div onClick={ this.props.toggleAuth }>
-            Sign In/Up
+        <div group>
+          <div
+            className="sign-in header-list-item"
+            onClick={ this.props.toggleAuth }>
+            Sign In
+          </div>
+          <div
+            className="register-link header-list-item"
+            onClick={ this.props.toggleAuth }>
+            <div className="register">{"Register (It's Free)"}</div>
           </div>
           <div className={ "sign-in-up-modal " + this.props.auth }>
             { signInUp }
