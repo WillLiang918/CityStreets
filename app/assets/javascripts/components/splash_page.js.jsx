@@ -5,6 +5,7 @@
     render: function () {
       return (
         <div>
+          <MainHeader />
           <h3 className="splash-header">New York City Real Estate</h3>
           <SearchForm
             history={ this.history }/>

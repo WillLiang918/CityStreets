@@ -1,26 +1,26 @@
 (function (root) {
   var HeaderAuth = root.HeaderAuth = React.createClass({
 
-    getInitialState: function () {
-      return {
-        currentUser: CurrentUserStore.currentUser(),
-        auth: false
-      };
-    },
+    // getInitialState: function () {
+    //   return {
+    //     currentUser: CurrentUserStore.currentUser(),
+    //     auth: false
+    //   };
+    // },
 
-    componentDidMount: function () {
-      ApiUtil.fetchCurrentUser();
-      CurrentUserStore.addChangeListener(this._onChange);
-    },
-
-    componentWillUnmount: function () {
-      CurrentUserStore.removeChangeListener(this._onChange);
-    },
+    // componentDidMount: function () {
+    //   ApiUtil.fetchCurrentUser();
+    //   CurrentUserStore.addChangeListener(this._onChange);
+    // },
+    //
+    // componentWillUnmount: function () {
+    //   CurrentUserStore.removeChangeListener(this._onChange);
+    // },
 
     render: function () {
-      var background = (this.state.auth) ? "active" : "non-active";
+      var background = (this.props.auth) ? "active" : "non-active";
       var headerList;
-      if ( this.state.currentUser !== null) {
+      if ( this.props.currentUser !== null) {
         headerList = (
           <div>
             <li className="header-list-item">
@@ -37,8 +37,8 @@
           <div>
             <li>
               <SignInUp
-                toggleAuth={ this.toggleAuth }
-                auth={ this.state.auth } />
+                toggleAuth={ this.props.toggleAuth }
+                auth={ this.props.auth } />
             </li>
           </div>
         );
@@ -67,9 +67,9 @@
       this.setState({ auth: false });
     },
 
-    toggleAuth: function () {
-      this.setState({ auth: !this.state.auth });
-    },
+    // toggleAuth: function () {
+    //   this.props.toggleAuth();
+    // },
 
   });
 })(this);

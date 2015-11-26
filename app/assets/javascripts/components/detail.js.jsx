@@ -43,7 +43,7 @@
         });
         this.updateSave();
       } else {
-        this.props.history.pushState(null, "/signin");
+        this.props.toggleAuth();
       }
     },
 

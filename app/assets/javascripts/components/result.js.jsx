@@ -11,6 +11,7 @@
         properties: PropertyStore.all(),
         photos: PhotoStore.all(),
         refineSearch: false,
+        auth: false
       };
     },
 
@@ -37,6 +38,11 @@
       var background = (this.state.refineSearch) ? "active" : "non-active";
       return (
         <div>
+          <MainHeader
+            currentUser={ this.state.currentUser }
+            auth={ this.state.auth }
+            toggleAuth={ this.toggleAuth }
+            history={ this.props.history }/>
           <div className="result">
             <div
               onClick={ this.exitModal }
@@ -48,10 +54,12 @@
               history={this.props.history}/>
             <div>
               <PropertyList
-                currentUser={this.state.currentUser}
-                properties={this.state.properties}
-                photos={this.state.photos}
-                history={this.props.history}/>
+                currentUser={ this.state.currentUser }
+                properties={ this.state.properties }
+                photos={ this.state.photos }
+                toggleAuth={ this.toggleAuth }
+                auth={ this.state.auth }
+                history={ this.props.history }/>
             </div>
             <div>
               <Map />
@@ -65,8 +73,15 @@
       this.setState({ refineSearch: !this.state.refineSearch });
     },
 
+    toggleAuth: function () {
+      this.setState({ auth: !this.state.auth });
+    },
+
     exitModal: function () {
-      this.setState({ refineSearch: false });
+      this.setState({
+        refineSearch: false,
+        auth: false
+       });
     },
 
     // _updateCurrentUser: function () {

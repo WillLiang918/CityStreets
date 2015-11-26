@@ -8,8 +8,10 @@
           {that.props.properties.map( function (property) {
             return (
               <PropertyListItem
-                currentUser={that.props.currentUser}
-                property={property}
+                currentUser={ that.props.currentUser }
+                property={ property }
+                photos={ that.props.photos }
+                toggleAuth={ that.props.toggleAuth }
                 history={that.props.history}
                 id={property.id}
                 key={property.id} />

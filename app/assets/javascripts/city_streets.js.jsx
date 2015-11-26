@@ -10,7 +10,6 @@ $(function () {
     render: function () {
       return (
         <div>
-          <MainHeader />
           {this.props.children}
         </div>
       );

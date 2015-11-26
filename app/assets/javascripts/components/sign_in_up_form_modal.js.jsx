@@ -20,7 +20,8 @@
 
       return (
         <div className=".sign-in-up-modal">
-          <SignModalTitle />
+          <SignModalTitle
+            toggleAuth={ this.props.toggleAuth }/>
           <div className="sign-in-up-form-modal">
             <div className="new-user-text">
               Register for free to access all

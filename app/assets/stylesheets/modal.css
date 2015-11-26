@@ -142,3 +142,22 @@
   display: inline-block;
   font-size: 18px;
 }
+
+.sign-in-up-modal-navbar > * {
+  text-transform: uppercase;
+  float: left;
+  padding: 14px 15px;
+  font-weight: bold;
+}
+
+.sign-form-modal-cancel {
+  display: block;
+  font-size: 14px;
+}
+
+.sign-form-modal-sign-in {
+  margin-left: 35px;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 18px;
+}

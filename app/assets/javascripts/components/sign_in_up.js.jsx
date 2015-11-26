@@ -8,7 +8,7 @@
         signInUp = (
           <div className={ this.props.auth }>
             <SignInUpFormModal
-              history={this.props.history}
+              history={ this.props.history }
               toggleAuth={ this.props.toggleAuth } />
           </div>
         );
