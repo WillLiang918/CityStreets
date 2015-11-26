@@ -50,7 +50,6 @@
             </div>
 
             <div className="search-row group">
-
               <div>
                 <label className="search-price" >Price</label>
                 <select
@@ -58,13 +57,11 @@
                   valueLink={this.linkState("minPrice")}
                     type="text">
                     <option>Any</option>
-                    <option>1000</option>
-                    <option>2000</option>
-                    <option>3000</option>
-                    <option>4000</option>
-                    <option>5000</option>
-                    <option>6000</option>
-                    <option>7000</option>
+                    {SearchConstants.PRICE.map( function(price) {
+                      return (
+                        <option key={price}>{price}</option>
+                      );
+                    })}
                 </select>
                 <label className="between-price">to</label>
                 <select
@@ -72,13 +69,11 @@
                   valueLink={this.linkState("maxPrice")}
                     type="text">
                     <option>Any</option>
-                    <option>1000</option>
-                    <option>2000</option>
-                    <option>3000</option>
-                    <option>4000</option>
-                    <option>5000</option>
-                    <option>6000</option>
-                    <option>7000</option>
+                    {SearchConstants.PRICE.map( function(price) {
+                      return (
+                        <option key={price}>{price}</option>
+                      );
+                    })}
                 </select>
               </div>
 
