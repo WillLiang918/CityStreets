@@ -53,7 +53,6 @@
             </div>
 
             <div className="search-row group">
-
               <div>
                 <label className="search-price" >Price</label>
                 <select
@@ -61,13 +60,11 @@
                   valueLink={this.linkState("minPrice")}
                     type="text">
                     <option>Any</option>
-                    <option>1000</option>
-                    <option>2000</option>
-                    <option>3000</option>
-                    <option>4000</option>
-                    <option>5000</option>
-                    <option>6000</option>
-                    <option>7000</option>
+                    {SearchConstants.PRICE.map( function(price) {
+                      return (
+                        <option key={price}>{price}</option>
+                      );
+                    })}
                 </select>
                 <label className="between-price">to</label>
                 <select
@@ -75,13 +72,11 @@
                   valueLink={this.linkState("maxPrice")}
                     type="text">
                     <option>Any</option>
-                    <option>1000</option>
-                    <option>2000</option>
-                    <option>3000</option>
-                    <option>4000</option>
-                    <option>5000</option>
-                    <option>6000</option>
-                    <option>7000</option>
+                    {SearchConstants.PRICE.map( function(price) {
+                      return (
+                        <option key={ price }>{ price }</option>
+                      );
+                    })}
                 </select>
               </div>
 
@@ -91,11 +86,11 @@
                 valueLink={this.linkState("bedrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                    {SearchConstants.BEDROOMS.map( function(bedrooms) {
+                      return (
+                        <option key={ bedrooms }>{ bedrooms }</option>
+                      );
+                    })}
                 </select>
               </div>
 
@@ -105,13 +100,11 @@
                 valueLink={this.linkState("bathrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1</option>
-                  <option>1.5</option>
-                  <option>2</option>
-                  <option>2.5</option>
-                  <option>3</option>
-                  <option>3.5</option>
-                  <option>4</option>
+                    {SearchConstants.BATHROOMS.map( function(bathrooms) {
+                      return (
+                        <option key={ bathrooms }>{ bathrooms }</option>
+                      );
+                    })}
                 </select>
               </div>
 
