@@ -1,5 +1,8 @@
 class Property < ActiveRecord::Base
 
+  include PgSearch
+  multisearchable :against => [:address]
+
   validates :owner_user_id, :price, presence: true
 
   belongs_to :owner, class_name: "User", foreign_key: :owner_user_id

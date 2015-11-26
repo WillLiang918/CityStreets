@@ -1,63 +1,33 @@
-/*jshint multistr: true */
-
 SearchConstants = {
   NEIGHBORHOOD: [
-    // "FINANCIAL,\
-    // CIVIC CENTER,\
-    // FLATIRON,\
-    // MIDTOWN WEST,\
-    // CHELSEA,\
-    // GREENWICH VILLAGE-CENTRAL,\
-    // WASHINGTON HEIGHTS,\
-    // MIDTOWN EAST,\
-    // LOWER EAST SIDE,\
-    // GREENWICH VILLAGE-WEST,\
-    // UPPER WEST SIDE,\
-    // MIDTOWN CBD,\
-    // EAST VILLAGE,\
-    // MURRAY HILL,\
-    // GRAMERCY,\
-    // MANHATTAN VALLEY,\
-    // KIPS BAY,\
-    // INWOOD,\
-    // TRIBECA,\
-    // HARLEM-WEST,\
-    // HARLEM-CENTRAL,\
-    // CHINATOWN,\
-    // LITTLE ITALY,\
-    // UPPER EAST SIDE,\
-    // SOHO,\
-    // HARLEM-EAST,\
-    // MORNINGSIDE HEIGHTS",
-    'CHELSEA',
-    'CHINATOWN',
-    'CIVIC CENTER',
-    'EAST VILLAGE',
-    'FINANCIAL',
-    'FLATIRON',
-    'GRAMERCY',
-    'GREENWICH VILLAGE-CENTRAL',
-    'GREENWICH VILLAGE-WEST',
-    'HARLEM-CENTRAL',
-    'HARLEM-EAST',
-    'HARLEM-WEST',
-    'INWOOD',
-    'KIPS BAY',
-    'LITTLE ITALY',
-    'LOWER EAST SIDE',
-    'MANHATTAN VALLEY',
-    'MIDTOWN CBD',
-    'MIDTOWN EAST',
-    'MIDTOWN WEST',
-    'MORNINGSIDE HEIGHTS',
-    'MURRAY HILL',
-    'SOHO',
-    'TRIBECA',
-    'UPPER EAST SIDE',
-    'UPPER WEST SIDE',
-    'WASHINGTON HEIGHTS',
+    'Chelsea',
+    'Chinatown',
+    'Civic Center',
+    'East Village',
+    'Financial',
+    'Flatiron',
+    'Gramercy',
+    'Greenwich Village-Central',
+    'Greenwich Village-West',
+    'Harlem-Central',
+    'Harlem-East',
+    'Harlem-West',
+    'Inwood',
+    'Kips Bay',
+    'Little Italy',
+    'Lower East Side',
+    'Manhattan Valley',
+    'Midtown CBD',
+    'Midtown East',
+    'Midtown West',
+    'Morningside Heights',
+    'Murray Hill',
+    'Soho',
+    'Tribeca',
+    'Upper East Side',
+    'Upper West Side',
+    'Washington Heights',
   ],
-
 
   PRICE: [
     '$500',

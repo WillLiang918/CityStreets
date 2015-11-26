@@ -1,5 +1,8 @@
 class Address < ActiveRecord::Base
 
+  include PgSearch
+  multisearchable :against => [:street, :unit, :city, :state, :zip, :neighborhood]
+
   belongs_to :property, class_name: "Property", foreign_key: :property_id
   geocoded_by :get_full_address
 

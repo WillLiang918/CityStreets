@@ -6,12 +6,13 @@
     getInitialState: function () {
       return {
           location: "",
+          neighborhood: "",
           minPrice: null,
           maxPrice: null,
           bedrooms: null,
           bathrooms: null,
           matches: [],
-          canShow: true
+          canShow: true,
       };
     },
 
@@ -42,9 +43,10 @@
       var matches = [];
       this.setState({
         location: e.target.value,
+        neighborhood: "",
         canShow: true
       });
-      var searchText = new RegExp(e.target.value.toUpperCase());
+      var searchText = new RegExp(e.target.value, 'i');
       for ( var i = 0; i < SearchConstants.NEIGHBORHOOD.length; i++ ) {
         var neighborhood = SearchConstants.NEIGHBORHOOD[i];
         if ( neighborhood.match(searchText) ) {
@@ -54,8 +56,11 @@
       this.setState({ matches: matches });
     },
 
-    setLocation: function (location) {
-      this.setState({ location: location });
+    setNeighborhood: function (location) {
+      this.setState({
+        location: location,
+        neighborhood: location
+      });
     },
 
     toggleCanShow: function () {
@@ -64,10 +69,10 @@
 
     render: function () {
       var locationDetail;
-      if ( this.state.location.length > 0 && this.state.canShow) {
+      if ( this.state.location.length > 0 && !this.state.neighborhood) {
         locationDetail = <SearchLocation
                             toggleCanShow={ this.toggleCanShow }
-                            setLocation={ this.setLocation }
+                            setNeighborhood={ this.setNeighborhood }
                             location={ this.state.location }
                             matches={ this.state.matches }/>;
       }
@@ -145,8 +150,6 @@
 
               </div>
             <br/>
-
-
             <button className="search-button">Search</button>
           </form>
         </div>

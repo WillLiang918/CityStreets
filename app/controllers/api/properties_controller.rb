@@ -5,11 +5,13 @@ class Api::PropertiesController < ApplicationController
     maxPrice = params[:maxPrice]
     bedrooms = params[:bedrooms]
     bathrooms = params[:bathrooms]
+    neighborhood = params[:neighborhood]
 
-    @properties = Property.all
+    @properties = Property.joins(:address)
     if minPrice.present? && minPrice != "Any"
       @properties = @properties.where("price >= ?", minPrice.gsub(/\D/,'').to_i )
     end
+
     if maxPrice.present? && maxPrice != "Any"
       @properties = @properties.where("price <= ?", maxPrice.gsub(/\D/,'').to_i )
     end
@@ -19,7 +21,9 @@ class Api::PropertiesController < ApplicationController
     if bathrooms.present? && bathrooms != "Any"
       @properties = @properties.where("bathrooms >= ?", bathrooms.gsub(/[^\d\.]/, '').to_f )
     end
-
+    if neighborhood.present?
+      @properties = @properties.where("neighborhood LIKE ?", neighborhood)
+    end
     @properties
   end
 

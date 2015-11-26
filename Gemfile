@@ -33,7 +33,8 @@ gem 'aws-sdk', '~> 1.6'
 gem 'figaro'
 
 gem 'geocoder'
-gem 'ny_address', git: 'git://gist.github.com/1672379.git'
+gem 'pg_search'
+gem 'kaminari'
 
 # Use Unicorn as the app server
 # gem 'unicorn'
