@@ -9,7 +9,8 @@
       return {
         currentUser: CurrentUserStore.currentUser(),
         properties: PropertyStore.all(),
-        photos: PhotoStore.all()
+        photos: PhotoStore.all(),
+        auth: false
       };
     },
 
@@ -35,7 +36,11 @@
     render: function () {
       return (
         <div>
-          <MainHeader />
+          <MainHeader
+            currentUser={ this.state.currentUser }
+            auth={ this.state.auth }
+            toggleAuth={ this.toggleAuth }
+            history={ this.props.history }/>
           <div className="saved-listings">
             <div>
               <h2>Saved Properties</h2>
@@ -53,17 +58,21 @@
       );
     },
 
-    _updateCurrentUser: function () {
-      this.setState({ currentUser: CurrentUserStore.currentUser() });
+    toggleAuth: function () {
+      this.setState({ auth: !this.state.auth });
     },
 
-    _updateProperties: function () {
-      this.setState({ properties: PropertyStore.all() });
-    },
-
-    _updatePhotos: function () {
-      this.setState({ photos: PhotoStore.all(), });
-    }
+    // _updateCurrentUser: function () {
+    //   this.setState({ currentUser: CurrentUserStore.currentUser() });
+    // },
+    //
+    // _updateProperties: function () {
+    //   this.setState({ properties: PropertyStore.all() });
+    // },
+    //
+    // _updatePhotos: function () {
+    //   this.setState({ photos: PhotoStore.all(), });
+    // }
 
   });
 })(this);

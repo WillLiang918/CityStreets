@@ -287,7 +287,7 @@ ADDRESSES = [
   ['1 BOND STREET','GREENWICH VILLAGE-CENTRAL',5051001]
 ]
 
-10.times do |i|
+15.times do |i|
   Property.create!(
   owner_user_id: 1,
   price: rand(2..7) * 1000,
