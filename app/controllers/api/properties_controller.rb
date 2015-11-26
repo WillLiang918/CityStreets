@@ -11,7 +11,6 @@ class Api::PropertiesController < ApplicationController
     if minPrice.present? && minPrice != "Any"
       @properties = @properties.where("price >= ?", minPrice.gsub(/\D/,'').to_i )
     end
-
     if maxPrice.present? && maxPrice != "Any"
       @properties = @properties.where("price <= ?", maxPrice.gsub(/\D/,'').to_i )
     end
