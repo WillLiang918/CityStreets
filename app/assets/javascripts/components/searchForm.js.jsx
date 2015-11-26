@@ -71,7 +71,7 @@
                     <option>Any</option>
                     {SearchConstants.PRICE.map( function(price) {
                       return (
-                        <option key={price}>{price}</option>
+                        <option key={ price }>{ price }</option>
                       );
                     })}
                 </select>
@@ -83,11 +83,11 @@
                 valueLink={this.linkState("bedrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                    {SearchConstants.BEDROOMS.map( function(bedrooms) {
+                      return (
+                        <option key={ bedrooms }>{ bedrooms }</option>
+                      );
+                    })}
                 </select>
               </div>
 
@@ -97,13 +97,11 @@
                 valueLink={this.linkState("bathrooms")}
                   type="text">
                   <option>Any</option>
-                  <option>1</option>
-                  <option>1.5</option>
-                  <option>2</option>
-                  <option>2.5</option>
-                  <option>3</option>
-                  <option>3.5</option>
-                  <option>4</option>
+                    {SearchConstants.BATHROOMS.map( function(bathrooms) {
+                      return (
+                        <option key={ bathrooms }>{ bathrooms }</option>
+                      );
+                    })}
                 </select>
               </div>
 

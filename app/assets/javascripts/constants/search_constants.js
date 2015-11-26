@@ -50,5 +50,24 @@ SearchConstants = {
     '$10,000',
     '$12,500',
     '$15,000',
+  ],
+
+  BEDROOMS: [
+    "1 bedroom",
+    "2 bedrooms",
+    "3 bedrooms",
+    "4 bedrooms",
+  ],
+
+  BATHROOMS: [
+    "1 or more",
+    "1.5 or more",
+    "2 or more",
+    "2.5 or more",
+    "3 or more",
+    "3.5 or more",
+    "4 or more",
   ]
+
+
 };

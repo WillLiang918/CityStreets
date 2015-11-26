@@ -14,10 +14,10 @@ class Api::PropertiesController < ApplicationController
       @properties = @properties.where("price <= ?", maxPrice.gsub(/\D/,'').to_i )
     end
     if bedrooms.present? && bedrooms != "Any"
-      @properties = @properties.where("bedrooms >= ?", bedrooms )
+      @properties = @properties.where("bedrooms >= ?", bedrooms.gsub(/\D/,'').to_i )
     end
     if bathrooms.present? && bathrooms != "Any"
-      @properties = @properties.where("bathrooms >= ?", bathrooms )
+      @properties = @properties.where("bathrooms >= ?", bathrooms.gsub(/[^\d\.]/, '').to_f )
     end
 
     @properties
