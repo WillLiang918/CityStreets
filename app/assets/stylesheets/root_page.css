@@ -12,7 +12,8 @@
 }
 
 .search-location-container > * {
-  width: 500px;
+  width: 460px;
+  padding: 0px 10px;
 }
 
 .search-location {

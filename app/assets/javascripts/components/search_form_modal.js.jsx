@@ -6,10 +6,14 @@
     getInitialState: function () {
       return {
           location: "",
+          neighborhood: "",
           minPrice: null,
           maxPrice: null,
           bedrooms: null,
-          bathrooms: null };
+          bathrooms: null,
+          matches: [],
+          canShow: true,
+      };
     },
 
     handleSubmit: function (event) {
@@ -34,7 +38,44 @@
     _onChange: function () {
     },
 
+    handleKeyPress: function (e) {
+      var matches = [];
+      this.setState({
+        location: e.target.value,
+        neighborhood: "",
+        canShow: true
+      });
+      var searchText = new RegExp(e.target.value, 'i');
+      for ( var i = 0; i < SearchConstants.NEIGHBORHOOD.length; i++ ) {
+        var neighborhood = SearchConstants.NEIGHBORHOOD[i];
+        if ( neighborhood.match(searchText) ) {
+          matches.push( neighborhood );
+        }
+      }
+      this.setState({ matches: matches });
+    },
+
+    setNeighborhood: function (location) {
+      this.setState({
+        location: location,
+        neighborhood: location
+      });
+    },
+
+    toggleCanShow: function () {
+      this.setState({ canShow: false });
+    },
+
     render: function () {
+      var locationDetail;
+      // if ( this.state.location.length > 0 && !this.state.neighborhood) {
+      if ( this.state.location.length > 0 && this.state.canShow ) {
+        locationDetail = <SearchLocation
+                            toggleCanShow={ this.toggleCanShow }
+                            setNeighborhood={ this.setNeighborhood }
+                            location={ this.state.location }
+                            matches={ this.state.matches }/>;
+      }
       return (
         <div>
           <SearchModalTitle
@@ -47,9 +88,11 @@
                 <label className="search-location">Location</label>
                 <input
                   type="text"
-                  valueLink={this.linkState("location")}
+                  onChange={ this.handleKeyPress }
+                  value={ this.state.location }
                   placeholder="Neighborhood / Address / Building / Keyword"/>
-              </div>
+                { locationDetail }
+            </div>
             </div>
 
             <div className="search-row group">
@@ -110,7 +153,6 @@
 
               </div>
             <br/>
-
 
             <button className="search-button">Search</button>
           </form>

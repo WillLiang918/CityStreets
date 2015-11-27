@@ -46,6 +46,10 @@
   padding: 15px;
 }
 
+.search-form-modal input {
+  height: 39px;
+}
+
 .sign-in-up-form-modal {
   padding: 15px;
 }

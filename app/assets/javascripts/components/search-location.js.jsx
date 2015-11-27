@@ -10,27 +10,42 @@
       this.props.setNeighborhood(e.target.value);
     },
 
+    handleMouseEnter: function () {
+      this.props.toggleCanShow();
+    },
+
     render: function () {
       var that = this;
       var matches = [];
       if (this.props.matches.length > 0 ) {
         this.props.matches.forEach( function (match) {
           matches.push(
-            <li>
-              <input onChange={ that.handleClick } value={ match } type="checkbox">
-                <label value={match}>
-                  { match }
-                </label>
-              </input>
+            <li className="location-modal-list-item group">
+              <label value={match}>
+                <input
+                  className="select-location-button"
+                  onChange={ that.handleClick }
+                  value={ match }
+                  type="checkbox">
+                </input>
+                <div className="select-location">{ match }</div>
+              </label>
             </li>
           );
         });
       } else {
-        matches = <div>Search for "{ this.props.location }.."</div>;
+        matches = <li
+          className="location-modal-list-item pg-list">
+            <div
+              onMouseEnter={ this.handleMouseEnter }
+              className="pg-search">
+              Search for "{ this.props.location }.."
+            </div>
+        </li>;
       }
 
       return (
-        <div>
+        <div className="location-modal-list group">
           { matches }
         </div>
       );

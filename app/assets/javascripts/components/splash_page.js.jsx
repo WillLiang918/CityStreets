@@ -44,6 +44,5 @@
     toggleAuth: function () {
       this.setState({ auth: !this.state.auth });
     },
-    
   });
 })(this);

@@ -1,0 +1,44 @@
+.location-modal-list {
+  width: 100%;
+  position: absolute;
+}
+
+.location-modal-list-item {
+  height: auto;
+  box-sizing: border-box;
+  display: inline-block;
+  border-bottom: 1px solid #ccc;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+  background-color: white;
+  padding-left: 20px;
+  max-height: 200px;
+  width: 100%;
+}
+
+.location-modal-list-item:hover {
+  background-color: #d4ecfa;
+}
+
+.select-location-button {
+  height: 32px;
+  padding: 0;
+  vertical-align: middle;
+}
+
+.select-location {
+  height: 32px;
+  padding: 0px 7px;
+  display: inline-block;
+  width: 300px;
+}
+
+.pg-list {
+  background-color: #d4ecfa;
+}
+
+.pg-search {
+  padding-top: 4px;
+  height: 32px;
+  vertical-align: middle;
+}

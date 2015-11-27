@@ -22,13 +22,12 @@
     },
 
     componentWillUnmount: function () {
-      // Not sure why I commented this out
+      // Not sure why this breaks
       // FilterParamsStore.removeChangeListener(this._onChange);
     },
 
     handleSubmit: function (event) {
       event.preventDefault();
-
       ApiActions.updateSearchParams(this.state);
       var params = FilterParamsStore.params();
       this.setState(params);
@@ -69,7 +68,7 @@
 
     render: function () {
       var locationDetail;
-      if ( this.state.location.length > 0 && !this.state.neighborhood) {
+      if ( this.state.location.length > 0 && this.state.canShow) {
         locationDetail = <SearchLocation
                             toggleCanShow={ this.toggleCanShow }
                             setNeighborhood={ this.setNeighborhood }
