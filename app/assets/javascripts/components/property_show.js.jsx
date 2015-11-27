@@ -74,11 +74,11 @@
               <SlideShow
                 property={ this.state.property }
                 id={ parseInt(this.props.params.propertyId) }/>
-              <Description />
+              <Description
+                property={ this.state.property }/>
             </div>
             <div className="right-two-fifths">
               {detail}
-              Transit Stuff
             </div>
           </div>
         </div>
@@ -97,17 +97,6 @@
       var property = this._findPropertyById(propertyId);
       this.setState({ property: property });
     },
-
-    // onChange: function () {
-    //   var propertyId = this.props.params.propertyId;
-    //   var property = this._findPropertyById(propertyId);
-    //
-    //   this.setState({
-    //     currentUser: CurrentUserStore.currentUser(),
-    //     property: property,
-    //     saved: !!this.isSaved(this.props.params.propertyId)
-    //   });
-    // },
 
     _findPropertyById: function (id) {
       var result;

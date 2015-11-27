@@ -287,12 +287,42 @@ ADDRESSES = [
   ['1 BOND STREET','GREENWICH VILLAGE-CENTRAL',5051001]
 ]
 
+DESCRIPTION = [
+  "This one-of-a-kind home beckons someone who appreciates luxury in its truest
+  sense. Its westerly window curtains frame jaw-dropping Hudson views from the
+  64th floor; its generously-proportioned great room with 10-foot ceiling
+  provides the perfect backdrop for unforgettable soirees. Enjoy culinary
+  delights with help from the luxurious kitchen, featuring a Miele four-burner
+  cooktop with Varenna hood and refrigerator from Sub-Zero. Luxuriate in the
+  5-fixture spa bath in the master suite. Additional thoughtful details, such
+  as ample closet space, motorized sunshades, a powder room, and in-unit washer
+  & dryer complete this unique offering.",
+  "Built in 1906 Turn of the Century Residence by the noted architectural firm
+  Hiss and Weekes. The building features are : 24 Hr Concierge and Doorman
+  Service. Beautiful interior garden and landscaped courtyard with a fountain.
+  children playroom, Bike room, private drive way, complimentary 24 Hr fitness
+  room",
+  "Great location near Central Park, transportation, shopping and restaurants.
+  Step back in time and enjoy a whole new way to experience living in New York
+  City! ",
+  "Fabulously light-filled, wonderfully airy and luxuriously spacious, this one
+  bedroom residence has the extravagance of two private outdoor terraces. Each
+  terrace flows from its own separate seating areas - one a living room for
+  relaxing in comfort on sofa and armchairs around a woodburning fireplace, the
+  other being a study/media room with a large flat-screen television and Apple
+  iMac workstation.",
+  "Yes. You will find 'Shakespeare in the Park', but if he lived during this
+  century or the last, you'd have found him dipping his quill in an ink well,
+  on his desk in the study of this 6 room pre-war condo at The Century! "
+]
+
 15.times do |i|
   Property.create!(
   owner_user_id: 1,
   price: rand(2..7) * 1000,
   bathrooms: BATHROOMS.sample,
-  bedrooms: BEDROOMS.sample
+  bedrooms: BEDROOMS.sample,
+  description: DESCRIPTION.sample
   )
 
   Address.create!(
@@ -314,12 +344,6 @@ ADDRESSES = [
 
 end
 
-10.times do |i|
-end
-
-10.times do |i|
-end
-
 50.times do
   Photo.create!(
     property_id: rand(1..8),
@@ -328,92 +352,3 @@ end
     )
   )
 end
-
-
-# file = File.open("#{Rails.root}/public/images/nyc#{Random.rand(21) + 1}.jpg")
-#
-# File.open("#{Rails.root}/public/images/Sample1.jpg")
-#
-# File.open("#{Rails.root}/public/images/Sample1.jpg", 'r')
-#
-# x = Photo.create!(:image => File.open("#{Rails.root}/public/images/Sample1.jpg", 'r'))
-#
-# Photo.each do |photo|
-#   photo.image.url "Sample" + rand(1..11).to_s + ".jpg"
-# end
-
-# property1 = Property.create!(
-#   owner_user_id: 1,
-#   price: 3000,
-#   bathrooms: 2,
-#   bedrooms: 2
-# )
-#
-# property2 = Property.create!(
-#   owner_user_id: 1,
-#   price: 6000,
-#   bathrooms: 2
-# )
-#
-# property3 = Property.create!(
-#   owner_user_id: 1,
-#   price: 6000
-# )
-#
-# property4 = Property.create!(
-#   owner_user_id: 1,
-#   price: 5,
-#   square_ft: 2114
-# )
-
-# address1 = Address.create!(
-#   property_id: 1,
-#   street: "959 First Avenue",
-#   unit: "#17B",
-#   city: "New York City",
-#   state: "New York",
-#   zip: 10022
-# )
-#
-# address2 = Address.create!(
-#   property_id: 2,
-#   street: "5 Roebling Street",
-#   unit: "#PHB",
-#   city: "New York City",
-#   state: "New York",
-#   zip: 11211
-# )
-#
-# address3 = Address.create!(
-#   property_id: 3,
-#   street: "15 Brpad Street",
-#   unit: "1900",
-#   city: "New York City",
-#   state: "New York",
-#   zip: 10005
-# )
-#
-# address4 = Address.create!(
-#   property_id: 4,
-#   street: "5 Beekma Street",
-#   unit: "#23C",
-#   city: "New York City",
-#   state: "New York",
-#   zip: 10038
-# )
-
-# photo1 = Photo.create!(
-#   property_id: 1,
-# )
-# photo11 = Photo.create!(
-#   property_id: 1,
-# )
-# photo2 = Photo.create!(
-#   property_id: 2,
-# )
-# photo3 = Photo.create!(
-#   property_id: 3,
-# )
-# photo4 = Photo.create!(
-#   property_id: 4,
-# )

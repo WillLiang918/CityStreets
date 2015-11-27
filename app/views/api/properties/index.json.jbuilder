@@ -1,5 +1,6 @@
 json.array! @properties do |property|
   json.id property.id
+  json.description property.description
   json.address property.address.get_address
   json.fullAddress property.address.get_full_address
   json.latlng property.address.get_lnglat
