@@ -62,7 +62,7 @@ input {
 
 .background {
   opacity: 0.2;
-  background: url('/assets/background.jpg');
+  background: url(image_path('background.jpg'));
   min-height: 100%;
   min-width: 1024px;
   width: 100%;
@@ -81,7 +81,7 @@ input {
 
 .splash-page {
   // opacity: 0.8;
-  animation: fadein 5s;
+  animation: fadein 4s;
 }
 
 .property-list {
