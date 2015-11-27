@@ -54,9 +54,11 @@
   height: 100%;
 }
 
-/*.result .property-list-item:hover {
-  background-color: red;
-}*/
+.property-list-item:hover {
+  -moz-transform:scale(1.05);
+  -webkit-transform:scale(1.05);
+  -o-transform:scale(1.05);
+}
 
 .result .property-image {
   width: 165px;
