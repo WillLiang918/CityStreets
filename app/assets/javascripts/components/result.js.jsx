@@ -38,6 +38,7 @@
       var background = (this.state.refineSearch) ? "active" : "non-active";
       return (
         <div>
+          <div className="background"></div>
           <MainHeader
             currentUser={ this.state.currentUser }
             auth={ this.state.auth }

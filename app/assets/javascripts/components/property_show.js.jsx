@@ -64,6 +64,7 @@
       }
       return (
         <div>
+          <div className="background"></div>
           <MainHeader
             currentUser={ this.state.currentUser }
             auth={ this.state.auth }

@@ -2,7 +2,7 @@
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ ``* Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
  * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
  *
  * You're free to add application-wide styles to this file and they'll appear at the bottom of the
@@ -32,6 +32,7 @@ html {
 }
 
 body {
+  background: white;
   width: 980px;
   margin: auto;
   font-family: Source Sans Pro,Helvetica,Arial,Geneva,sans-serif;
@@ -58,6 +59,30 @@ input {
   display: block;
 }
 /*profile page*/
+
+.background {
+  opacity: 0.2;
+  background: url('/assets/background.jpg');
+  min-height: 100%;
+  min-width: 1024px;
+  width: 100%;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background-color:rgba(0, 0, 0, 0.5)
+}
+
+@keyframes fadein {
+  0%   { opacity: 1; }
+  100% { opacity: .2; }
+}
+
+.splash-page {
+  // opacity: 0.8;
+  animation: fadein 5s;
+}
 
 .property-list {
   /*border: 5px solid black;*/

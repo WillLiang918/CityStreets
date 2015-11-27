@@ -29,6 +29,7 @@
     render: function () {
       return (
         <div>
+          <div className="background splash-page"></div> 
           <MainHeader
             currentUser={ this.state.currentUser }
             auth={ this.state.auth }
