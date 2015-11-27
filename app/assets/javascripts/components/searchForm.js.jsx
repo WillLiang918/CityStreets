@@ -124,7 +124,7 @@
                 <select
                 valueLink={this.linkState("bedrooms")}
                   type="text">
-                  <option>Any</option>
+                  <option>Any Beds</option>
                     {SearchConstants.BEDROOMS.map( function(bedrooms) {
                       return (
                         <option key={ bedrooms }>{ bedrooms }</option>
@@ -138,7 +138,7 @@
                 <select
                 valueLink={this.linkState("bathrooms")}
                   type="text">
-                  <option>Any</option>
+                  <option>Any Baths</option>
                     {SearchConstants.BATHROOMS.map( function(bathrooms) {
                       return (
                         <option key={ bathrooms }>{ bathrooms }</option>

@@ -33,10 +33,10 @@ class Api::PropertiesController < ApplicationController
     if maxPrice.present? && maxPrice != "Any"
       @properties = @properties.where("price <= ?", maxPrice.gsub(/\D/,'').to_i )
     end
-    if bedrooms.present? && bedrooms != "Any"
+    if bedrooms.present? && bedrooms != "Any Beds"
       @properties = @properties.where("bedrooms >= ?", bedrooms.gsub(/\D/,'').to_i )
     end
-    if bathrooms.present? && bathrooms != "Any"
+    if bathrooms.present? && bathrooms != "Any Baths"
       @properties = @properties.where("bathrooms >= ?", bathrooms.gsub(/[^\d\.]/, '').to_f )
     end
     @properties

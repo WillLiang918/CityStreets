@@ -64,6 +64,7 @@
 }
 
 .app-logo {
+  font-weight: 500;
   float: left;
   font-size: 38px;
 }

@@ -10,9 +10,9 @@
 .refine-search-button {
   display: inline-block;
   padding: 7px 13px;
-  border: 1px solid #0080c6;
+  border: 2px solid #0080c6;
   color: #0080c6;
-  background-color: white;
+  background-color: #ccc;
   text-transform: uppercase;
 }
 
