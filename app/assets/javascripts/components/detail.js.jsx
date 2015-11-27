@@ -6,7 +6,7 @@
       if (this.props.saved) {
         savedButton = <div onClick={this.unsave} className="detail-save-button">x</div>;
       } else {
-        savedButton = <div onClick={this.save} className="detail-save-button">★ save</div>;
+        savedButton = <div onClick={this.save} className="detail-save-button">  save</div>;
       }
       return(
         <div className="detail-component">
