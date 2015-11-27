@@ -165,3 +165,13 @@
   font-size: 18px;
   line-height: 18px;
 }
+
+.register-true {
+  font-weight: bold;
+  background-color: #ccc;
+}
+
+.sign-in-true {
+  font-weight: bold;
+  background-color: #ccc;
+}

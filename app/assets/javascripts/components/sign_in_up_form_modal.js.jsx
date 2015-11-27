@@ -29,10 +29,10 @@
               data and advanced features.</div>
             <div className="modal-tabs-container group">
               <div
-                className="register-tab"
+                className={ "register-tab " + "register-" + this.state.register }
                 onClick={ this.handleRegister}>Register</div>
               <div
-                className="signIn-tab"
+                className={ "signIn-tab " + "sign-in-" + !this.state.register }
                 onClick={ this.handleSignIn }>Sign In</div>
             </div>
             { signInUpChoice }
