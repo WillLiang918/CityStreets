@@ -316,10 +316,10 @@ DESCRIPTION = [
   on his desk in the study of this 6 room pre-war condo at The Century! "
 ]
 
-20.times do |i|
+30.times do |i|
   Property.create!(
   owner_user_id: 1,
-  price: rand(2..7) * 1000,
+  price: rand(2..14) * 500,
   bathrooms: BATHROOMS.sample,
   bedrooms: BEDROOMS.sample,
   description: DESCRIPTION.sample

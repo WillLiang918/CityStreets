@@ -75,12 +75,11 @@ input {
 }
 
 @keyframes fadein {
-  0%   { opacity: 1; }
+  0%   { opacity: .9; }
   100% { opacity: .2; }
 }
 
 .splash-page {
-  // opacity: 0.8;
   animation: fadein 4s;
 }
 

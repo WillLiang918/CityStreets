@@ -14,6 +14,13 @@
   color: #0080c6;
   background-color: white;
   text-transform: uppercase;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.refine-search-button:hover {
+  background-color: #0080c6;
+  color: white;
 }
 
 .map-container {
@@ -83,6 +90,7 @@
   position: relative;
   border: 1px solid #fdc435;
   font-size: 14px;
+  border-radius: 5px;
 }
 
 .detail-save-button:hover {

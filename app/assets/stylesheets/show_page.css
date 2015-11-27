@@ -9,7 +9,8 @@
 .thumb-photos {
   border-bottom: 3px solid black;
   display: block;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  padding-top: 5px;
 }
 /*.right-two-fifths {
   box-sizing: border-box;
@@ -19,9 +20,9 @@
 
 .slide-show .thumb {
   box-sizing: border-box;
-  border: 3px solid white;
-  width: 31px;
-  height: 30px;
+  border: 3px solid transparent;
+  width: 41px;
+  height: 40px;
   float: left;
   display: block;
 }

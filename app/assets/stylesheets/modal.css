@@ -85,6 +85,7 @@
 
 .search-modal-navbar > * {
   padding: 14px 15px;
+  cursor: pointer;
 }
 
 .modal-tabs-container {
