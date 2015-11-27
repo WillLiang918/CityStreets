@@ -345,7 +345,7 @@ end
 
 100.times do
   Photo.create!(
-    property_id: rand(1..8),
+    property_id: rand(1..19),
     :image => File.open(
       "#{Rails.root}/app/assets/images/Sample" + rand(1..42).to_s + ".jpg", 'r'
     )
