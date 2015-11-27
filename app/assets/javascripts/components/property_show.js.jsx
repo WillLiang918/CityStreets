@@ -86,7 +86,10 @@
     },
 
     _updateCurrentUser: function () {
-      this.setState({ currentUser: CurrentUserStore.currentUser() });
+      this.setState({
+        currentUser: CurrentUserStore.currentUser(),
+        saved: !!this.isSaved(this.props.params.propertyId)
+      });
     },
 
     _updateProperties: function () {
@@ -94,6 +97,17 @@
       var property = this._findPropertyById(propertyId);
       this.setState({ property: property });
     },
+
+    // onChange: function () {
+    //   var propertyId = this.props.params.propertyId;
+    //   var property = this._findPropertyById(propertyId);
+    //
+    //   this.setState({
+    //     currentUser: CurrentUserStore.currentUser(),
+    //     property: property,
+    //     saved: !!this.isSaved(this.props.params.propertyId)
+    //   });
+    // },
 
     _findPropertyById: function (id) {
       var result;
