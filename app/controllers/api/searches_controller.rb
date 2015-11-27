@@ -1,3 +1,17 @@
+class Api::SearchController < ApplicationController
+
+  def index
+    @search_results = PgSearch
+      .multisearch(params[:query])
+      .includes(:searchable)
+      .page(params[:page])
+
+
+  end
+
+
+end
+
 # json.total_count @search_results.total_count
 #
 # json.results do
