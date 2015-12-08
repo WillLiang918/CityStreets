@@ -142,7 +142,7 @@
   top: 10px;
   display: inline;
   position: absolute;
-  z-index: 1000;
+  z-index: 10;
 }
 
 .list-item-photo-container {
