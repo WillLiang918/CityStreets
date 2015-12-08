@@ -338,7 +338,7 @@ DESCRIPTION = [
   Photo.create!(
     property_id: i + 1,
     :image => File.open(
-      "#{Rails.root}/app/assets/images/Sample" + rand(1..42).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..45).to_s + ".jpg", 'r'
     )
   )
 end
@@ -347,7 +347,7 @@ end
   Photo.create!(
     property_id: rand(1..30),
     :image => File.open(
-      "#{Rails.root}/app/assets/images/Sample" + rand(1..42).to_s + ".jpg", 'r'
+      "#{Rails.root}/app/assets/images/Sample" + rand(1..45).to_s + ".jpg", 'r'
     )
   )
 end
