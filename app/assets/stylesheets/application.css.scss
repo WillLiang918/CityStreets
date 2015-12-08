@@ -73,24 +73,55 @@ input {
   z-index: -1;
   background-color:rgba(0, 0, 0, 0.5)
 }
-.splash-content {
-  
+
+.video-container {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -100;
+  object-fit: cover;
 }
 
-iframe {
-  opacity: 0.1;
-  position: fixed;
+.home-page-splash-video {
+  // opacity: 0.5;
+  position: absolute;
+  height: 100%;
   width: 100%;
-  height: 120%;
-  top: -100px;
-  left: 0;
-  z-index: -1;
-  background-color:rgba(0, 0, 0, 0.5);
+  object-fit: contain;
+  // animation: fadein 5s;
+  // top: -15%;
+  // left: 0;
+  // z-index: -1;
+  // background-color:rgba(0, 0, 0, 0.5);
+}
+
+.splash-content-container {
+  background-color:rgba(255, 255, 255, 0.3);
+  // background-color: white;
+  // opacity: 0.2;
+}
+
+.splash-content {
+  border-radius: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
+  background-color:rgba(255, 255, 255, 0.5);
+
+  // border: 10px solid gold;
+}
+
+.splash-page-search {
+  margin-left: 150px;
 }
 
 @keyframes fadein {
   0%   { opacity: .9; }
-  100% { opacity: .2; }
+  100% { opacity: .1; }
 }
 
 .splash-page {
