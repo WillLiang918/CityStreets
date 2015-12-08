@@ -36,6 +36,7 @@
 
     render: function () {
       var background = (this.state.refineSearch) ? "active" : "non-active";
+
       return (
         <div>
           <div className="background"></div>
@@ -49,10 +50,12 @@
               onClick={ this.exitModal }
               className={ "modal-screen " + background }>
             </div>
+
             <ResultHeader
+              properties={ this.state.properties }
               toggleRefineSearch={ this.toggleRefineSearch }
               refineSearch={ this.state.refineSearch }
-              history={this.props.history}/>
+              history={ this.props.history }/>
             <div>
               <PropertyList
                 currentUser={ this.state.currentUser }

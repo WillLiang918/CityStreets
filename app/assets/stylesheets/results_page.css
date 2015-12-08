@@ -1,10 +1,17 @@
 .result-header-component {
   font-size: 38px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  /*margin-left: 10px;*/
 }
 
 .result-header-options-component {
   padding: 10px 0px;
   font-size: 14px;
+}
+
+.result-title {
+  font-size: 30px;
 }
 
 .refine-search-button {

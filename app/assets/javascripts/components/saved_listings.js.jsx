@@ -44,7 +44,6 @@
             history={ this.props.history }/>
           <div className="saved-listings">
             <div>
-              <h2>Saved Properties</h2>
               <SavedPropertyList
                 currentUser={this.state.currentUser}
                 properties={this.state.properties}

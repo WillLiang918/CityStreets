@@ -10,10 +10,13 @@
 
     render: function () {
       var savedlist = "";
+      var savedCount = 0;
+      var user = this.props.currentUser;
       var that = this;
-        if (this.props.currentUser) {
+        if (user) {
+          savedCount = user.saved_properties.length;
           savedlist = (<ul className="property-list group">
-            {this.props.currentUser.saved_properties.map( function (saved_property) {
+            {user.saved_properties.map( function (saved_property) {
               return (
                 <PropertyListItem
                   currentUser={that.props.currentUser}
@@ -26,7 +29,10 @@
           </ul> );
         }
       return (
-        <div>{savedlist}</div>
+        <div>
+          <h2>Saved Properties ({ savedCount })</h2>
+          {savedlist}
+        </div>
       );
     },
   });
