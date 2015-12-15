@@ -20,6 +20,8 @@
     },
 
     render: function () {
+      // photos={ this.props.photos }
+      // toggleAuth={ this.props.toggleAuth }
       return (
         <div
           className="property-list-item group"
@@ -37,8 +39,6 @@
               saved={ !!this.isSaved(this.props.id) }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
-              photos={ this.props.photos }
-              toggleAuth={ this.props.toggleAuth }
               history={ this.props.history }
               id={ this.props.id }/>
           </div>

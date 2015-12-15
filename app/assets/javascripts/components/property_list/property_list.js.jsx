@@ -12,7 +12,7 @@
                 property={ property }
                 photos={ that.props.photos }
                 toggleAuth={ that.props.toggleAuth }
-                history={that.props.history}
+                history={ that.props.history }
                 id={property.id}
                 key={property.id} />
             );

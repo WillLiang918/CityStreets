@@ -3,8 +3,8 @@
 
     getInitialState: function () {
       return {
-        properties: PropertyStore.all(),
-        photos: PhotoStore.all(),
+        // properties: PropertyStore.all(),
+        // photos: PhotoStore.all(),
       };
     },
 
@@ -21,6 +21,7 @@
                 <PropertyListItem
                   currentUser={that.props.currentUser}
                   property={saved_property}
+                  photos={ that.props.photos }
                   history={that.props.history}
                   id={saved_property.property_id}
                   key={saved_property.id} />

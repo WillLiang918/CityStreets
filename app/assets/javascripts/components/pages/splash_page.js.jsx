@@ -25,11 +25,7 @@
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this.onChange);
     },
-          //  <iframe
-          //   src="//player.vimeo.com/video/96396015?title=0&amp;byline=0&amp;portrait=0&amp;color=3a6774&amp;autoplay=1&amp;loop=1&amp;muted=1"
-          //   width="960" height="540" frameBorder="0" webkitallowfullscreen
-          //   mozallowfullscreen allowFullScreen>
-          //  </iframe>
+
     render: function () {
       return (
         <div>

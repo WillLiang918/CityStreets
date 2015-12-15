@@ -16,15 +16,14 @@
       };
     },
 
-    componentDidMount: function () {
-      FilterParamsStore.addChangeListener(this._onChange);
-      ApiUtil.fetchProperties();
-    },
-
-    componentWillUnmount: function () {
-      // Not sure why this breaks
-      // FilterParamsStore.removeChangeListener(this._onChange);
-    },
+    // componentDidMount: function () {
+    //   FilterParamsStore.addChangeListener(this._onChange);
+    //   ApiUtil.fetchProperties();
+    // },
+    //
+    // componentWillUnmount: function () {
+    //   FilterParamsStore.removeChangeListener(this._onChange);
+    // },
 
     handleSubmit: function (event) {
       event.preventDefault();
@@ -35,8 +34,8 @@
       this.props.history.pushState(null, "result");
     },
 
-    _onChange: function () {
-    },
+    // _onChange: function () {
+    // },
 
     handleKeyPress: function (e) {
       var matches = [];

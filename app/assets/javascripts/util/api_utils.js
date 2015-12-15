@@ -12,14 +12,13 @@ ApiUtil = {
   },
 
   fetchSavedProperties: function (user) {
-    debugger
+    var user_id = user ? user.id : null;
     $.ajax ({
       url: 'api/saved_properties',
       dataType: 'json',
-      data: { user: user },
+      data: { user_id: user_id },
       success: function (properties){
-        debugger
-        ApiActions.receiveAllSavedProperties(properties);
+        // ApiActions.receiveAllSavedProperties(properties);
       }
     });
   },

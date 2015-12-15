@@ -8,6 +8,7 @@
     getStateFromStore: function () {
       return {
         currentUser: CurrentUserStore.currentUser(),
+        // properties: ApiUtil.fetchSavedProperties,
         properties: PropertyStore.all(),
         photos: PhotoStore.all(),
         auth: false
@@ -33,6 +34,10 @@
       PhotoStore.removeChangeListener(this.onChange);
     },
 
+    getSavedProperties: function () {
+      return ApiUtil.fetchSavedProperties( CurrentUserStore.currentUser() );
+    },
+
     render: function () {
       return (
         <div>
@@ -46,7 +51,7 @@
             <div>
               <SavedPropertyList
                 currentUser={this.state.currentUser}
-                properties={this.state.properties}
+                properties={ this.getSavedProperties() }
                 photos={this.state.photos}
                 history={this.props.history}/>
             </div>

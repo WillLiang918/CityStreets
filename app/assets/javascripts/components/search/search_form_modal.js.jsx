@@ -35,8 +35,8 @@
       this.props.history.pushState(null, "result");
     },
 
-    _onChange: function () {
-    },
+    // _onChange: function () {
+    // },
 
     handleKeyPress: function (e) {
       var matches = [];
