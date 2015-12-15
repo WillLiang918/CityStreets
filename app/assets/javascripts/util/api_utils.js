@@ -1,4 +1,14 @@
 ApiUtil = {
+  fetchProperty: function (id) {
+    $.ajax ({
+      url: 'api/properties/' + id,
+      dataType: 'json',
+      success: function (properties){
+        ApiActions.receiveAllProperties([properties]);
+      }
+    });
+  },
+
   fetchProperties: function () {
     var filter = FilterParamsStore.params();
     $.ajax ({
@@ -24,7 +34,6 @@ ApiUtil = {
   },
 
   createPhoto: function (formData, callback) {
-    debugger
     $.ajax({
       url: '/api/photos',
       type: 'POST',
@@ -64,14 +73,12 @@ ApiUtil = {
   },
 
   fetchPhotos: function (properties_id) {
-    debugger
     $.ajax({
       url: '/api/photos',
       type: 'GET',
       dataType: 'json',
       data: { id: properties_id },
       success: function(photos) {
-        debugger
         ApiActions.receivePhotos(photos);
       }
     });

@@ -2,10 +2,10 @@
   root.PropertyShow = React.createClass ({
 
     getInitialState: function () {
-      var property = this._findPropertyById(this.props.params.propertyId);
       return {
         currentUser: CurrentUserStore.currentUser(),
-        property: property,
+        property: "",
+        currentPhoto: "",
         saved: !!this.isSaved(this.props.params.propertyId),
         auth: false
       };
@@ -37,8 +37,9 @@
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this._updateCurrentUser);
       PropertyStore.addChangeListener(this._updateProperties);
-      ApiUtil.fetchProperties();
-      ApiUtil.fetchPhotos(PropertyStore.getIds);
+      ApiUtil.fetchProperty(this.props.params.propertyId);
+      // ApiUtil.fetchProperties();
+      // ApiUtil.fetchPhotos( this.state.property );
       ApiUtil.fetchCurrentUser();
     },
 
@@ -73,6 +74,8 @@
           <div className="property-page group">
             <div className="left-three-fifths group">
               <SlideShow
+                currentPhoto={ this.state.currentPhoto }
+                changeCurrentPhoto={ this.changeCurrentPhoto }
                 property={ this.state.property }
                 id={ parseInt(this.props.params.propertyId) }/>
               <Description
@@ -94,9 +97,13 @@
     },
 
     _updateProperties: function () {
-      var propertyId = this.props.params.propertyId;
-      var property = this._findPropertyById(propertyId);
-      this.setState({ property: property });
+      // var propertyId = this.props.params.propertyId;
+      // var property = this._findPropertyById(propertyId);
+      // this.setState({ property: property });
+      this.setState({
+        property: PropertyStore.all()[0],
+        currentPhoto: PropertyStore.all()[0].photos[0]
+       });
     },
 
     _findPropertyById: function (id) {
@@ -118,5 +125,10 @@
     toggleAuth: function () {
       this.setState({ auth: !this.state.auth });
     },
+
+    changeCurrentPhoto: function (photo) {
+      this.setState({ currentPhoto: photo });
+    },
+
   });
 })(this);

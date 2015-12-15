@@ -36,7 +36,7 @@ class Property < ActiveRecord::Base
   end
 
   def get_photos
-    self.photos.map { |photo| photo.image.url }
+    self.photos.map { |photo| photo.image.url(:normal) }
   end
 
 end

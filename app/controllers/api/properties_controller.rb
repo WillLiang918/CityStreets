@@ -48,7 +48,7 @@ class Api::PropertiesController < ApplicationController
   end
 
   def show
-    property = Property.find(params[:id])
+    @property = Property.find(params[:id])
   end
 
   def update

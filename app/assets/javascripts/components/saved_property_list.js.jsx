@@ -21,7 +21,7 @@
                 <PropertyListItem
                   currentUser={that.props.currentUser}
                   property={saved_property}
-                  photos={ that.props.photos }
+                  photos={ saved_property.photos }
                   history={that.props.history}
                   id={saved_property.property_id}
                   key={saved_property.id} />

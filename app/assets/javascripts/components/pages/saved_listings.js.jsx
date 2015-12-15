@@ -10,7 +10,7 @@
         currentUser: CurrentUserStore.currentUser(),
         // properties: ApiUtil.fetchSavedProperties,
         properties: SavedPropertyStore.all(),
-        photos: PhotoStore.all(),
+        // photos: PhotoStore.all(),
         auth: false
       };
     },
@@ -25,14 +25,14 @@
       PhotoStore.addChangeListener(this.onChange);
       ApiUtil.fetchSavedProperties( CurrentUserStore.currentUser() );
       // ApiUtil.fetchProperties();
-      ApiUtil.fetchPhotos(PropertyStore.getIds);
+      // ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this.onChange);
       SavedPropertyStore.removeChangeListener(this.onChange);
-      PhotoStore.removeChangeListener(this.onChange);
+      // PhotoStore.removeChangeListener(this.onChange);
     },
 
     getSavedProperties: function () {
