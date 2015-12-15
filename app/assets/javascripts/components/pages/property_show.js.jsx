@@ -26,8 +26,7 @@
     },
 
     updateSave: function () {
-      this.setState({ saved: !this.state.saved });
-      this.updatedUser();
+      ApiUtil.fetchCurrentUser();
     },
 
     updatedUser: function () {
