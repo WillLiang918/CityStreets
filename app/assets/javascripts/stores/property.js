@@ -37,7 +37,6 @@
       switch (payload.actionType) {
         case PropertyConstants.PROPERTIES_RECEIVED:
           _properties = payload.properties.slice(0);
-          // resetProperties(payload.properties);
           PropertyStore.emit(CHANGE_EVENT);
           break;
         case PropertyConstants.PROPERTY_RECEIVED:

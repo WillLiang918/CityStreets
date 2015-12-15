@@ -1,7 +1,8 @@
 class Api::PhotosController < ApplicationController
 
   def index
-    if (params[:id] && params[:id].length == 1)
+    # debugger
+    if params[:id].present?
       @photo = Photo.where(property_id: params[:id])
     else
       @photos = Photo.order(created_at: :desc).all
@@ -18,8 +19,7 @@ class Api::PhotosController < ApplicationController
   end
 
   private
-
     def photo_params
-      params.require(:photo).permit(:title, :property_id, :image)
+      params.require(:photo).permit(:title, :property_id, :image, :id)
     end
 end

@@ -17939,3 +17939,651 @@ Processing by StaticPagesController#root as HTML
   Rendered layouts/_header.html.erb (2.1ms)
   Rendered layouts/_errors.html.erb (0.1ms)
 Completed 200 OK in 185ms (Views: 184.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2015-12-15 07:47:00 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by StaticPagesController#root as HTML
+  Rendered static_pages/root.html.erb within layouts/application (2.6ms)
+  [1m[35mUser Load (0.7ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  Rendered layouts/_header.html.erb (48.6ms)
+  Rendered layouts/_errors.html.erb (0.7ms)
+Completed 200 OK in 1317ms (Views: 1311.7ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/header.self-75f260e9d7ce7ce8396b5bf194ff7e20a9665adcfabae39a93484aade5928c09.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/location_modal.self-c9ced306e0d25fbd84761fcd80a9fb29f6436e8e2c9d12ae2d9c2b6be7e913a6.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/property_page.self-c162363f4886dc50f384c0a728f0fc3cf3f2195abe728db07bdb32b6ce5f7b2b.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/root_page.self-d8496cc453ee2fbdebb43e4a85758b8003716f63407d5b0c7cf203a106b59eaa.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/results_page.self-433e3cfe720a7c3596e2007c4d2c57b9feee85f60b54a828c202cff774635050.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/modal.self-6aaf737d1747a1ce7bfae57cf2197abfa8474ca4f694543bc562da2022f89ca9.css?body=1" for ::1 at 2015-12-15 07:47:01 -0500
+
+
+Started GET "/assets/description.self-1b0aa03b2e375fae183c2350d89b94a148a01e19c2d0c5e868c9f0aa534b51ee.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/session.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/saved_properties_page.self-17d89ec4d302b2bbf2b5d588571a14c98c364c51a338ea52cd1ec3033909b1fd.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/show_page.self-d7478fe5ec832cc882b081a36c6e0dec1ff491db1fa13414b6b7da9e93b0d98d.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/signin.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/static_pages.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/user.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/application.self-6f4b9d7b237b23828da1b55e812a544fb63987506da933ad878c2153d4c54255.css?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/development-with-addons/react.self-eb8c71fecbd80164b57078dcf4c66c91c12c9c84b59938c485aea8b6ae3538c1.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/ReactRouter.min.self-0c08710e85e99bdc2b63a49d032bf9a8ac55d74ebb3e4ab8829aa5352e735450.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/react_ujs.self-c42e5ee44bcda6910afca6fb40f99d9963074b3aefe72365ce90c24312e73b2b.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/flux.self-c2206dc953bbad23c0ee331879560545a4ec58709c89fe78db57a156ec19c08f.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/auth/sign_in_up.self-a21040de7222194f31f18bc0d6aff926d2c80855107afd2fbca133b091975001.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/eventemitter.self-b7e538902dfb3dce50e80598efaa7b435781b7bc8fe936a7aca64a6f2699d411.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/auth/sign_in_up_form_modal.self-6f74e917dad78d2dc976b0c4393ee1e452dcd1c3732eeb0551a16f2bf0b11b96.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/auth/sign_in_page.self-f4a3f5e8a1c123955687e8cb8dad02bcf62af76597d9f28c34431224e5793538.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/auth/sign_up_page.self-356413dd02e9ef02fdb5beffcda2e170b47bfa6c95631728db670886841f06df.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/description.self-8f8b617f0a3d16ed91e0062f738af180bf19cd99b282b2c85828e95c892009e6.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/header_auth.self-a2fd6ebeda8bbb681b7a1ed7ea7444d2f94d80551c4f1af34f5ae784096286d1.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/auth/sign_modal_title.self-3693a7efc90eb264e10e3a8f9a9fa2f18efd17cecca8dab01670f8adb27d5597.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/map.self-2e672f4090fd5e529258b08cb99e2fef8d6969907c838423663f83c270f813e0.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/pages/property_show.self-2b254243f1c574452625b2758d2e1088f737ab715ecccd5a3ac80cd644a78d59.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/main_header.self-20d4af4b172e5c210b3648072bfe3bb455f18e597ed73deddf64ce88ca0d92a8.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/pages/result.self-4cea8affae0f013ee32f8f82bbcdf9e8ebdee3faebc05536eb18f3dd5027cd05.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/pages/saved_listings.self-504d9d4461172f50a832d0f781199263ca67dde0e9677a3225431270b0fbb3a8.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/pages/splash_page.self-17c4b80d645f208026439d9dc9d59cde8bae7c8885138abbd8e9facdef539880.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/photo_form.self-15f705ee9670772608a38cff77b4fca1f46e746fa9924b1f7f64bd9c16471231.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/property_list/detail.self-dc359a84213689d31924b271c302ac6d05596b8e51b97cd334a5a49b1ec9aab1.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/property_list/list_item_photo.self-84d321f79390c7d2f74af3cba2dcb2aa90ce3e1d527a470446eca24993dda26c.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/property_list/property_list.self-7df1752955bab7144151a502bd68e6a51892050b43356ead8c1c8a240b2a3adb.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/property_list/property_list_item.self-62a85e25f55c00ea18af684d10a39966f9a372d26da9444e3febd8fea551aced.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/property_page.self-f4b468803b5a0a055bc5986223f2ff22ee17795a79dbc01462810b677232fab9.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/result_header_options.self-9fc358f8492544ef30a4ee6d827cb8de74031309289274a817ab6f0d1bb910b3.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/result_header.self-5e0c14f26292935cacb53107d45e646374451b765930ff9c10df1b4c83121db6.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/saved_property_list.self-b69dda5c219960ba4013ca613d74d7795971aa3e2999f0d7659c8a36e31444bc.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/search/search_modal_title.self-7da70a088a850f109038a27ff2c836ab934cd575079ab397774a9356195d284e.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/search/searchForm.self-26901f01bfbd22b862c3d92ce900fa94d81627c25d487fe0772c153639c23141.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/search/search_form_modal.self-11e0baffc437784c2659a8d0e56afb1883a70ce116d7b56c8a886fc1b1636188.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/search_results.self-79c52fe202cc8059c3bcc2d93643d6e55e3643edd88fdf40e446e9e25bd994b4.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/slide_show.self-21bb97959c4c43d29e35e1601e09b7ee55a933b845c981bbf63471cf8e6936e6.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/components/search/search-location.self-99d8a27e9a49e337993c08f43cdb83441c9ebe4511b08ca15e848c168413e506.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/actions/api_actions.self-e8109fe60efbb1d770a8d3be36cbe5807cd868f4a86e83a8c955a9815bada5b8.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/city_streets.self-da3a02ba503ff9ae166a7d559b4cac3c09a28e99d67de4f68dd381a429ec9308.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/constants/search_constants.self-05d7814e9d089af5807af6d38f3efab8dcd55d2406b2182412c0051c64360575.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/constants/property_constants.self-f8f6553b61d8290bd5fc0d52b129da57749147e60f726910b8e38c402ce72c0e.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/session.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/dispatcher/dispatcher.self-df4b2118c83e53bfcd046d9391e85547aa2f41e5a424adaa5c8d907b9675777f.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/static_pages.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/stores/current_user.self-210cb97d3a8ea9362cbbebd4569baaf79c93e8f667eff2b94f7a4a47f7d20084.js?body=1" for ::1 at 2015-12-15 07:47:02 -0500
+
+
+Started GET "/assets/stores/filter_params.self-726f88cacabfabbe19fa812892b66fc55af4286b71bb1271f7bd07b93a64c1b3.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/stores/photo.self-6a267bf973ff695527a22366018a3f268228369309e4a7c8db866aa00bd9cc78.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/stores/marker.self-41a28a7a09ed038e153c82fa7e2940ebcb61a7485c391687bb559199798e2ba6.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/stores/saved_property.self-23a63d99071d1e84fa152ccab5ec35d4939ee19c13a7ad312909f34fdea0599f.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/stores/search_results_store.self-1d793b70c3b23dcd1fee361801352e24c57dad5f4b381d71f7a1ef1eb621b53f.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/util/api_utils.self-07914139f9f78b3e92f26bee0d07413e14cf1055410b708c866f904cece2947d.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/util/search_api_util.self-3bd075c5a47541df504e5d3548cd083a7bbb2464404b3cd7c67432df782f2265.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/user.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/constants/filter_constants.self-6081d78ec7c15294461c2fcef86e0231832129789953ef67e167aba9b48df8b7.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/application.self-a1a74291c4c48f2f663a025ffa678498d6448b849a2d74c0ca25e39ee192c0a7.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/stores/property.self-4c531042db05e17b905a71df1cc551ff2258a9d8b99a96b09a529b6647a288c3.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/constants/search_result_constants.self-bc46447aa1e872c86f5e9bd8ae8d545918f833d1f668bb1427e03424eaaee2e6.js?body=1" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/assets/background-3135858a46b7d022d32a450af4cbccb5e2675aeb0e482fc1d317bf516a142a11.jpg" for ::1 at 2015-12-15 07:47:03 -0500
+
+
+Started GET "/api/properties?location=&minPrice=&maxPrice=&bedrooms=&bathrooms=" for ::1 at 2015-12-15 07:47:03 -0500
+Processing by Api::PropertiesController#index as JSON
+  Parameters: {"location"=>"", "minPrice"=>"", "maxPrice"=>"", "bedrooms"=>"", "bathrooms"=>""}
+  [1m[36mProperty Load (1.2ms)[0m  [1mSELECT "properties".* FROM "properties"[0m
+  [1m[35mAddress Load (0.6ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 1]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 2]]
+  [1m[36mPhoto Load (5.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 2]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 3]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 3]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 4]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 4]]
+  [1m[35mAddress Load (0.6ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 5]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 5]]
+  [1m[35mAddress Load (1.6ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 6]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 6]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 7]]
+  [1m[36mPhoto Load (3.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 7]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 8]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 8]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 9]]
+  [1m[36mPhoto Load (1.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 9]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 10]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 10]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 11]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 11]]
+  [1m[35mAddress Load (2.8ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 12]]
+  [1m[36mPhoto Load (3.2ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 12]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 13]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 13]]
+  [1m[35mAddress Load (0.6ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 14]]
+  [1m[36mPhoto Load (5.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 14]]
+  [1m[35mAddress Load (1.7ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 15]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 15]]
+  [1m[35mAddress Load (12.1ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 16]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 16]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 17]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 17]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 18]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 18]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 19]]
+  [1m[36mPhoto Load (0.6ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 19]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 20]]
+  [1m[36mPhoto Load (0.5ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 20]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 21]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 21]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 22]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 22]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 23]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 23]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 24]]
+  [1m[36mPhoto Load (1.7ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 24]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 25]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 25]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 26]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 26]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 27]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 27]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 28]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 28]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 29]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 29]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 30]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 30]]
+  Rendered api/properties/index.json.jbuilder (635.9ms)
+Completed 200 OK in 749ms (Views: 654.5ms | ActiveRecord: 67.1ms)
+
+
+Started GET "/api/session" for ::1 at 2015-12-15 07:47:04 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[35mUser Load (0.4ms)[0m  SELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  [1m[36mSavedProperty Load (0.4ms)[0m  [1mSELECT "saved_properties".* FROM "saved_properties" WHERE "saved_properties"."user_id" = $1[0m  [["user_id", 2]]
+  [1m[35mProperty Load (0.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 1]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 1]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 1]]
+  [1m[36mProperty Load (2.2ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 2]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 2]]
+  [1m[35mProperty Load (2.3ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 4]]
+  Rendered api/sessions/show.json.jbuilder (118.5ms)
+Completed 200 OK in 146ms (Views: 133.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/api/session" for ::1 at 2015-12-15 07:47:15 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.7ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  [1m[35mSavedProperty Load (0.4ms)[0m  SELECT "saved_properties".* FROM "saved_properties" WHERE "saved_properties"."user_id" = $1  [["user_id", 2]]
+  [1m[36mProperty Load (0.9ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAddress Load (3.9ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mPhoto Load (1.0ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 1]]
+  [1m[35mProperty Load (23.9ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 4]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 4]]
+  Rendered api/sessions/show.json.jbuilder (106.1ms)
+Completed 200 OK in 277ms (Views: 242.4ms | ActiveRecord: 32.8ms)
+
+
+Started GET "/api/properties?location=&minPrice=&maxPrice=&bedrooms=&bathrooms=&neighborhood=&canShow=true" for ::1 at 2015-12-15 07:47:22 -0500
+Processing by Api::PropertiesController#index as JSON
+  Parameters: {"location"=>"", "minPrice"=>"", "maxPrice"=>"", "bedrooms"=>"", "bathrooms"=>"", "neighborhood"=>"", "canShow"=>"true"}
+  [1m[35mProperty Load (0.6ms)[0m  SELECT "properties".* FROM "properties"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 1]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 1]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 3]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 3]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 4]]
+  [1m[36mAddress Load (19.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 5]]
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 5]]
+  [1m[36mAddress Load (3.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 6]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 6]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 7]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 7]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 8]]
+  [1m[35mPhoto Load (3.8ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 8]]
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 9]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 9]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 10]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 10]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 11]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 11]]
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 12]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 12]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 13]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 13]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 14]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 14]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 15]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 15]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 16]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 16]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 17]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 17]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 18]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 18]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 19]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 19]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 20]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 20]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 21]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 21]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 22]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 22]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 23]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 23]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 24]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 24]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 25]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 25]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 26]]
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 26]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 27]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 27]]
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 28]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 28]]
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 29]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 29]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 30]]
+  [1m[35mPhoto Load (0.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 30]]
+  Rendered api/properties/index.json.jbuilder (551.0ms)
+Completed 200 OK in 569ms (Views: 518.2ms | ActiveRecord: 49.6ms)
+
+
+Started GET "/api/session" for ::1 at 2015-12-15 07:47:23 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.2ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  [1m[35mSavedProperty Load (0.5ms)[0m  SELECT "saved_properties".* FROM "saved_properties" WHERE "saved_properties"."user_id" = $1  [["user_id", 2]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAddress Load (7.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 1]]
+  [1m[35mProperty Load (0.4ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (11.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAddress Load (0.3ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 4]]
+  [1m[36mPhoto Load (0.3ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 4]]
+  Rendered api/sessions/show.json.jbuilder (113.3ms)
+Completed 200 OK in 144ms (Views: 118.9ms | ActiveRecord: 22.8ms)
+
+
+Started GET "/api/properties?location=&minPrice=&maxPrice=&bedrooms=&bathrooms=&neighborhood=&canShow=true" for ::1 at 2015-12-15 07:47:23 -0500
+Processing by Api::PropertiesController#index as JSON
+  Parameters: {"location"=>"", "minPrice"=>"", "maxPrice"=>"", "bedrooms"=>"", "bathrooms"=>"", "neighborhood"=>"", "canShow"=>"true"}
+  [1m[35mProperty Load (0.6ms)[0m  SELECT "properties".* FROM "properties"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 1]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 1]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 3]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 3]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 4]]
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 5]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 5]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 6]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 6]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 7]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 7]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 8]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 8]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 9]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 9]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 10]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 10]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 11]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 11]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 12]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 12]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 13]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 13]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 14]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 14]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 15]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 15]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 16]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 16]]
+  [1m[36mAddress Load (1.1ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 17]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 17]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 18]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 18]]
+  [1m[36mAddress Load (0.8ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 19]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 19]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 20]]
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 20]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 21]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 21]]
+  [1m[36mAddress Load (0.7ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 22]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 22]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 23]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 23]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 24]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 24]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 25]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 25]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 26]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 26]]
+  [1m[36mAddress Load (3.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 27]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 27]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 28]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 28]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 29]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 29]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 30]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 30]]
+  Rendered api/properties/index.json.jbuilder (813.5ms)
+Completed 200 OK in 848ms (Views: 820.2ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/api/session" for ::1 at 2015-12-15 07:47:35 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (1.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  [1m[35mSavedProperty Load (0.4ms)[0m  SELECT "saved_properties".* FROM "saved_properties" WHERE "saved_properties"."user_id" = $1  [["user_id", 2]]
+  [1m[36mProperty Load (0.3ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAddress Load (0.8ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mPhoto Load (0.9ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 1]]
+  [1m[35mProperty Load (0.8ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAddress Load (2.7ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (1.7ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAddress Load (0.5ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 4]]
+  [1m[36mPhoto Load (2.1ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 4]]
+  Rendered api/sessions/show.json.jbuilder (61.2ms)
+Completed 200 OK in 83ms (Views: 69.1ms | ActiveRecord: 12.0ms)
+
+
+Started GET "/api/properties?location=&minPrice=&maxPrice=&bedrooms=&bathrooms=&neighborhood=&canShow=true" for ::1 at 2015-12-15 07:47:37 -0500
+Processing by Api::PropertiesController#index as JSON
+  Parameters: {"location"=>"", "minPrice"=>"", "maxPrice"=>"", "bedrooms"=>"", "bathrooms"=>"", "neighborhood"=>"", "canShow"=>"true"}
+  [1m[35mProperty Load (1.3ms)[0m  SELECT "properties".* FROM "properties"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 1]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 1]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 3]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 3]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 4]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 5]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 5]]
+  [1m[36mAddress Load (13.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 6]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 6]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 7]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 7]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 8]]
+  [1m[35mPhoto Load (0.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 8]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 9]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 9]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 10]]
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 10]]
+  [1m[36mAddress Load (4.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 11]]
+  [1m[35mPhoto Load (7.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 11]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 12]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 12]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 13]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 13]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 14]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 14]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 15]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 15]]
+  [1m[36mAddress Load (5.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 16]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 16]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 17]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 17]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 18]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 18]]
+  [1m[36mAddress Load (4.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 19]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 19]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 20]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 20]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 21]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 21]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 22]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 22]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 23]]
+  [1m[35mPhoto Load (0.5ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 23]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 24]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 24]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 25]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 25]]
+  [1m[36mAddress Load (1.0ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 26]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 26]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 27]]
+  [1m[35mPhoto Load (5.9ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 27]]
+  [1m[36mAddress Load (1.6ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 28]]
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 28]]
+  [1m[36mAddress Load (0.9ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 29]]
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 29]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 30]]
+  [1m[35mPhoto Load (0.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 30]]
+  Rendered api/properties/index.json.jbuilder (913.4ms)
+Completed 200 OK in 953ms (Views: 886.8ms | ActiveRecord: 65.2ms)
+
+
+Started GET "/api/session" for ::1 at 2015-12-15 07:47:38 -0500
+Processing by Api::SessionsController#show as JSON
+  [1m[36mUser Load (0.4ms)[0m  [1mSELECT  "users".* FROM "users" WHERE "users"."session_token" = $1 LIMIT 1[0m  [["session_token", "WpY_YMuRNafBeM6k-Fr9aQ"]]
+  [1m[35mSavedProperty Load (0.5ms)[0m  SELECT "saved_properties".* FROM "saved_properties" WHERE "saved_properties"."user_id" = $1  [["user_id", 2]]
+  [1m[36mProperty Load (0.4ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  [1m[35mAddress Load (7.2ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 1]]
+  [1m[36mPhoto Load (2.8ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 1]]
+  [1m[35mProperty Load (0.8ms)[0m  SELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mAddress Load (1.2ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mProperty Load (5.6ms)[0m  [1mSELECT  "properties".* FROM "properties" WHERE "properties"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mAddress Load (0.4ms)[0m  SELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1  [["property_id", 4]]
+  [1m[36mPhoto Load (0.4ms)[0m  [1mSELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1[0m  [["property_id", 4]]
+  Rendered api/sessions/show.json.jbuilder (65.5ms)
+Completed 200 OK in 86ms (Views: 64.7ms | ActiveRecord: 20.0ms)
+
+
+Started GET "/api/properties?location=&minPrice=&maxPrice=&bedrooms=&bathrooms=&neighborhood=&canShow=true" for ::1 at 2015-12-15 07:47:38 -0500
+Processing by Api::PropertiesController#index as JSON
+  Parameters: {"location"=>"", "minPrice"=>"", "maxPrice"=>"", "bedrooms"=>"", "bathrooms"=>"", "neighborhood"=>"", "canShow"=>"true"}
+  [1m[35mProperty Load (0.7ms)[0m  SELECT "properties".* FROM "properties"
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 1]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 1]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 2]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 2]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 3]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 3]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 4]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 4]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 5]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 5]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 6]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 6]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 7]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 7]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 8]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 8]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 9]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 9]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 10]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 10]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 11]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 11]]
+  [1m[36mAddress Load (2.8ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 12]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 12]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 13]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 13]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 14]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 14]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 15]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 15]]
+  [1m[36mAddress Load (0.4ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 16]]
+  [1m[35mPhoto Load (0.4ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 16]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 17]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 17]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 18]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 18]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 19]]
+  [1m[35mPhoto Load (1.6ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 19]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 20]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 20]]
+  [1m[36mAddress Load (0.5ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 21]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 21]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 22]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 22]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 23]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 23]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 24]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 24]]
+  [1m[36mAddress Load (0.6ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 25]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 25]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 26]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 26]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 27]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 27]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 28]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 28]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 29]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 29]]
+  [1m[36mAddress Load (0.3ms)[0m  [1mSELECT  "addresses".* FROM "addresses" WHERE "addresses"."property_id" = $1 LIMIT 1[0m  [["property_id", 30]]
+  [1m[35mPhoto Load (0.3ms)[0m  SELECT "photos".* FROM "photos" WHERE "photos"."property_id" = $1  [["property_id", 30]]
+  Rendered api/properties/index.json.jbuilder (390.8ms)
+Completed 200 OK in 410ms (Views: 385.5ms | ActiveRecord: 24.5ms)

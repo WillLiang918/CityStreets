@@ -12,7 +12,6 @@ class Address < ActiveRecord::Base
 
   after_validation :geocode
 
-
   def get_address
     "#{self.street} #{self.unit}"
   end

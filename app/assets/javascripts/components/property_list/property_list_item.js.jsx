@@ -21,7 +21,7 @@
 
     render: function () {
       // photos={ this.props.photos }
-      // toggleAuth={ this.props.toggleAuth }
+      // photo={ this.getPhoto(this.props.id) }
       return (
         <div
           className="property-list-item group"
@@ -29,7 +29,7 @@
           onClick={ this.handleClick }>
           <div className="property-image">
             <ListItemPhoto
-              photo={ this.getPhoto(this.props.id) }
+              photo = { this.props.photos }
               saved={ !!this.isSaved(this.props.id) }/>
           </div>
           <div>
@@ -39,6 +39,7 @@
               saved={ !!this.isSaved(this.props.id) }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
+              toggleAuth={ this.props.toggleAuth }
               history={ this.props.history }
               id={ this.props.id }/>
           </div>
@@ -58,12 +59,12 @@
       }
     },
 
-    getPhoto: function (id) {
-      var photo = PhotoStore.find(id)[0];
-      if (typeof photo != "undefined") {
-        return photo.image_url;
-      }
-    },
+    // getPhoto: function (id) {
+    //   var photo = PhotoStore.find(id)[0];
+    //   if (typeof photo != "undefined") {
+    //     return photo.image_url;
+    //   }
+    // },
 
   });
 })(this);

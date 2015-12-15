@@ -18,12 +18,13 @@ ApiUtil = {
       dataType: 'json',
       data: { user_id: user_id },
       success: function (properties){
-        // ApiActions.receiveAllSavedProperties(properties);
+        ApiActions.receiveAllSavedProperties(properties);
       }
     });
   },
 
   createPhoto: function (formData, callback) {
+    debugger
     $.ajax({
       url: '/api/photos',
       type: 'POST',
@@ -63,12 +64,14 @@ ApiUtil = {
   },
 
   fetchPhotos: function (properties_id) {
+    debugger
     $.ajax({
       url: '/api/photos',
       type: 'GET',
       dataType: 'json',
-      id: properties_id,
+      data: { id: properties_id },
       success: function(photos) {
+        debugger
         ApiActions.receivePhotos(photos);
       }
     });

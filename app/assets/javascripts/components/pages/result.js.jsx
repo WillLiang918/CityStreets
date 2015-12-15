@@ -9,7 +9,7 @@
       return {
         currentUser: CurrentUserStore.currentUser(),
         properties: PropertyStore.all(),
-        photos: PhotoStore.all(),
+        // photos: PhotoStore.all(),
         refineSearch: false,
         auth: false
       };
@@ -22,16 +22,16 @@
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this.onChange);
       PropertyStore.addChangeListener(this.onChange);
-      PhotoStore.addChangeListener(this.onChange);
+      // PhotoStore.addChangeListener(this.onChange);
       ApiUtil.fetchProperties();
-      ApiUtil.fetchPhotos(PropertyStore.getIds);
+      // ApiUtil.fetchPhotos(PropertyStore.getIds());
       ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this.onChange);
       PropertyStore.removeChangeListener(this.onChange);
-      PhotoStore.removeChangeListener(this.onChange);
+      // PhotoStore.removeChangeListener(this.onChange);
     },
 
     render: function () {

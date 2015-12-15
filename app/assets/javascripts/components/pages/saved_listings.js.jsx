@@ -9,7 +9,7 @@
       return {
         currentUser: CurrentUserStore.currentUser(),
         // properties: ApiUtil.fetchSavedProperties,
-        properties: PropertyStore.all(),
+        properties: SavedPropertyStore.all(),
         photos: PhotoStore.all(),
         auth: false
       };
@@ -21,16 +21,17 @@
 
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this.onChange);
-      PropertyStore.addChangeListener(this.onChange);
+      SavedPropertyStore.addChangeListener(this.onChange);
       PhotoStore.addChangeListener(this.onChange);
-      ApiUtil.fetchProperties();
+      ApiUtil.fetchSavedProperties( CurrentUserStore.currentUser() );
+      // ApiUtil.fetchProperties();
       ApiUtil.fetchPhotos(PropertyStore.getIds);
       ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this.onChange);
-      PropertyStore.removeChangeListener(this.onChange);
+      SavedPropertyStore.removeChangeListener(this.onChange);
       PhotoStore.removeChangeListener(this.onChange);
     },
 
@@ -50,8 +51,8 @@
           <div className="saved-listings">
             <div>
               <SavedPropertyList
-                currentUser={this.state.currentUser}
-                properties={ this.getSavedProperties() }
+                currentUser={ this.state.currentUser }
+                properties={ this.state.properties }
                 photos={this.state.photos}
                 history={this.props.history}/>
             </div>
@@ -66,18 +67,5 @@
     toggleAuth: function () {
       this.setState({ auth: !this.state.auth });
     },
-
-    // _updateCurrentUser: function () {
-    //   this.setState({ currentUser: CurrentUserStore.currentUser() });
-    // },
-    //
-    // _updateProperties: function () {
-    //   this.setState({ properties: PropertyStore.all() });
-    // },
-    //
-    // _updatePhotos: function () {
-    //   this.setState({ photos: PhotoStore.all(), });
-    // }
-
   });
 })(this);

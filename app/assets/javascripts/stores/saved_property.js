@@ -41,7 +41,6 @@
           break;
         case PropertyConstants.SAVED_PROPERTIES_RECEIVED:
           _saved_properties = payload.saved_properties;
-          debugger
           PropertyStore.emit(CHANGE_EVENT);
           break;
       }

@@ -10,7 +10,7 @@
               <PropertyListItem
                 currentUser={ that.props.currentUser }
                 property={ property }
-                photos={ that.props.photos }
+                photos={ property.photos }
                 toggleAuth={ that.props.toggleAuth }
                 history={ that.props.history }
                 id={property.id}
