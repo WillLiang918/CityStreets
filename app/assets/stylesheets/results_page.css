@@ -116,6 +116,7 @@
   border: 1px solid #fdc435;
   font-size: 14px;
   border-radius: 5px;
+  cursor: pointer;
 }
 
 .detail-save-button:hover {

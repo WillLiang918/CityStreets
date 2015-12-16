@@ -46,6 +46,10 @@ input {
   border: 1px solid black;
 }
 
+a, button, img {
+  cursor:pointer;
+}
+
 .group:after {
   content: "";
   display: block;
