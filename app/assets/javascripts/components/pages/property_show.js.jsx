@@ -35,16 +35,14 @@
 
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this._updateCurrentUser);
-      PropertyStore.addChangeListener(this._updateProperties);
+      PropertyStore.addChangeListener(this._updateProperty);
       ApiUtil.fetchProperty(this.props.params.propertyId);
-      // ApiUtil.fetchProperties();
-      // ApiUtil.fetchPhotos( this.state.property );
       ApiUtil.fetchCurrentUser();
     },
 
     componentWillUnmount: function () {
       CurrentUserStore.removeChangeListener(this._updateCurrentUser);
-      PropertyStore.removeChangeListener(this._updateProperties);
+      PropertyStore.removeChangeListener(this._updateProperty);
     },
 
     render: function () {
@@ -95,10 +93,7 @@
       });
     },
 
-    _updateProperties: function () {
-      // var propertyId = this.props.params.propertyId;
-      // var property = this._findPropertyById(propertyId);
-      // this.setState({ property: property });
+    _updateProperty: function () {
       this.setState({
         property: PropertyStore.all()[0],
         currentPhoto: PropertyStore.all()[0].photos[0]
