@@ -48,8 +48,10 @@
   float: right;
 }
 
-.result .property-list {
+/*.result .property-list {*/
+.result .two-thirds {
   padding-left: 10px;
+  padding-bottom: 100px;
   box-sizing: border-box;
   width: 66.66%;
   float: left;
@@ -59,6 +61,20 @@
   padding: 14px 0px;
   border-top: 1px solid #1a1f2c;
   height: 100%;
+}
+
+.pages {
+  font-size: 20px;
+  padding-left: 50%;
+}
+
+.pages a {
+  cursor: pointer;
+  padding: 5px;
+}
+
+.pages a:hover {
+  font-weight: bold;
 }
 
 .property-list-item:hover {

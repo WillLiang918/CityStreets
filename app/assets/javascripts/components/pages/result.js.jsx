@@ -53,9 +53,7 @@
               toggleRefineSearch={ this.toggleRefineSearch }
               refineSearch={ this.state.refineSearch }
               history={ this.props.history }/>
-            <a onClick={this.handlePrev}>Prev</a>
-            <a onClick={this.handleNext}>Next</a>
-            <div>
+            <div className="two-thirds">
               <PropertyList
                 currentUser={ this.state.currentUser }
                 properties={ this.state.properties }
@@ -63,6 +61,10 @@
                 toggleAuth={ this.toggleAuth }
                 auth={ this.state.auth }
                 history={ this.props.history }/>
+              <div className="pages">
+                <a onClick={this.handlePrev}>Prev</a>
+                <a onClick={this.handleNext}>Next</a>
+              </div>
             </div>
             <div>
               <Map />
@@ -91,6 +93,7 @@
       if (this.state.page > 1) {
         ApiUtil.fetchProperties(this.state.page - 1);
         this.setState({page: this.state.page - 1});
+        window.scrollTo(0,0);
       }
     },
 
@@ -98,6 +101,7 @@
       if (this.state.properties[0].propertiesCount / 10 > this.state.page) {
         ApiUtil.fetchProperties(this.state.page + 1);
         this.setState({page: this.state.page + 1});
+        window.scrollTo(0,0);
       }
     },
   });
