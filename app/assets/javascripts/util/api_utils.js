@@ -9,8 +9,9 @@ ApiUtil = {
     });
   },
 
-  fetchProperties: function () {
+  fetchProperties: function (page) {
     var filter = FilterParamsStore.params();
+    filter.page = page;
     $.ajax ({
       url: 'api/properties',
       dataType: 'json',

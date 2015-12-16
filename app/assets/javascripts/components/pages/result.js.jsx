@@ -10,7 +10,7 @@
         currentUser: CurrentUserStore.currentUser(),
         properties: PropertyStore.all(),
         refineSearch: false,
-        auth: false
+        auth: false,
       };
     },
 
@@ -21,6 +21,7 @@
     componentDidMount: function () {
       CurrentUserStore.addChangeListener(this.onChange);
       PropertyStore.addChangeListener(this.onChange);
+      this.setState({ page: 1 });
       ApiUtil.fetchProperties();
       ApiUtil.fetchCurrentUser();
     },
@@ -52,6 +53,8 @@
               toggleRefineSearch={ this.toggleRefineSearch }
               refineSearch={ this.state.refineSearch }
               history={ this.props.history }/>
+            <a onClick={this.handlePrev}>Prev</a>
+            <a onClick={this.handleNext}>Next</a>
             <div>
               <PropertyList
                 currentUser={ this.state.currentUser }
@@ -82,6 +85,20 @@
         refineSearch: false,
         auth: false
        });
+    },
+
+    handlePrev: function () {
+      if (this.state.page > 1) {
+        ApiUtil.fetchProperties(this.state.page - 1);
+        this.setState({page: this.state.page - 1});
+      }
+    },
+
+    handleNext: function () {
+      if (this.state.properties[0].propertiesCount / 10 > this.state.page) {
+        ApiUtil.fetchProperties(this.state.page + 1);
+        this.setState({page: this.state.page + 1});
+      }
     },
   });
 })(this);

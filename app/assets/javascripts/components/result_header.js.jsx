@@ -6,7 +6,8 @@
     },
 
     render: function () {
-      var count = this.props.properties.length;
+      var firstProperty = this.props.properties[0];
+      var count = firstProperty ? firstProperty.propertiesCount : 0;
       var resultTitle;
       if (count === 1) {
         resultTitle = count + " NYC Real Estate & Apartment for Rent";

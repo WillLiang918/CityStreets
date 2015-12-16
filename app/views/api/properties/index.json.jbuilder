@@ -12,4 +12,6 @@ json.array! @properties do |property|
     json.bathrooms property.get_bathrooms
     json.square_ft property.get_square_ft
   end
+
+  json.propertiesCount @properties_count
 end

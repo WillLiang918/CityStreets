@@ -39,7 +39,8 @@ class Api::PropertiesController < ApplicationController
     if bathrooms.present? && bathrooms != "Any Baths"
       @properties = @properties.where("bathrooms >= ?", bathrooms.gsub(/[^\d\.]/, '').to_f )
     end
-    @properties
+    @properties_count = @properties.count
+    @properties = @properties.page(params[:page]).per(10)
   end
 
   def create
@@ -64,7 +65,8 @@ class Api::PropertiesController < ApplicationController
         :price,
         :bedrooms,
         :bathrooms,
-        :square_ft
+        :square_ft,
+        :page
       )
     end
 end
