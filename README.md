@@ -13,6 +13,7 @@ City Streets is an easy to use and intuitive real estate website providing effec
 - Search for properties by keyword, neighborhood, price, bedrooms or bathrooms
 - View essential property details and photos
 - Save and remove saved properties
+- Pagination
 
 ### Languages
 * JavaScript
@@ -32,6 +33,7 @@ City Streets is an easy to use and intuitive real estate website providing effec
 * Paperclip
 * AWS
 * Figaro
+* Kaminari
 * JBuilder
 * Reactify
 * ReactRouter
@@ -48,7 +50,6 @@ City Streets is an easy to use and intuitive real estate website providing effec
 
 ### Future Features
 - Prettify transitions
-- Pagination / Infinite Scroll
 - Allow agents to create new property listings
 - Allow users to comment on properties
 - Messaging system for users to contact agents
