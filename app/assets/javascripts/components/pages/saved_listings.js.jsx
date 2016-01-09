@@ -43,11 +43,6 @@
       return (
         <div>
           <div className="background"></div>
-          <MainHeader
-            currentUser={ this.state.currentUser }
-            auth={ this.state.auth }
-            toggleAuth={ this.toggleAuth }
-            history={ this.props.history }/>
           <div className="saved-listings">
             <div>
               <SavedPropertyList

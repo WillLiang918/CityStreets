@@ -39,16 +39,10 @@
         </div>
         <div className="splash-content-container">
           <div className="splash-content">
-            <MainHeader
-              currentUser={ this.state.currentUser }
-              auth={ this.state.auth }
-              toggleAuth={ this.toggleAuth }
-              history={ this.props.history }/>
             <div className="splash-page-search">
               <h3 className="splash-header">New York City Real Estate</h3>
-              <SearchForm
-                history={ this.history }/>
-              </div>
+              <SearchForm history={ this.history }/>
+            </div>
             </div>
           </div>
         </div>
