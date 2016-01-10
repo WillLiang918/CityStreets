@@ -1,6 +1,5 @@
 (function (root) {
   root.PropertyList = React.createClass({
-
     render: function () {
       var that = this;
       return (

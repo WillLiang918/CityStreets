@@ -31,7 +31,7 @@
       var params = FilterParamsStore.params();
       this.setState(params);
       ApiUtil.fetchProperties();
-      this.props.history.pushState(null, "result");
+      this.props.history.pushState(null, "results");
     },
 
     // _onChange: function () {

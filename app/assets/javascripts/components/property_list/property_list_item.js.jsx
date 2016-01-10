@@ -1,6 +1,5 @@
 (function (root) {
   root.PropertyListItem = React.createClass ({
-
     isSaved: function (id) {
       var saved = false;
       var that = this;
@@ -14,14 +13,10 @@
       }
       return saved;
     },
-
     updateSave: function () {
       ApiUtil.fetchCurrentUser();
     },
-
     render: function () {
-      // photos={ this.props.photos }
-      // photo={ this.getPhoto(this.props.id) }
       return (
         <div
           className="property-list-item group"
@@ -34,23 +29,18 @@
           </div>
           <div>
             <Detail
-              currentUser={ this.props.currentUser }
-              property={ this.props.property }
+              {...this.props}
               saved={ !!this.isSaved(this.props.id) }
               isSaved={ this.isSaved }
               updateSave={ this.updateSave }
-              toggleAuth={ this.props.toggleAuth }
-              history={ this.props.history }
-              id={ this.props.id }/>
+            />
           </div>
         </div>
       );
     },
-
     handleHover: function (event) {
       ApiActions.getMarker(this.props.property.latlng);
     },
-
     handleClick: function (event) {
       event.preventDefault();
       var that = this;
@@ -58,13 +48,5 @@
         this.props.history.pushState(null, "properties/" + this.props.id);
       }
     },
-
-    // getPhoto: function (id) {
-    //   var photo = PhotoStore.find(id)[0];
-    //   if (typeof photo != "undefined") {
-    //     return photo.image_url;
-    //   }
-    // },
-
   });
 })(this);

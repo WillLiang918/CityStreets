@@ -3,11 +3,11 @@
 
     getInitialState: function () {
       return {
-        currentUser: CurrentUserStore.currentUser(),
+        currentUser: this.props.currentUser,
+        auth: this.props.auth,
         property: "",
         currentPhoto: "",
         saved: !!this.isSaved(this.props.params.propertyId),
-        auth: false
       };
     },
 

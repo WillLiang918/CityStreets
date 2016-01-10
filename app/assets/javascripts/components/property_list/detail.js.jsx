@@ -1,6 +1,5 @@
 (function(root){
   var Detail = root.Detail = React.createClass({
-
     render: function () {
       var savedButton;
       if (this.props.saved) {
@@ -28,13 +27,11 @@
         </div>
       );
     },
-
     unsave: function () {
       var id = this.props.isSaved(this.props.id);
       ApiUtil.destroySavedProperty(id);
       this.updateSave();
     },
-
     save: function () {
       if (CurrentUserStore.currentUser()) {
         ApiUtil.createSavedProperty({
@@ -46,11 +43,9 @@
         this.props.toggleAuth();
       }
     },
-
     updateSave: function () {
       ApiUtil.fetchCurrentUser();
       this.props.updateSave();
     },
-
   });
 })(this);

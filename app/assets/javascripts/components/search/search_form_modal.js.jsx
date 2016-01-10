@@ -23,7 +23,7 @@
       this.setState(params);
       ApiUtil.fetchProperties();
       this.props.toggleRefineSearch();
-      this.props.history.pushState(null, "result");
+      this.props.history.pushState(null, "results");
     },
 
     handleApply: function () {
