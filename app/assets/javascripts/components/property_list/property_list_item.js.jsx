@@ -6,8 +6,8 @@
       var currentUser = this.props.currentUser;
       if (currentUser && currentUser.saved_properties) {
           currentUser.saved_properties.forEach( function ( saved_property ) {
-            if (saved_property.property_id === id) {
-              saved = saved_property.id;
+            if (saved_property.id === id) {
+              saved = saved_property.saved_property_id;
             }
           });
       }

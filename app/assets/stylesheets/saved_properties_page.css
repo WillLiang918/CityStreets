@@ -25,11 +25,6 @@
   float: right;
 }
 
-.saved-listings .property-list {
-  width: 66.66%;
-  float: left;
-}
-
 .saved-listings .property-list-item {
   padding: 14px 0px;
   border-top: 1px solid #1a1f2c;

@@ -8,8 +8,8 @@
             return (
               <PropertyListItem
                 {...that.props}
-                property={ property }
-                photos={ property.photos }
+                property={property}
+                photos={property.photos}
                 id={property.id}
                 key={property.id} />
             );

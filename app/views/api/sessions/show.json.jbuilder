@@ -1,13 +1,10 @@
 json.extract! @user,
   :id,
   :username
-  # json.saved_properties @user.saved_properties
-
-  # if (@user.saved_properties)
   json.saved_properties do
     json.array! @user.saved_properties do |saved_property|
-      json.id saved_property.id
-      json.property_id saved_property.property_id
+      json.saved_property_id saved_property.id
+      json.id saved_property.property_id
       json.address saved_property.property.address.get_address
       json.fullAddress saved_property.property.address.get_full_address
       json.latlng saved_property.property.address.get_lnglat
@@ -21,4 +18,3 @@ json.extract! @user,
       end
     end
   end
-  # end
