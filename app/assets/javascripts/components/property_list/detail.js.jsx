@@ -17,9 +17,7 @@
             {this.props.property.price}
           </div>
           <div className="detail-info">
-            <p>
-              {this.props.property.details}
-            </p>
+            <p>{this.props.property.details}</p>
           </div>
           <div className="detail-info">
             Listed by
@@ -44,7 +42,6 @@
       }
     },
     updateSave: function () {
-      ApiUtil.fetchCurrentUser();
       this.props.updateSave();
     },
   });
