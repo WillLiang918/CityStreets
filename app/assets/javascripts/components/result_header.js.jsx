@@ -1,13 +1,10 @@
 (function (root) {
   var ResultHeader = root.ResultHeader = React.createClass({
-
     toggleRefineSearch: function () {
       this.props.toggleRefineSearch();
     },
-
     render: function () {
-      var firstProperty = this.props.properties[0];
-      var count = firstProperty ? firstProperty.propertiesCount : 0;
+      var count = this.countResults();
       var resultTitle;
       if (count === 1) {
         resultTitle = count + " NYC Real Estate & Apartment for Rent";
@@ -16,13 +13,17 @@
       }
       return (
         <div className="result-header-component">
-          <div className="result-title">{ resultTitle }</div>
+          <div className="result-title">{resultTitle}</div>
           <ResultHeaderOptions
-            refineSearch={ this.props.refineSearch }
-            toggleRefineSearch= { this.props.toggleRefineSearch }
-            history={ this.props.history }/>
+            refineSearch={this.props.refineSearch}
+            toggleRefineSearch= {this.props.toggleRefineSearch}
+            history={this.props.history}/>
         </div>
       );
-    }
+    },
+    countResults: function () {
+      var property = this.props.properties[0];
+      return property ? property.propertiesCount : 0;
+    },
   });
 })(this);

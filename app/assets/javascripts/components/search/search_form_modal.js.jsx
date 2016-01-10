@@ -1,8 +1,6 @@
 (function(root){
   root.SearchFormModal = React.createClass ({
-
-    mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
-
+    mixins: [React.addons.LinkedStateMixin],
     getInitialState: function () {
       return {
           location: "",
@@ -15,7 +13,6 @@
           canShow: true,
       };
     },
-
     handleSubmit: function (event) {
       event.preventDefault();
       ApiActions.updateSearchParams(this.state);
@@ -25,7 +22,6 @@
       this.props.toggleRefineSearch();
       this.props.history.pushState(null, "results");
     },
-
     handleApply: function () {
       ApiActions.updateSearchParams(this.state);
       var params = FilterParamsStore.params();
@@ -34,10 +30,6 @@
       this.props.toggleRefineSearch();
       this.props.history.pushState(null, "result");
     },
-
-    // _onChange: function () {
-    // },
-
     handleKeyPress: function (e) {
       var matches = [];
       this.setState({
@@ -54,18 +46,15 @@
       }
       this.setState({ matches: matches });
     },
-
     setNeighborhood: function (location) {
       this.setState({
         location: location,
         neighborhood: location
       });
     },
-
     toggleCanShow: function () {
       this.setState({ canShow: false });
     },
-
     render: function () {
       var locationDetail;
       // if ( this.state.location.length > 0 && !this.state.neighborhood) {
@@ -94,7 +83,6 @@
                 { locationDetail }
             </div>
             </div>
-
             <div className="search-row group">
               <div>
                 <label className="search-price" >Price</label>
@@ -122,7 +110,6 @@
                     })}
                 </select>
               </div>
-
               <div>
                 <label className="search-bedrooms">Bedrooms</label>
                 <select
@@ -136,7 +123,6 @@
                     })}
                 </select>
               </div>
-
               <div>
                 <label className="search-bathrooms">Bathrooms</label>
                 <select
@@ -150,10 +136,8 @@
                     })}
                 </select>
               </div>
-
               </div>
             <br/>
-
             <button className="search-button">Search</button>
           </form>
         </div>

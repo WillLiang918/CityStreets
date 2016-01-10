@@ -34,12 +34,12 @@
           <div className="property-page group">
             <div className="left-three-fifths group">
               <SlideShow
-                currentPhoto={ this.state.currentPhoto }
-                changeCurrentPhoto={ this.changeCurrentPhoto }
-                property={ this.state.property }
-                id={ parseInt(this.props.params.propertyId) }/>
+                currentPhoto={this.state.currentPhoto}
+                changeCurrentPhoto={this.changeCurrentPhoto}
+                property={this.state.property}
+                id={parseInt(this.props.params.propertyId)}/>
               <Description
-                property={ this.state.property }/>
+                property={this.state.property}/>
             </div>
             <div className="right-two-fifths">
               {detail}
@@ -53,7 +53,7 @@
       var that = this;
       var currentUser = this.props.currentUser;
       if (currentUser && currentUser.saved_properties) {
-          currentUser.saved_properties.forEach( function ( saved_property ) {
+          currentUser.saved_properties.forEach(function (saved_property) {
             if (saved_property.property_id == id) {
               saved = saved_property.id;
             }
@@ -71,7 +71,7 @@
        });
     },
     changeCurrentPhoto: function (photo) {
-      this.setState({ currentPhoto: photo });
+      this.setState({currentPhoto: photo});
     },
   });
 })(this);

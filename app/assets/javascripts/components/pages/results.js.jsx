@@ -18,18 +18,18 @@
           <div className="result">
             <div
               onClick={this.exitModal}
-              className={ "modal-screen " + background }>
+              className={"modal-screen " + background}>
             </div>
             <ResultHeader
-              properties={ this.state.properties }
-              toggleRefineSearch={ this.toggleRefineSearch }
-              refineSearch={ this.state.refineSearch }
-              history={ this.props.history }
+              properties={this.state.properties}
+              toggleRefineSearch={this.toggleRefineSearch}
+              refineSearch={this.state.refineSearch}
+              history={this.props.history}
             />
             <div className="two-thirds">
               <PropertyList
                 {...this.props}
-                properties={ this.state.properties }
+                properties={this.state.properties}
               />
               <div className="pages">
                 <a onClick={this.handlePrev}>Prev</a>

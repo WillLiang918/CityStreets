@@ -1,6 +1,6 @@
-( function (root) {
+(function (root) {
   var SplashPage = root.SplashPage = React.createClass({
-    mixins: [ReactRouter.History, React.addons.LinkedStateMixin],
+    mixins: [ReactRouter.History],
     render: function () {
       return (
         <div>
@@ -16,12 +16,16 @@
           <div className="splash-content">
             <div className="splash-page-search">
               <h3 className="splash-header">New York City Real Estate</h3>
-              <SearchForm history={ this.props.history }/>
+              <SearchForm
+                history={this.props.history}
+                toggleRefineSearch={this.toggleRefineSearch}
+                />
             </div>
             </div>
           </div>
         </div>
       );
     },
+    toggleRefineSearch: function () {},
   });
 })(this);
