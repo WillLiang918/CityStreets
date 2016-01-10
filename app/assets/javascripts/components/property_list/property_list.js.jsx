@@ -3,7 +3,7 @@
     render: function () {
       var that = this;
       return (
-        <ul className="property-list group">
+        <ul>
           {that.props.properties.map(function (property) {
             return (
               <PropertyListItem

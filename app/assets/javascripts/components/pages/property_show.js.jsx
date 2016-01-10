@@ -8,11 +8,11 @@
       };
     },
     componentDidMount: function () {
-      PropertyStore.addChangeListener(this._updateProperty);
+      PropertyStore.addChangeListener(this.updateProperty);
       ApiUtil.fetchProperty(this.props.params.propertyId);
     },
     componentWillUnmount: function () {
-      PropertyStore.removeChangeListener(this._updateProperty);
+      PropertyStore.removeChangeListener(this.updateProperty);
     },
     render: function () {
       var detail;
@@ -54,8 +54,8 @@
       var currentUser = this.props.currentUser;
       if (currentUser && currentUser.saved_properties) {
           currentUser.saved_properties.forEach(function (saved_property) {
-            if (saved_property.property_id == id) {
-              saved = saved_property.id;
+            if (saved_property.id == id) {
+              saved = saved_property.saved_property_id;
             }
           });
       }
@@ -64,7 +64,7 @@
     updateSave: function () {
       ApiUtil.fetchCurrentUser();
     },
-    _updateProperty: function () {
+    updateProperty: function () {
       this.setState({
         property: PropertyStore.all()[0],
         currentPhoto: PropertyStore.all()[0].photos[0]
