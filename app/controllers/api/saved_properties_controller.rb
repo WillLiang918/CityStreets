@@ -3,7 +3,7 @@ class Api::SavedPropertiesController < ApplicationController
   def index
     user_id = params[:user_id]
     if user_id.present?
-      @saved_properties = Property.joins(:saved_properties)
+      @saved_properties = Property.joins(:properties)
                           .where("user_id = ? ", user_id)
       @saved_properties
     else

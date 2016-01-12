@@ -8,11 +8,11 @@ class Api::PropertiesController < ApplicationController
     neighborhood = params[:neighborhood]
     location = params[:location]
 
+    @properties = Property.includes(:address, :photos)
     if neighborhood.present?
-      @properties = Property.joins(:address)
       @properties = @properties.where("neighborhood LIKE ?", neighborhood)
-    else
-      @properties = Property.all
+    # else
+    #   @properties = Property.all
     end
 
     if location.present?

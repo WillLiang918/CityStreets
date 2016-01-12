@@ -10,7 +10,6 @@ class Property < ActiveRecord::Base
   has_many :photos, class_name: "Photo", foreign_key: :property_id
   has_many :saved_properties, class_name: "SavedProperty", foreign_key: :property_id
 
-
   def get_price
     "$#{self.price}".to_s.reverse.gsub(/(\d{3})(?=\d)/, '\\1,').reverse
   end

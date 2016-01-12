@@ -316,7 +316,7 @@ DESCRIPTION = [
   on his desk in the study of this 6 room pre-war condo at The Century! "
 ]
 
-100.times do |i|
+20.times do |i|
   Property.create!(
   owner_user_id: 1,
   price: rand(2..18) * 500,
@@ -343,9 +343,9 @@ DESCRIPTION = [
   )
 end
 
-300.times do
+40.times do
   Photo.create!(
-    property_id: rand(1..100),
+    property_id: rand(1..20),
     :image => File.open(
       "#{Rails.root}/app/assets/images/Sample" + rand(1..45).to_s + ".jpg", 'r'
     )

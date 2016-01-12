@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127034126) do
+ActiveRecord::Schema.define(version: 20160110080304) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,6 +29,8 @@ ActiveRecord::Schema.define(version: 20151127034126) do
     t.datetime "updated_at",   null: false
     t.string   "neighborhood"
   end
+
+  add_index "addresses", ["property_id"], name: "index_addresses_on_property_id", using: :btree
 
   create_table "pg_search_documents", force: :cascade do |t|
     t.text     "content"
@@ -61,6 +63,8 @@ ActiveRecord::Schema.define(version: 20151127034126) do
     t.datetime "updated_at",    null: false
     t.text     "description"
   end
+
+  add_index "properties", ["owner_user_id"], name: "index_properties_on_owner_user_id", using: :btree
 
   create_table "saved_properties", force: :cascade do |t|
     t.integer  "property_id", null: false

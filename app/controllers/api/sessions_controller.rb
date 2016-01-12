@@ -2,6 +2,7 @@ class Api::SessionsController < ApplicationController
 
   def show
     if current_user
+      # @user = User.includes(:saved_properties).where(id: current_user.id).first
       @user = current_user
     else
       render json: {}

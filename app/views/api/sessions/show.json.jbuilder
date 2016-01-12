@@ -11,6 +11,7 @@ json.extract! @user,
       json.price saved_property.property.get_price
       json.photos saved_property.property.get_photos
 
+
       json.details do
         json.bedrooms saved_property.property.get_bedrooms
         json.bathrooms saved_property.property.get_bathrooms
